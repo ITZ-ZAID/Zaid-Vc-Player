@@ -1,0 +1,8 @@
+.env
+*.log
+.git/
+.idea/
+downloads/
+raw_files/
+.gitignore
+__pycache__/
