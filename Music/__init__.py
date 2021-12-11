@@ -1,4 +1,4 @@
-print("[INFO]: INITIALIZING THE YUKKI SERVER")
+print("[INFO]: INITIALIZING THE SERVER")
 from pyrogram import Client
 import asyncio
 from Music.config import API_ID, API_HASH, BOT_TOKEN, MONGO_DB_URI, SUDO_USERS
@@ -27,7 +27,7 @@ SUDOERS = SUDO_USERS
 OWNER = OWNER_ID
 async def load_sudoers():
     global SUDOERS
-    print("[INFO]: LOADING SUDO USERS OF YUKKI")
+    print("[INFO]: LOADING SUDO USERS")
     sudoersdb = db.sudoers
     sudoers = await sudoersdb.find_one({"sudo": "sudo"})
     sudoers = [] if not sudoers else sudoers["sudoers"]
@@ -53,7 +53,7 @@ ASSID = 0
 ASSNAME = ""
 ASSUSERNAME = ""
 ASSMENTION = ""
-print("[INFO]: INITIALIZING BOT CLIENT OF YUKKI")
+print("[INFO]: INITIALIZING BOT CLIENTS")
 app = Client(
     'YukkiBot',
     API_ID,
