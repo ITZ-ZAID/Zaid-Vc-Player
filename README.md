@@ -9,7 +9,7 @@
     <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-black.svg?style=flat-square&logo=python&logoColor=blue&color=red" /></a>
 
 ## 🅡🅔🅟🅞 🅢🅣🅐🅣🅢
-![github card](https://github-readme-stats.vercel.app/api/pin/?username=Itsunknown-12&repo=Zaid-Vc-Player&theme=dark)
+![github card](https://github-readme-stats.vercel.app/api/pin/?username=ITZ-ZAID&repo=Zaid-Vc-Player&theme=dark)
 
 <h3>ʀᴇQᴜɪʀᴇᴍᴇɴᴛꜱ 📝</h3>
 
@@ -58,11 +58,6 @@
 
 [![ᴢᴠᴄ ᴅᴇᴘʟᴏʏ](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ITZ-ZAID/Zaid-Vc-Player)
 
-## ᴅᴇᴘʟᴏʏ ꜰᴏʀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ  💜
-ʜᴇʀᴏᴋᴜ ɪꜱ ᴛʜᴇ ᴇᴀꜱʏ ᴡᴀʏ ᴛᴏ ʜᴏꜱᴛ ᴜʀ ᴀᴘᴘꜱ
-
-[![ᴢᴠᴄ ᴅᴇᴘʟᴏʏ](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ITZ-ZAID/Zaid-Vc-Player/tree/management)
-
 ## ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ 🚄
 ꜰᴏʀ ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ ᴍᴀᴋᴇ [Necessary Variables Here](https://github.com/ITZ-ZAID/Zaid-Vc-Player), ᴜ ʜᴀᴠᴇ ᴛᴏ ꜰɪʟʟ.
 
@@ -70,10 +65,8 @@
 
 
 ### ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ 💖
-- [Menthos Music](https://GitHub.com/ToxicCybers/MentosMusic)
 - Callsmusic
 - Yukki
-- Daisy
 - PyroGram
 -xyz ⚡
 
