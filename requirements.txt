@@ -28,6 +28,7 @@ uvloop
 git+https://github.com/ITZ-ZAID/yt-dl@master
 telegraph
 heroku3
+ffmpeg
 hachoir
 lyricsgenius
 solidAPI==0.1.8.9
