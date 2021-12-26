@@ -3,7 +3,7 @@
     "description": "Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["Zaid", "Veez Music", "music", "voice chat", "telegram", "Yukki", "Yukki Music", "Private Music"],
     "repository": "https://github.com/itsunknown-12/Zaid-Vc-Player",
-    "stack": "container",
+  "stack": "container",
     "env": {
         "SESSION_NAME": {
             "description": "fill with the pyrogram session string from account",
@@ -65,12 +65,22 @@
             "value": "mongodb+srv://music:music@cluster0.sh6h4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
         }
     },
-    "buildpacks": [
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+  "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
     },
-    {
-      "url": "heroku/python"
-    }
-  ]
+    "stack": "container"
 }
