@@ -1,7 +1,7 @@
 import os
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from Zaie.filters import command, other_filters
+from Zaid.filters import command, other_filters
 from Zaid.decorators import sudo_users_only, errors
 
 downloads = os.path.realpath("Zaid/downloads")
