@@ -25,7 +25,7 @@ pyromod
 requests
 speedtest-cli
 uvloop
-git+https://github.com/ITZ-ZAID/yt-download@master
+yt_dlp
 telegraph
 heroku3
 ffmpeg
