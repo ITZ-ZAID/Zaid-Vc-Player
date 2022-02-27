@@ -22,7 +22,6 @@ psutil
 pykeyboard
 pyromod
 requests
-speedtest-cli
 uvloop
 telegraph
 heroku3
