@@ -12,7 +12,6 @@ search-engine-parser
 tgcrypto
 youtube-search-python==1.5.1
 youtube-search
-speedtest-cli
 cryptography
 dnspython
 future
@@ -25,7 +24,6 @@ pyromod
 requests
 speedtest-cli
 uvloop
-yt_dlp
 telegraph
 heroku3
 ffmpeg
