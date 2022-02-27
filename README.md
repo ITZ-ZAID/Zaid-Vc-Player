@@ -34,12 +34,12 @@
 ## ʜᴇʀᴏᴋᴜ ᴅᴇᴘʟᴏʏᴍᴇɴᴛꜱ 💜
 ʜᴇʀᴏᴋᴜ ɪꜱ ᴛʜᴇ ᴇᴀꜱʏ ᴡᴀʏ ᴛᴏ ʜᴏꜱᴛ ᴜʀ ᴀᴘᴘꜱ
 
-(https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Zaifmohammed/Zaid-Vc-Player)
+[![ᴢᴠᴄ ᴅᴇᴘʟᴏʏ](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Zaifmohammed/Zaid-Vc-Player)
 
 ## ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ 🚄
 ꜰᴏʀ ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ ᴍᴀᴋᴇ 
 
-(https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/Zaifmohammed/Zaid-Vc-Player&envs=SESSION_NAME,BOT_TOKEN,ASS_ID,OWNER_ID,ZAID_SUPPORT,UPDATES_CHANNEL,API_ID,API_HASH,SUDO_USERS,DURATION_LIMIT,LOG_GROUP_ID,MONGO_DB_URI)
+[![ᴢᴀɪᴅ+ᴅᴇᴘʟᴏʏ+ᴏɴ+ʀᴀɪʟᴡᴀʏ](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/Zaifmohammed/Zaid-Vc-Player&envs=SESSION_NAME,BOT_TOKEN,ASS_ID,OWNER_ID,ZAID_SUPPORT,UPDATES_CHANNEL,API_ID,API_HASH,SUDO_USERS,DURATION_LIMIT,LOG_GROUP_ID,MONGO_DB_URI)
 
 
 
