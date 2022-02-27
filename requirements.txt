@@ -23,9 +23,7 @@ psutil
 pykeyboard
 pyromod
 requests
-speedtest-cli
 uvloop
-yt_dlp
 telegraph
 heroku3
 ffmpeg
