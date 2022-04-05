@@ -3,6 +3,11 @@
 cgreen='\033[0;32m'
 cyellow='\033[0;33m'
 cpurple='\033[0;35m'
+
+pprint (){
+    printf """$cpurple $1"""
+}
+
 update() {
 	sudo apt-get update && sudo apt-get upgrade -y
 }
