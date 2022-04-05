@@ -52,7 +52,7 @@ packages(){
 			pprint "SUCCESS.\n\n" "cgreen"
 		else
 			pprint "FAIL.\n\n" "cred"
-			pprint "You need to install ffmpeg manually in order to use YukkiMusicBot, exiting..\n" "cblue"
+			pprint "You need to install ffmpeg manually in order to use Zaid-Vc-Player, exiting..\n" "cblue"
 			exit 1
 		fi
 	fi
