@@ -52,6 +52,8 @@
 
 ## ᴅᴇᴘʟᴏʏ
 
+<p align="center"><a href="https://t.me/Superior_Bots"><vid src="https://telegra.ph/file/5bcf79f948ca06030640c.mp4" width="300"></a></p>
+
 ᴛᴏ ʙᴇ ꜱᴀꜰᴇ ꜰᴏʀᴋ ᴛʜɪꜱ ʀᴇᴘᴏ ᴀɴᴅ ᴛʜᴇɴ ᴘʀᴇꜱꜱ ᴅᴇᴘʟᴏʏ ʙᴜᴛᴛᴏɴ ꜰʀᴏᴍ ᴛʜᴇ ꜰᴏʀᴋᴇᴅ ʀᴇᴘᴏ 
 
 ꜰᴏʀᴋ ᴅᴇᴘʟᴏʏ ɪꜱ ʜɪɢʜʟʏ ʀᴇᴄᴏᴍᴍᴇɴᴅᴇᴅ
