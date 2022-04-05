@@ -5,7 +5,7 @@ from Zaid.main import call_py, bot
 async def start_bot():
     print("[INFO]: STARTING BOT CLIENT")
     await bot.start()
-    print("[INFO]: STARTING PYTGCALLS CLIENT")
+    print("[INFO]: STARTING PYTGCALLSS CLIENT")
     await call_py.start()
     await idle()
     print("[INFO]: STOPPING BOT & USERBOT")
