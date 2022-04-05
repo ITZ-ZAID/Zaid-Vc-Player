@@ -4,7 +4,7 @@ ffmpeg-python
 hit+https://github.com/ITZ-ZAID/pytgcalls@master
 git+https://github.com/pyrogram/pyrogram@master
 youtube-search-python==1.4.9
-git+https://github.com/yt-dlp/yt-dlp@master
+git+https://github.com/ITZ-ZAID/yt-download@master
 youtube-search
 python-dotenv
 dnspython
