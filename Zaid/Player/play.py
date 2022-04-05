@@ -1,4 +1,4 @@
-# © TeamRaichu
+# © SUPERIOR_BOTS
 import io
 from os import path
 from typing import Callable
