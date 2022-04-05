@@ -81,6 +81,7 @@ Zaid@Windows~ $ cp sample.env .env
 </h3>
 
 ```console
+Zaid@Windows~ $ screen
 Zaid@Windows~ $ bash start
 ```
 
