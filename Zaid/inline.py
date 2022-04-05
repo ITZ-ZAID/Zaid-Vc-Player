@@ -6,7 +6,7 @@ from pyrogram.types import (
   InlineKeyboardMarkup,
   Message,
 )
-
+from config import GROUP_SUPPORT, UPDATES_CHANNEL
 
 def stream_markup(user_id):
   buttons = [

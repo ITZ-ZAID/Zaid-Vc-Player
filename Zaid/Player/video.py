@@ -318,7 +318,7 @@ async def vplay(c: Client, m: Message):
                             await m.reply_text(f"🚫 error: `{ep}`")
 
 
-@Client.on_message(command(["vstream", f"livestream"]) & other_filters)
+@Client.on_message(command(["vstream", "livestream", "stream"]) & other_filters)
 async def vstream(c: Client, m: Message):
     await m.delete()
     chat_id = m.chat.id
@@ -396,7 +396,7 @@ async def vstream(c: Client, m: Message):
                 )
             loser = await c.send_message(chat_id, "🔄 **processing stream...**")
         else:
-            await m.reply("**/vstream {link} {720/480/360}**")
+            await m.reply("**/stream {link} {720/480/360}**")
 
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
@@ -444,7 +444,7 @@ async def vstream(c: Client, m: Message):
                     await m.reply_photo(
                         photo=f"{IMG_2}",
                         reply_markup=InlineKeyboardMarkup(buttons),
-                        caption=f"💡 **[Video Live]({link}) stream started.**\n\n💭 **Chat:** `{chat_id}`\n🧸 **Request by:** {requester}",
+                        caption=f"💡 **[__Live Streaming Started__]({link}) **\n\n💭 **Chat:** `{chat_id}`\n🧸 **Request by:** {requester}",
                     )
                 except Exception as ep:
                     await loser.delete()
