@@ -64,6 +64,26 @@
 [![ᴢᴀɪᴅ+ᴅᴇᴘʟᴏʏ+ᴏɴ+ʀᴀɪʟᴡᴀʏ](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/ITZ-ZAID/Zaid-Vc-Player&envs=SESSION_NAME,BOT_TOKEN,GROUP_SUPPORT,UPDATES_CHANNEL,API_ID,API_HASH,SUDO_USERS,DURATION_LIMIT)
 
 
+<h2 align="center">
+   Install Locally Or On A VPS
+</h2>
+
+
+```console
+Zaid@Windows~ $ git clone https://github.com/ITZ-ZAID/Zaid-Vc-Player
+Zaid@Windows~ $ cd Zaid-Vc-Player
+Zaid@Windows~ $ bash setup
+Zaid@Windows~ $ cp sample.env .env
+```
+
+<h3 align="center">
+    Edit <b>.env</b> with your own values and Run Bot
+</h3>
+
+```console
+Zaid@Windows~ $ bash start
+```
+
 ### ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ 💖
 - Callsmusic
 - Yukki
