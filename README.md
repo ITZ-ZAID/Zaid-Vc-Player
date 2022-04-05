@@ -81,7 +81,7 @@ Zaid@Windows~ $ bash start
 
 ### ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ 💖
 - Callsmusic
-- Yukki
+- Veez
 - PyroGram
 -xyz ⚡
 
