@@ -286,7 +286,7 @@ async def lyrics(_, message):
         await rep.edit("❌ **lyrics not found.**\n\n» **please give a valid song name.**")
 
 
-@Client.on_message(command(["restart", f"restart@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["restart", f"reboot"]) & ~filters.edited)
 async def restart_bot(_, message: Message):
     if message.from_user.id not in SUDO_USERS:
         return
