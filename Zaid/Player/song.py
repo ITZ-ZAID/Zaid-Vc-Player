@@ -1,4 +1,4 @@
-# Copyright (C) 2021 By Veez Music-Project
+# Copyright (C) 2021 By Zaid Vc Player
 
 from __future__ import unicode_literals
 
@@ -20,7 +20,7 @@ from pyrogram.types import Message
 from youtube_search import YoutubeSearch
 from yt_dlp import YoutubeDL
 
-from config import BOT_USERNAME as bn
+from config import BOT_USERNAME as bn, SUDO_USERS
 from Zaid.decorators import humanbytes
 from Zaid.filters import command, other_filters
 
@@ -284,3 +284,12 @@ async def lyrics(_, message):
         await rep.edit(result)
     except Exception:
         await rep.edit("❌ **lyrics not found.**\n\n» **please give a valid song name.**")
+
+
+@Client.on_message(command(["restart", f"update"]))
+async def restart(_, message):
+    user_id = message.from_user.id
+    if user_id != SUDO_USERS:
+        return
+    await message.reply_text("🛠 <i>Restarting Player...</i>")
+    os.system(f"kill -9 {os.getpid()} && python3 main.py")
