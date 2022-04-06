@@ -51,9 +51,10 @@ def ytsearch(query: str):
         print(e)
         return 0
 
-
-async def ytdl(format: str, link: str):
-    stdout, stderr = await bash(f'youtube-dl -g -f "{format}" {link}')
+async def ytdl(link: str):
+    stdout, stderr = await bash(
+        f'yt-dlp --geo-bypass -g -f "[height<=?720][width<=?1280]" {link}'
+    )
     if stdout:
         return 1, stdout
     return 0, stderr
