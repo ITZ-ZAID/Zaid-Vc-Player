@@ -1,4 +1,4 @@
-# © SUPERIOR_BOTS
+# © 𝘽𝙤𝙩 𝘿𝙪𝙣𝙞𝙮𝙖
 import io
 from os import path
 from typing import Callable
@@ -9,24 +9,23 @@ import re
 
 import aiofiles
 import aiohttp
-from Zaid.converter import convert
+from RaiChu.converter import convert
 import ffmpeg
 import requests
-from Zaid.fonts import CHAT_TITLE
+from Process.fonts import CHAT_TITLE
 from PIL import Image, ImageDraw, ImageFont
 from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5, UPDATES_CHANNEL, GROUP_SUPPORT
-from Zaid.filters import command, other_filters
-from Zaid.queues import QUEUE, add_to_queue
-from Zaid.main import call_py, user
-from Zaid.utils import bash
+from Process.filters import command, other_filters
+from Process.queues import QUEUE, add_to_queue
+from Process.main import call_py, user
+from Process.utils import bash
 from pyrogram import Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import AudioPiped
 from youtubesearchpython import VideosSearch
-import youtube_dl
-import youtube_dl
+import yt_dlp
 
 FOREGROUND_IMG = [
     "Process/ImageFont/Red.png",
@@ -39,14 +38,14 @@ FOREGROUND_IMG = [
     "Process/ImageFont/Purple.png",
 ]
 
-def ytsearch(query: str):
+def ytsearch(query):
     try:
         search = VideosSearch(query, limit=1).result()
         data = search["result"][0]
         songname = data["title"]
         url = data["link"]
         duration = data["duration"]
-        thumbnail = data["thumbnails"][0]["url"]
+        thumbnail = f"https://i.ytimg.com/vi/{data['id']}/hqdefault.jpg"
         return [songname, url, duration, thumbnail]
     except Exception as e:
         print(e)
@@ -54,9 +53,9 @@ def ytsearch(query: str):
 
 
 async def ytdl(format: str, link: str):
-    stdout, stderr = await bash(f'youtube-dl -g -f "{format}" {link}')
+    stdout, stderr = await bash(f'yt-dlp -g -f "{format}" {link}')
     if stdout:
-        return 1, stdout
+        return 1, stdout.split("\n")[0]
     return 0, stderr
 
 chat_id = None
@@ -278,7 +277,7 @@ async def play(c: Client, m: Message):
                 gcname = m.chat.title
                 ctitle = await CHAT_TITLE(gcname)
                 image = await generate_cover(thumbnail, title, userid, ctitle)
-                format = "bestaudio"
+                format = "bestaudio/best"
                 abhi, ytlink = await ytdl(format, url)
                 if abhi == 0:
                     await suhu.edit(f"💬 yt-dl issues detected\n\n» `{ytlink}`")
@@ -297,7 +296,7 @@ async def play(c: Client, m: Message):
                     else:
                         try:
                             await suhu.edit(
-                            f"**Downloader**\n\n**Title**: {title[:22]}\n\n100% ████████████100%\n\n**Time Taken**: 00:00 Seconds\n\n**Converting Audio[FFmpeg Process]**"
+                            f"**𝙉𝙪𝙡𝙡 Downloader**\n\n**Title**: {title[:22]}\n\n100% ████████████100%\n\n**Time Taken**: 00:00 Seconds\n\n**Converting Audio[FFmpeg Process]**"
                         )
                             await call_py.join_group_call(
                                 chat_id,
