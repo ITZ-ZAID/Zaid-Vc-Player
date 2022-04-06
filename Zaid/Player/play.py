@@ -1,4 +1,3 @@
-# © 𝘽𝙤𝙩 𝘿𝙪𝙣𝙞𝙮𝙖
 import io
 from os import path
 from typing import Callable
@@ -9,16 +8,16 @@ import re
 
 import aiofiles
 import aiohttp
-from RaiChu.converter import convert
+from Zaid.converter import convert
 import ffmpeg
 import requests
 from Process.fonts import CHAT_TITLE
 from PIL import Image, ImageDraw, ImageFont
 from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5, UPDATES_CHANNEL, GROUP_SUPPORT
-from Process.filters import command, other_filters
-from Process.queues import QUEUE, add_to_queue
-from Process.main import call_py, user
-from Process.utils import bash
+from Zaid.filters import command, other_filters
+from Zaid.queues import QUEUE, add_to_queue
+from Zaid.main import call_py, user
+from Zaid.utils import bash
 from pyrogram import Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
