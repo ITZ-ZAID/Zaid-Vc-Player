@@ -1,4 +1,4 @@
-# © SUPERIOR_BOTS
+# © 𝘽𝙤𝙩 𝘿𝙪𝙣𝙞𝙮𝙖
 import io
 from os import path
 from typing import Callable
@@ -12,20 +12,21 @@ import aiohttp
 from Zaid.converter import convert
 import ffmpeg
 import requests
-from Zaid.fonts import CHAT_TITLE
+from Process.fonts import CHAT_TITLE
 from PIL import Image, ImageDraw, ImageFont
-from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5, GROUP_SUPPORT, UPDATES_CHANNEL
-from Zaid.filters import command, other_filters
-from Zaid.queues import QUEUE, add_to_queue
-from Zaid.main import call_py, user
-from Zaid.utils import bash
+from Zaid.config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5
+from Process.filters import command, other_filters
+from Process.queues import QUEUE, add_to_queue
+from Process.main import call_py, user
+from Process.utils import bash
 from pyrogram import Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import AudioPiped
 from youtubesearchpython import VideosSearch
-import yt_dlp as youtube_dl
+import youtube_dl
+import youtube_dl
 
 FOREGROUND_IMG = [
     "Process/ImageFont/Red.png",
@@ -57,7 +58,6 @@ async def ytdl(format: str, link: str):
     if stdout:
         return 1, stdout
     return 0, stderr
-
 
 chat_id = None
 DISABLED_GROUPS = []
@@ -137,7 +137,7 @@ async def play(c: Client, m: Message):
                   [[
                       InlineKeyboardButton("⏹", callback_data="cbstop"),
                       InlineKeyboardButton("⏸", callback_data="cbpause"),
-                      InlineKeyboardButton('⏭️', callback_data="skip"),
+                      InlineKeyboardButton("⏭️", "skip"),
                       InlineKeyboardButton("▶️", callback_data="cbresume"),
                   ],[
                       InlineKeyboardButton(text="✨ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
@@ -262,7 +262,7 @@ async def play(c: Client, m: Message):
             )
         else:
             suhu = await m.reply_text(
-        f"**Downloading**\n\n20% ▓▓▓▓▓▓▓▓▓▓▓▓ 60%"
+        f"**Downloading**\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
     )
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
@@ -278,7 +278,7 @@ async def play(c: Client, m: Message):
                 gcname = m.chat.title
                 ctitle = await CHAT_TITLE(gcname)
                 image = await generate_cover(thumbnail, title, userid, ctitle)
-                format = "bestaudio[ext=m4a]"
+                format = "bestaudio"
                 abhi, ytlink = await ytdl(format, url)
                 if abhi == 0:
                     await suhu.edit(f"💬 yt-dl issues detected\n\n» `{ytlink}`")
@@ -296,7 +296,9 @@ async def play(c: Client, m: Message):
                         )
                     else:
                         try:
-                            await suhu.edit("🔄 **Trying to Join Vc...**")
+                            await suhu.edit(
+                            f"**𝙉𝙪𝙡𝙡 Downloader**\n\n**Title**: {title[:22]}\n\n100% ████████████100%\n\n**Time Taken**: 00:00 Seconds\n\n**Converting Audio[FFmpeg Process]**"
+                        )
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioPiped(
