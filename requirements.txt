@@ -18,4 +18,4 @@ motor
 psutil
 future
 wget
-youtube-dl==2021.12.17
+
