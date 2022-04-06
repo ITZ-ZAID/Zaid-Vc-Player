@@ -4,7 +4,7 @@ ffmpeg-python
 py-tgcalls[pyrogram]
 git+https://github.com/pyrogram/pyrogram@master
 youtube-search-python==1.4.9
-git+https://github.com/ITZ-ZAID/yt-download@master
+yt-dlp
 youtube-search
 python-dotenv
 dnspython
