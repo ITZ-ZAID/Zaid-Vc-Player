@@ -1,4 +1,4 @@
-# © 𝘽𝙤𝙩 𝘿𝙪𝙣𝙞𝙮𝙖
+# © SUPERIOR_BOTS
 import io
 from os import path
 from typing import Callable
