@@ -233,7 +233,7 @@ async def rrl(client: Client, message: Message):
     chat_id = message.chat_id
     reply = random.choice(RAIDHU)
     caption = f"{reply}"
-    await client.reply(chat_id, caption)
+    await client.send_message(chat_id, caption)
     await asyncio.sleep(0.2)
                 
 @Client.on_message(filters.command('replyraid'))
