@@ -52,6 +52,40 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ITZ-ZAID/Music-Deploy)
 
+> Click on buttons below to expand and  detailed explanation process. !
+
+
+<details>
+    <summary><b> Detailed Heroku Depoyment Process » </b></summary>
+
+<img src="https://telegra.ph/file/97e6de197eba98d2caba5.jpg" align="right" width="350" height="700"/>
+
+### 🚀 Deploy Process
+- Click on the deploy button above and login to your [heroku account](https://heroku.com/login) .
+- Fill your values there.
+- If you don't know how to get config vars : [Please refer here](GitHub.com/ITZ-ZAID/Zaid-Vc-Player)
+- Make sure you fill correct values.
+- Click on **Deploy** button.
+- Please wait till the app gets deployed on heroku. Deploying can take upto **2-3 mins**..
+- When your app is successfully deployed, click on **Manage App** button.
+
+
+### 🚀 Booting Process
+- Search for **Resources** Tab inside your app. ( Check Image for more details)
+- Click on the **Pencil Icon** under resources section.
+- Turn **on** the **switch** present there near pencil icon.
+- Congrats your Music Bot is now **Booting**.
+
+
+### 🚀 Checking Logs
+- After Turning on your booting .
+- Click on the **More Button** present at top right corner .
+- Click on the **View Logs** button from the drop down menu.
+- You check your logs there!
+- Click on save button there at bottom to save your logs and forward it to us on [@Bot_Support](https://t.me/Superior_Support) if you face any problem
+
+</details>
+
 ## ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ 🚄
 ꜰᴏʀ ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ ᴍᴀᴋᴇ [Necessary Variables Here](https://github.com/ITZ-ZAID/Zaid-Vc-Player), ᴜ ʜᴀᴠᴇ ᴛᴏ ꜰɪʟʟ.
 
