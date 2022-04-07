@@ -241,12 +241,13 @@ async def arr(client: Client, message: Message):
         return
     global que
     if message.reply_to_message:
+        chat_id = message.chat.id
         a = message.reply_to_message.from_user
-        b =message.reply_to_message.from_user
+        b = message.reply_to_message.from_user
         e = b.id
         c = b.first_name
         username = f"[{c}](tg://user?id={e})"
-        event = await Client.send_message(message.chat.id, text="**Reply Raid Activating....**", reply_to_message_id=message.message_id)
+        event = await client.send_message(message.chat_id, "Reply Raid Activating....")
         que[client] = []
         qeue = que.get(client)
         appendable = [e]
