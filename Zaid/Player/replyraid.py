@@ -241,7 +241,7 @@ async def arr(client: Client, message: Message):
         return
     global que
     if message.reply_to_message:
-        chat_id = message.chat.id
+        chat_id = reply_to_message_id=message.message_id
         a = message.reply_to_message.from_user
         b = message.reply_to_message.from_user
         e = b.id
