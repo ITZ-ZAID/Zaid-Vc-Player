@@ -245,7 +245,7 @@ async def arr(client: Client, message: Message):
         chat_id = message.chat.id
         a = message.reply_to_message.from_user
         b = message.reply_to_message.from_user
-        e = b.user_id
+        e = b.id
         c = b.first_name
         username = f"[{c}](tg://user?id={e})"
         event = await client.send_message(chat_id, "Reply Raid Activating....")
@@ -265,7 +265,7 @@ async def drr(client: Client, message: Message):
         chat_id = message.chat.id
         a = message.reply_to_message.from_user
         b = message.reply_to_message
-        e = b.user_id
+        e = b.id
         c = b.first_name
         username = f"[{c}](tg://user?id={e})"
         event = await client.send_message(chat.id, "Reply Raid De-activating....")
