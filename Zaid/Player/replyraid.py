@@ -246,7 +246,7 @@ async def arr(client: Client, message: Message):
         e = b.id
         c = b.first_name
         username = f"[{c}](tg://user?id={e})"
-        event = await client.send_message(message.chat_id, "Reply Raid Activating....")
+        event = await Client.send_message(message.chat.id, text="**Reply Raid Activating....**", reply_to_message_id=message.message_id)
         que[client] = []
         qeue = que.get(client)
         appendable = [e]
