@@ -10,6 +10,7 @@ from Zaid.data import RAID, REPLYRAID, DEADLYSPAM
 from Zaid.main import BOT
 from config import SUDO_USERS
 
+OWNER_ID = SUDO_USERS
 que = {}
 hl = '/'
 
