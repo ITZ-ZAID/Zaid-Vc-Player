@@ -1,4 +1,5 @@
-# @ArrayCore
+#forked from https://github.com/The-HellBot/ArrayCore
+
 import asyncio
 import datetime
 import logging
