@@ -286,15 +286,3 @@ async def lyrics(_, message):
         await rep.edit("❌ **lyrics not found.**\n\n» **please give a valid song name.**")
 
 
-@Client.on_message(command(["restart", f"reboot"]) & ~filters.edited)
-async def restart_bot(_, message: Message):
-    if message.from_user.id not in SUDO_USERS:
-        return
-    try:
-        msg = await message.reply_text("❖ Restarting bot...")
-        LOGS.info("[INFO]: BOT SERVER RESTARTED !!")
-    except BaseException as err:
-        LOGS.info(f"[ERROR]: {err}")
-        return
-    await msg.edit_text("✅ Bot has restarted !\n\n» back active again in 5-10 seconds.")
-    os.system(f"kill -9 {os.getpid()} && python3 main.py")
