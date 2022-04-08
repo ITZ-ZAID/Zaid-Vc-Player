@@ -48,7 +48,6 @@ async def vcraid(_, e: Message):
     try:
         chat_id = (await call_py.get_chat(chat)).id
         await call_py.join_chat(chat_id)
-    if chat:
         Zaid = await e.reply_text("**Starting VC raid**")
         link = f"https://itshellboy.tk/{aud[1:]}"
         dl = aud
