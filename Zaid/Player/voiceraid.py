@@ -16,8 +16,8 @@ from pytgcalls.types.input_stream.quality import (HighQualityAudio, HighQualityV
 
 from Zaid.queues import QUEUE, add_to_queue, get_queue, clear_queue
 
-
-from config import call_py as call_py1, bot as vcbot, SUDO_USERS
+from Zaid.main import call_py as call_py1, bot as vcbot
+from config import SUDO_USERS
 
 logging.basicConfig(level=logging.INFO)
 
