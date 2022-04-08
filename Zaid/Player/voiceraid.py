@@ -1,4 +1,5 @@
 # @ArrayCore
+# GitHub.com/DesiNobita
 import asyncio
 import datetime
 import logging
