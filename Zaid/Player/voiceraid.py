@@ -127,3 +127,20 @@ async def ping(_, e: Message):
             await e.reply_text(f"**ERROR** \n`{e}`")
     else:
         await e.reply_text("**No raid is currently paused!**")
+
+@vcbot.on_message(filters.command("joinassistant") & filters.user(SUDO_USERS))
+async def basffy(_, message):
+    if len(message.command) != 2:
+        await message.reply_text(
+            "**Usage:**\n/joinassistant [Chat Username or Chat ID]"
+        )
+        return
+    chat = message.text.split(None, 2)[1]
+    try:
+        chat_id = (await app.get_chat(chat)).id
+    try:
+        await call_py.join_chat(chat_id)
+    except Exception as e:
+        await message.reply_text(f"Failed\n**Possible reason could be**:{e}")
+        return
+    await message.reply_text("Joined.")
