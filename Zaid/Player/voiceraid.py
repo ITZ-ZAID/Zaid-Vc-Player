@@ -48,6 +48,7 @@ async def vcraid(_, e: Message):
     else:
          chat_id = gid
     aud = choice(aud_list)
+        inp = e.text[8:]
     if inp:
         TheVenomXD = await e.reply_text("**Starting VC raid**")
         link = f"https://itshellboy.tk/{aud[1:]}"
@@ -70,6 +71,7 @@ async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
     if gid == uid:
+        inp = e.text[8:]
         chat_ = await Venom1.get_chat(inp)
         chat_id = chat_.id
     else:
@@ -90,6 +92,7 @@ async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
     if gid == uid:
+        inp = e.text[8:]
         chat_ = await Venom1.get_chat(inp)
         chat_id = chat_.id
     else:
@@ -110,6 +113,7 @@ async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
     if gid == uid:
+        inp = e.text[8:]
         chat_ = await Venom1.get_chat(inp)
         chat_id = chat_.id
     else:
