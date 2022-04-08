@@ -14,7 +14,7 @@ from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.input_stream.quality import (HighQualityAudio, HighQualityVideo,
                                                   LowQualityVideo, MediumQualityVideo)
 
-from ArrayCore.vc.queues import QUEUE, add_to_queue, get_queue, clear_queue
+from Zaid.queues import QUEUE, add_to_queue, get_queue, clear_queue
 
 
 from config import call_py1, bot as vcbot, SUDO_USERS, Venom1
