@@ -43,12 +43,12 @@ async def vcraid(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
     inp = e.text[8:]
-    if gid == uid:
-        chat_ = await call_py.get_chat(inp)
-        chat_id = chat_.id
-    else:
-         chat_id = gid
+    chat = message.text.split(None, 2)[1]
+    try:
+        chat_id = (await call_py.get_chat(chat)).id
     aud = choice(aud_list)
+    try:
+        await call_py.join_chat(chat_id)
     if inp:
         Zaid = await e.reply_text("**Starting VC raid**")
         link = f"https://itshellboy.tk/{aud[1:]}"
@@ -128,19 +128,3 @@ async def ping(_, e: Message):
     else:
         await e.reply_text("**No raid is currently paused!**")
 
-@vcbot.on_message(filters.command("joinassistant") & filters.user(SUDO_USERS))
-async def basffy(_, message):
-    if len(message.command) != 2:
-        await message.reply_text(
-            "**Usage:**\n/joinassistant [Chat Username or Chat ID]"
-        )
-        return
-    chat = message.text.split(None, 2)[1]
-    try:
-        chat_id = (await call_py.get_chat(chat)).id
-    try:
-        await call_py.join_chat(chat_id)
-    except Exception as e:
-        await message.reply_text(f"Failed\n**Possible reason could be**:{e}")
-        return
-    await message.reply_text("Joined.")
