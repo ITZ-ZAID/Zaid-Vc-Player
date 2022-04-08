@@ -52,7 +52,7 @@ async def vcraid(_, e: Message):
     aud = choice(aud_list) 
     if e.text[8:]:
         Zaid = await e.reply_text("**Starting VC raid**")
-        link = f"https://itshellboy.tk/{aud[1:]}"
+        link = f"https://Zaid-Robot.io/{aud[1:]}"
         dl = aud
         songname = aud[18:]
         if chat_id in QUEUE:
