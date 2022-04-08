@@ -24,16 +24,16 @@ logging.basicConfig(level=logging.INFO)
 HNDLR = '/'
 
 aud_list = [
-    "./ArrayCore/Audio/AUD1.mp3",
-    "./ArrayCore/Audio/AUD2.mp3",
-    "./ArrayCore/Audio/AUD3.mp3",
-    "./ArrayCore/Audio/AUD4.mp3",
-    "./ArrayCore/Audio/AUD5.mp3",
-    "./ArrayCore/Audio/AUD6.mp3",
-    "./ArrayCore/Audio/AUD7.mp3",
-    "./ArrayCore/Audio/AUD8.mp3",
-    "./ArrayCore/Audio/AUD9.mp3",
-    "./ArrayCore/Audio/AUD10.mp3",
+    "./Zaid/Audio/AUD1.mp3",
+    "./Zaid/Audio/AUD2.mp3",
+    "./Zaid/Audio/AUD3.mp3",
+    "./Zaid/Audio/AUD4.mp3",
+    "./Zaid/Audio/AUD5.mp3",
+    "./Zaid/Audio/AUD6.mp3",
+    "./Zaid/Audio/AUD7.mp3",
+    "./Zaid/Audio/AUD8.mp3",
+    "./Zaid/Audio/AUD9.mp3",
+    "./Zaid/Audio/AUD10.mp3",
 ]
 
 Venom1 = call_py1
