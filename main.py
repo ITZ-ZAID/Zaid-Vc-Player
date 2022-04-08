@@ -1,6 +1,6 @@
 import asyncio
 from pytgcalls import idle
-from Zaid.main import call_py, bot
+from Zaid.main import call_py, bot, BOT
 
 async def start_bot():
     print("[INFO]: STARTING BOT CLIENT")
@@ -13,3 +13,4 @@ async def start_bot():
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(start_bot())
+BOT.run_until_disconnected()
