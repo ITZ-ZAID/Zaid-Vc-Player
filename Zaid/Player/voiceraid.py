@@ -48,7 +48,7 @@ async def vcraid(_, e: Message):
     else:
          chat_id = gid
     aud = choice(aud_list)
-    if inp:
+    if e.text[8:]:
         TheVenomXD = await e.reply_text("**Starting VC raid**")
         link = f"https://itshellboy.tk/{aud[1:]}"
         dl = aud
