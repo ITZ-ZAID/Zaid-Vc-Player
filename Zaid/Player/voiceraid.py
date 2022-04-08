@@ -64,6 +64,8 @@ async def vcraid(_, e: Message):
             await e.reply_text(f"**> Raiding in:** {chat_.title} \n\n**> Audio:** {songname} \n**> Position:** Ongoing Raid")
 
 
+
+
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["raidend"], prefixes=HNDLR))
 async def ping(_, e: Message):
     gid = e.chat.id
@@ -83,6 +85,7 @@ async def ping(_, e: Message):
             await e.reply_text(f"**ERROR** \n`{ex}`")
     else:
         await e.reply_text("**No ongoing raid!**")
+
 
 
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["raidpause"], prefixes=HNDLR))
