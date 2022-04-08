@@ -17,7 +17,7 @@ from pytgcalls.types.input_stream.quality import (HighQualityAudio, HighQualityV
 from Zaid.queues import QUEUE, add_to_queue, get_queue, clear_queue
 
 
-from config import call_py as call_py1, bot as vcbot, SUDO_USERS, Venom1
+from config import call_py as call_py1, bot as vcbot, SUDO_USERS
 
 logging.basicConfig(level=logging.INFO)
 HNDLR = /
@@ -34,6 +34,7 @@ aud_list = [
     "./ArrayCore/Audio/AUD10.mp3",
 ]
 
+Venom1 = call_py1
 
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["vcraid"], prefixes=HNDLR))
 async def vcraid(_, e: Message):
