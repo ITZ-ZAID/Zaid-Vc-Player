@@ -42,14 +42,14 @@ Venom1 = call_py
 async def vcraid(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
+    inp = e.text[8:]
     if gid == uid:
-        umm = e.text[8:]
-        chat_ = await call_py.get_chat(umm)
+        chat_ = await call_py.get_chat(inp)
         chat_id = chat_.id
     else:
          chat_id = gid
     aud = choice(aud_list)
-    if umm:
+    if inp:
         Zaid = await e.reply_text("**Starting VC raid**")
         link = f"https://itshellboy.tk/{aud[1:]}"
         dl = aud
