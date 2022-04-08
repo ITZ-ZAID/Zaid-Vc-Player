@@ -48,8 +48,8 @@ async def vcraid(_, e: Message):
         chat_id = chat_.id
     else:
          chat_id = gid
-    aud = choice(aud_list) 
-    if e.text[8:]:
+    aud = choice(aud_list)
+    if inp:
         Zaid = await e.reply_text("**Starting VC raid**")
         link = f"https://itshellboy.tk/{aud[1:]}"
         dl = aud
