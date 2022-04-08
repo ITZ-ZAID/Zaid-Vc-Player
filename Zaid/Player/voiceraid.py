@@ -43,7 +43,6 @@ async def vcraid(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
     if gid == uid:
-        inp = e.text[8:]
         chat_ = await Venom1.get_chat(inp)
         chat_id = chat_.id
     else:
@@ -71,7 +70,6 @@ async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
     if gid == uid:
-        inp = e.text[8:]
         chat_ = await Venom1.get_chat(inp)
         chat_id = chat_.id
     else:
@@ -92,7 +90,6 @@ async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
     if gid == uid:
-        inp = e.text[8:]
         chat_ = await Venom1.get_chat(inp)
         chat_id = chat_.id
     else:
@@ -113,7 +110,6 @@ async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
     if gid == uid:
-        inp = e.text[8:]
         chat_ = await Venom1.get_chat(inp)
         chat_id = chat_.id
     else:
