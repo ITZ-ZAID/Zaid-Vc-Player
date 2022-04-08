@@ -65,7 +65,7 @@ LOVEOP = [
 
 
 
-@BOT.on(events.NewMessage(incoming=True, pattern=r"\%s['loveraid', 'love'](?: |$)(.*)" % hl))
+@BOT.on(events.NewMessage(incoming=True, pattern=r"\%sloveraid(?: |$)(.*)" % hl))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = Love Raid\n\nCommand:\n\n.raid <count> <Username of User>\n\n.raid <count> <reply to a User>\n\nCount must be a integer."
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
@@ -139,7 +139,7 @@ async def _(event):
         )
 
 
-@BOT.on(events.NewMessage(incoming=True, pattern=r"\%s['lovereplyraid', 'addlove'](?: |$)(.*)" % hl))
+@BOT.on(events.NewMessage(incoming=True, pattern=r"\%slovereplyraid(?: |$)(.*)" % hl))
 async def _(e):
     global que
     usage = f"𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = Love ReplyRaid\n\nCommand:\n\n.lovereplyraid <Username of User>\n\n.lovereplyraid <reply to a User>."
@@ -196,7 +196,6 @@ async def _(e):
 async def _(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = Deactivate Raid\n\nCommand:\n\n.dreplyraid <Username of User>\n\n.dreplyraid <reply to a User>"
     global que    
-    if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
