@@ -14,7 +14,7 @@ from datetime import datetime
 hl = '/'
 deadlyversion = 'Spambot0.10'
 
-ZAID_PIC = "https://telegra.ph/file/c6f99c0b68ff07439ed72.jpg"
+ZAID_PIC = "https://telegra.ph/file/7262dbb16274f074764b4.jpg"
   
 
 DEADLY = "✯ 𝐌𝐮𝐬𝐢𝐜+𝐑𝐚𝐢𝐝 𝐒𝐩𝐚𝐦 𝐁𝐨𝐭 ✯\n\n"
@@ -27,7 +27,6 @@ DEADLY += f"═══════════════════\n\n"
                                   
 @BOT.on(events.NewMessage(incoming=True, pattern=r"\%salive(?: |$)(.*)" % hl))
 async def alive(event):
-  if event.sender_id in SUDO_USERS:
      await BOT.send_file(event.chat_id,
                                   ZAID_PIC,
                                   caption=DEADLY,
@@ -71,7 +70,6 @@ def get_readable_time(seconds: int) -> str:
 
 @BOT.on(events.NewMessage(incoming=True, pattern=r"\%sping(?: |$)(.*)" % hl))
 async def ping(e):
-    if e.sender_id in SUDO_USERS:
         start = datetime.now()
         text = "Pong!"
         event = await e.reply(text, parse_mode=None, link_preview=None )
