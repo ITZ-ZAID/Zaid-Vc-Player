@@ -7,7 +7,6 @@ from Zaid.main import BOT
 from config import OWNER_ID, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY
 from telethon.tl.functions.users import GetFullUserRequest
 # alive Pic By Default It's Will Show Our
-from Godfather import ALIVE_PIC
 from telethon import events, version, Button
 from telethon.tl.custom import button
 from time import time
