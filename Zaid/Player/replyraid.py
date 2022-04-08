@@ -228,8 +228,6 @@ que = {}
 async def rrl(client: Client, message: Message):
     global que
     queue = que.get(message.from_user.id)
-    if not queue:
-        return
     chat_id = message.chat_id
     reply = random.choice(RAIDHU)
     caption = f"{reply}"
