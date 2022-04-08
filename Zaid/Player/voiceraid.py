@@ -137,7 +137,7 @@ async def basffy(_, message):
         return
     chat = message.text.split(None, 2)[1]
     try:
-        chat_id = (await app.get_chat(chat)).id
+        chat_id = (await call_py.get_chat(chat)).id
     try:
         await call_py.join_chat(chat_id)
     except Exception as e:
