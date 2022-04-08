@@ -44,6 +44,7 @@ async def vcraid(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
     if gid == uid:
+        inp = e.text[8:]
         chat_ = await call_py.get_chat(inp)
         chat_id = chat_.id
     else:
