@@ -42,51 +42,7 @@ def admeme_callback(_, query):
         message.reply('You are not admin!')
 
 
-@bot.on_message(filters.command('ban'))
-def ban(_, message):
-    # scammer = reply.from_user.id
-    reply = message.reply_to_message
-    if is_admin(
-            message.chat.id, message.from_user.id
-    )
-        message.chat.ban_member(message.reply_to_message.from_user.id)
-        bot.send_message(
-            message.chat.id,
-            f"Banned! {reply.from_user.username}",
-            parse_mode="markdown",
-            reply_markup=InlineKeyboardMarkup([
-                [
-                    InlineKeyboardButton(
-                        "Unban",
-                        callback_data=
-                        f"admin:unban:{message.reply_to_message.from_user.id}")
-                ],
-            ]))
 
-    elif reply.from_user.id == 1669178360:
-        message.reply('This Person is my owner!')
-
-    elif reply.from_user.id in sudos:
-        message.reply("This Person is my sudo user !")
-
-    elif message.from_user.id == 1669178360 or message.from_user.id in sudos:
-        user = reply.from_user.username if not None else reply.from_user.id
-        bot.kick_chat_member(message.chat.id,
-                             message.reply_to_message.from_user.id)
-        bot.send_message(
-            message.chat.id,
-            f"Banned! {user}",
-            parse_mode="markdown",
-            reply_markup=InlineKeyboardMarkup([
-                [
-                    InlineKeyboardButton(
-                        "Unban",
-                        callback_data=
-                        f"admin:unban:{message.reply_to_message.from_user.id}")
-                ],
-            ]))
-    else:
-        message.reply('You are not admin')
 
 
 @bot.on_message(filters.command('unban'))
