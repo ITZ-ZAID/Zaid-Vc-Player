@@ -56,9 +56,7 @@ async def vcraid(_, e: Message):
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await Zaid.delete()
             await e.reply_text(f"**> Raiding in:** {chat_.title} \n\n**> Audio:** {songname} \n**> Position:** #{pos}")
-        else:
-            if call_py:
-                await call_py.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+            await call_py.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await Zaid.delete()
             await e.reply_text(f"**> Raiding in:** {chat_.title} \n\n**> Audio:** {songname} \n**> Position:** Ongoing Raid")
