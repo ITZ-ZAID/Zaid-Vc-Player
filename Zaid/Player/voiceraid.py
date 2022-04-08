@@ -20,7 +20,9 @@ from Zaid.queues import QUEUE, add_to_queue, get_queue, clear_queue
 from config import call_py as call_py1, bot as vcbot, SUDO_USERS
 
 logging.basicConfig(level=logging.INFO)
-HNDLR = /
+
+HNDLR = '/'
+
 aud_list = [
     "./ArrayCore/Audio/AUD1.mp3",
     "./ArrayCore/Audio/AUD2.mp3",
