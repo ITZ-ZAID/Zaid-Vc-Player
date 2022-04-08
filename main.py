@@ -11,13 +11,6 @@ async def start_bot():
     print("[INFO]: STOPPING BOT & USERBOT")
     await bot.stop()
 
-async def startup():
-    # STARTING CLIENTS
-    if Venom1:
-        try:
-            await Venom1.start()
-        except Exception as e:
-            print(str(e))
 
 
 loop = asyncio.get_event_loop()
