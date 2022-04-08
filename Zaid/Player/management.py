@@ -144,7 +144,7 @@ def kick(_, message):
                               message.reply_to_message.from_user.id)
         message.reply('kick @{} !'.format(
             message.reply_to_message.from_user.username))
-    elif reply.from_user.id == 825664681:
+    elif reply.from_user.id == 1669178360:
         message.reply('This Person is my owner!')
     else:
         message.reply('You are not admin')
