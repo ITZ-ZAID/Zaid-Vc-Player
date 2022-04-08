@@ -3,6 +3,6 @@ RUN apt-get update && apt-get upgrade -y
 RUN apt-get install ffmpeg -y
 COPY . /app/
 WORKDIR /app/
+RUN pip3 install -U pip
 RUN pip3 install -U -r requirements.txt
-COPY start /start
-CMD ["/bin/bash", "/start"]
+CMD python3 -m main.py
