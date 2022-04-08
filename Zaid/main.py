@@ -24,9 +24,4 @@ user = Client(
     api_hash=API_HASH,
 )
 
-if SESSION_NAME:
-    Venom1 = Client(SESSION_NAME, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'Zaid.Player'})
-    call_py = PyTgCalls(Venom1)
-else:
-    Venom1 = None
-    call_py = None
+call_py = PyTgCalls(user, overload_quiet_mode=True)
