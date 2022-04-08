@@ -1,12 +1,12 @@
 import asyncio
 from pytgcalls import idle
-from Zaid.main import call_py, bot, BOT, Venom1
+from Zaid.main import call_py, bot, BOT
 
 async def start_bot():
     print("[INFO]: STARTING BOT CLIENT")
     await bot.start()
     print("[INFO]: STARTING PYTGCALLSS CLIENT")
-    await Venom1.start()
+    await call_py.start()
     await idle()
     print("[INFO]: STOPPING BOT & USERBOT")
     await bot.stop()
