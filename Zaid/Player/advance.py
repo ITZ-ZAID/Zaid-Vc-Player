@@ -30,7 +30,7 @@ async def alive(event):
   if event.sender_id in SUDO_USERS:
      await BOT.send_file(event.chat_id,
                                   ZAID_PIC,
-                                  caption=deadly,
+                                  caption=DEADLY,
                                   buttons=[
         [
         Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/Superior_Bots"),
