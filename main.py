@@ -1,6 +1,6 @@
 import asyncio
 from pytgcalls import idle
-from Zaid.main import call_py, bot, BOT, Venom1
+from Zaid.main import call_py, bot, BOT
 
 async def start_bot():
     print("[INFO]: STARTING BOT CLIENT")
