@@ -30,4 +30,7 @@ if SESSION_NAME:
     call_py = PyTgCalls(Venom1)
 else:
     Venom1 = None
-    call_py1 = None
+    call_py = None
+
+call_py = Venom1
+
