@@ -66,25 +66,6 @@ async def vcraid(_, e: Message):
 
 
 
-@vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["raidend"], prefixes=HNDLR))
-async def ping(_, e: Message):
-    gid = e.chat.id
-    uid = e.from_user.id
-    if gid == uid:
-        inp = e.text[8:]
-        chat_ = await call_py.get_chat(inp)
-        chat_id = chat_.id
-    else:
-         chat_id = gid
-    if chat_id in QUEUE:
-        try:
-            if call_py:
-                await call_py.leave_group_call(chat_id)
-            await e.reply_text("**VC Raid Ended!**")
-        except Exception as ex:
-            await e.reply_text(f"**ERROR** \n`{ex}`")
-    else:
-        await e.reply_text("**No ongoing raid!**")
 
 
 
