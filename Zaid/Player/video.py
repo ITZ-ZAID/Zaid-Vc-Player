@@ -8,7 +8,7 @@ from Process.design.chatname import CHAT_TITLE
 from Zaid.filters import command, other_filters
 from Zaid.queues import QUEUE, add_to_queue
 from Zaid.main import call_py, user
-from pyrogram import Client
+from Zaid.main import bot as Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pytgcalls import StreamType
