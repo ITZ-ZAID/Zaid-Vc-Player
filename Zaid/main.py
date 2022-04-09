@@ -24,7 +24,5 @@ user = Client(
     api_hash=API_HASH,
 )
 
-
-
-call_py = PyTgCalls(user, overload_quiet_mode=True)
-
+Test = Client(SESSION_NAME, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'Zaid.Player'})
+call_py = PyTgCalls(Test)
