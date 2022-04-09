@@ -17,7 +17,7 @@ from PIL import Image, ImageDraw, ImageFont
 from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5, UPDATES_CHANNEL, GROUP_SUPPORT
 from Zaid.filters import command, other_filters
 from Zaid.queues import QUEUE, add_to_queue
-from Zaid.main import call_py, user
+from Zaid.main import call_py, Test as user
 from Zaid.utils import bash
 from Zaid.main import bot as Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
