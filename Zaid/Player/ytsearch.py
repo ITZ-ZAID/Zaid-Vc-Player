@@ -1,7 +1,7 @@
 import logging
 from config import BOT_USERNAME
 from Zaid.filters import command, other_filters
-from pyrogram import Client
+from Zaid.main import bot as Client
 from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
