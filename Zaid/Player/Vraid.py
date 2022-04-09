@@ -186,6 +186,9 @@ async def vraid(c: Client, m: Message):
                                     reply_markup=InlineKeyboardMarkup(buttons),
                                     caption=f"🗂 **Raid:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🧸 **Chat:** {chat_id}",
                                 )
+                        except Exception as ep:
+                            await loser.delete()
+                            await m.reply_text(f"🚫 error: `{ep}`")
 
     else:
         if len(m.command) < 2:
@@ -252,6 +255,9 @@ async def vraid(c: Client, m: Message):
                                 reply_markup=InlineKeyboardMarkup(buttons),
                                 caption=f"🗂 **Raid:** [{songname}]({url}) |`video`\n⏱ **Duration:** `{duration}`\n🧸 **Chat:** {chat_id}",
                             )
+                        except Exception as ep:
+                            await loser.delete()
+                            await m.reply_text(f"🚫 error: `{ep}`")
 
 
 @Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["vraidlive", "vraidstream"], prefixes=HNDLR))
@@ -329,4 +335,6 @@ async def raidlive(c: Client, m: Message):
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=f"💡 **[__Live Raid Started__]({link}) **\n\n💭 **Chat:** `{chat_id}`",
                     )
-
+                        except Exception as ep:
+                            await loser.delete()
+                            await m.reply_text(f"🚫 error: `{ep}`")
