@@ -5,9 +5,9 @@ from config import BOT_USERNAME
 from config import GROUP_SUPPORT, UPDATES_CHANNEL, START_PIC
 from Zaid.filters import command
 from Zaid.command import commandpro
-from pyrogram import Client, filters
+from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-
+from Zaid.main import bot as Client
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
