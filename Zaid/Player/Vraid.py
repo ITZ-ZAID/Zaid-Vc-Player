@@ -191,7 +191,7 @@ async def vplay(c: Client, m: Message):
         if len(m.command) < 2:
             await m.reply_photo(
                      photo=f"{IMG_6}",
-                    caption="💬**Usage: /vraid Give a Title Ya Replied Video File to Raid in A Zaid**"
+                    caption="💬**Usage: /vraid Give a Title Ya Replied Video File to Raid in A Chat**"
                     ,
                       reply_markup=InlineKeyboardMarkup(
                     [
