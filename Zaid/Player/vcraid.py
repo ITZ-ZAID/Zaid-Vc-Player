@@ -1,3 +1,4 @@
+
 #forked from https://github.com/The-HellBot/ArrayCore
 
 import asyncio
@@ -18,7 +19,7 @@ from pytgcalls.types.input_stream.quality import (HighQualityAudio, HighQualityV
 
 from Zaid.queues import QUEUE, add_to_queue, get_queue, clear_queue
 
-from Zaid.main import call_py, bot
+from Zaid.main import call_py, bot as Zaid, Test
 from config import SUDO_USERS
 
 logging.basicConfig(level=logging.INFO)
@@ -36,20 +37,18 @@ aud_list = [
     "./Zaid/Audio/AUDIO8",
 ]
 
-Venom1 = call_py
 
-@bot.on_message(filters.user(SUDO_USERS) & filters.command(["vcraid"], prefixes=HNDLR))
+
+@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["vcraid"], prefixes=HNDLR))
 async def vcraid(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
-    if gid == uid:
-        inp = e.text[8:]
-        chat_ = await call_py.get_chat(inp)
-        chat_id = chat_.id
-    else:
-         chat_id = gid
+    inp = e.text.split(None, 2)[1]
+    chat = await Test.get_chat(inp)
+    chat_id = chat.id
     aud = choice(aud_list) 
-    if e.text[8:]:
+
+    if inp:
         Zaid = await e.reply_text("**Starting Raid**")
         link = f"https://zaid-robot.github.io/{aud[1:]}"
         dl = aud
@@ -57,22 +56,22 @@ async def vcraid(_, e: Message):
         if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await Zaid.delete()
-            await e.reply_text(f"**> Raiding in:** {chat_.title} \n\n**> Audio:** {songname} \n**> Position:** #{pos}")
+            await e.reply_text(f"**> Raiding in:** {chat.title} \n\n**> Audio:** {songname} \n**> Position:** #{pos}")
         else:
             if call_py:
                 await call_py.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await Zaid.delete()
-            await e.reply_text(f"**> Raiding in:** {chat_.title} \n\n**> Audio:** {songname} \n**> Position:** Ongoing Raid")
+            await e.reply_text(f"**> Raiding in:** {chat.title} \n\n**> Audio:** {songname} \n**> Position:** Ongoing Raid")
 
 
-@bot.on_message(filters.user(SUDO_USERS) & filters.command(["raidend"], prefixes=HNDLR))
+@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["raidend"], prefixes=HNDLR))
 async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
     if gid == uid:
-        inp = e.text[8:]
-        chat_ = await call_py.get_chat(inp)
+        inp = e.text.split(None, 2)[1]
+        chat_ = await Test.get_chat(inp)
         chat_id = chat_.id
     else:
          chat_id = gid
@@ -87,13 +86,13 @@ async def ping(_, e: Message):
         await e.reply_text("**No ongoing raid!**")
 
 
-@bot.on_message(filters.user(SUDO_USERS) & filters.command(["raidpause"], prefixes=HNDLR))
+@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["raidpause"], prefixes=HNDLR))
 async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
     if gid == uid:
-        inp = e.text[8:]
-        chat_ = await call_py.get_chat(inp)
+        inp = e.text.split(None, 2)[1]
+        chat_ = await Test.get_chat(inp)
         chat_id = chat_.id
     else:
          chat_id = gid
@@ -108,13 +107,13 @@ async def ping(_, e: Message):
         await e.reply_text("**No ongoing raid!**")
 
 
-@bot.on_message(filters.user(SUDO_USERS) & filters.command(["raidresume"], prefixes=HNDLR))
+@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["raidresume"], prefixes=HNDLR))
 async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
     if gid == uid:
-        inp = e.text[8:]
-        chat_ = await call_py.get_chat(inp)
+        inp = e.text.split(None, 2)[1]
+        chat_ = await Test.get_chat(inp)
         chat_id = chat_.id
     else:
          chat_id = gid
