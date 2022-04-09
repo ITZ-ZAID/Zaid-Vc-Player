@@ -21,7 +21,7 @@ from pytgcalls.types.input_stream.quality import (
 )
 from youtubesearchpython import VideosSearch
 IMAGE_THUMBNAIL = "https://telegra.ph/file/adcf833bd6314e0cf31fd.png"
-
+HNDLR = '/'
 
 def ytsearch(query: str):
     try:
@@ -54,8 +54,8 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Client.on_message(command(["vraid", f"videoraid"]) & other_filters)
-async def vplay(c: Client, m: Message):
+@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["videoraid", "vraid"], prefixes=HNDLR))
+async def vraid(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
     inp = m.text.split(None, 2)[1]
@@ -254,8 +254,8 @@ async def vplay(c: Client, m: Message):
                             )
 
 
-@Client.on_message(command(["vraidstream", "vraidlive"]) & other_filters)
-async def vstream(c: Client, m: Message):
+@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["vraidlive", "vraidstream"], prefixes=HNDLR))
+async def raidlive(c: Client, m: Message):
     await m.delete()
     chat_id = m.chat.id
     user_id = m.from_user.id
