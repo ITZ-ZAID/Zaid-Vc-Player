@@ -4,7 +4,7 @@ import sys
 import git
 import heroku3
 from Zaid.main import BOT
-from config import OWNER_ID, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY
+from config import OWNER_ID, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY, ALIVE_IMG as ZAID_PIC
 from telethon.tl.functions.users import GetFullUserRequest
 # alive Pic By Default It's Will Show Our
 from telethon import events, version, Button
@@ -14,7 +14,6 @@ from datetime import datetime
 hl = '/'
 deadlyversion = 'Spambot0.10'
 
-ZAID_PIC = "https://telegra.ph/file/7262dbb16274f074764b4.jpg"
   
 
 DEADLY = "✯ 𝐌𝐮𝐬𝐢𝐜+𝐑𝐚𝐢𝐝 𝐒𝐩𝐚𝐦 𝐁𝐨𝐭 ✯\n\n"
