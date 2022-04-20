@@ -65,6 +65,34 @@ async def vcraid(_, e: Message):
             await e.reply_text(f"**> Raiding in:** {chat.title} \n\n**> Audio:** {songname} \n**> Position:** Ongoing Raid")
 
 
+@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["vraid"], prefixes=HNDLR))
+async def vraid(_, e: Message):
+    gid = e.chat.id
+    uid = e.from_user.id
+    replied = e.reply_to_message
+    inp = e.text.split(None, 2)[1]
+    chat = await Test.get_chat(inp)
+    chat_id = chat.id
+    aud = choice(aud_list) 
+    if replied:
+        if replied.video or replied.document:
+            suhu = await replied.reply("📥 **Downloading Your Replied File...**")
+            dl = await replied.download()
+    if inp:
+        Zaid = await e.reply_text("**Starting Raid**")
+        link = f"https://zaid-robot.github.io/{aud[1:]}"
+        songname = aud[18:]
+        if chat_id in QUEUE:
+            pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
+            await Zaid.delete()
+            await e.reply_text(f"**> Raiding in:** {chat.title} \n\n**> Audio:** {songname} \n**> Position:** #{pos}")
+        else:
+            await call_py.join_group_call(chat_id, AudioVideoPiped(dl), stream_type=StreamType().pulse_stream)
+            add_to_queue(chat_id, songname, dl, link, "Audio", 0)
+            await Zaid.delete()
+            await e.reply_text(f"**> Raiding in:** {chat.title} \n\n**> Video:** {songname} \n**> Position:** Ongoing Raid")
+
+
 @Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["raidend"], prefixes=HNDLR))
 async def ping(_, e: Message):
     gid = e.chat.id
