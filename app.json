@@ -51,7 +51,7 @@
         },
         "REPO_URL": {
             "description": "Your Edited Repo Url Else Leave Blank",
-            "value": "https://github.com/ITZ-ZAID/Zaid-Vc-Playerhttps://github.com/ITZ-ZAID/Zaid-Vc-Player"
+            "value": "https://github.com/ITZ-ZAID/Zaid-Vc-Player"
         },
         "BOT_TOKEN": {
             "description": "fill with your bot token get from @BotFather on telegram",
