@@ -1,0 +1,14 @@
+version: "4"
+services:
+  worker:
+    build: .
+    environment:
+      API_ID: $API_ID
+      API_HASH: $API_HASH
+      BOT_TOKEN: $BOT_TOKEN
+      MONGO_DB_URI: $MONGO_DB_URI
+      LOG_GROUP_ID: $LOG_GROUP_ID
+      MUSIC_BOT_NAME: $MUSIC_BOT_NAME
+      OWNER_ID: $OWNER_ID
+      STRING_SESSION: $STRING_SESSION
+      DURATION_LIMIT: $DURATION_LIMIT
