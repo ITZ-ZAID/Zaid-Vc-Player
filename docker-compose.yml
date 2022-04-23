@@ -24,3 +24,9 @@ services:
       ALIVE_IMG: $ALIVE_IMG
       COMMAND_PREFIXES: $COMMAND_PREFIXES
       UPSTREAM_REPO: $UPSTREAM_REPO
+      IMG_1: $IMG_1
+      IMG_2: $IMG_2
+      IMG_3: $IMG_3
+      IMG_4: $IMG_4
+      IMG_5: $IMG_5
+      IMG_6: $IMG_6
