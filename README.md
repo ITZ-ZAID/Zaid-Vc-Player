@@ -46,6 +46,11 @@
 - **Love Raid**
 - **VcRaid**
 - **Video Raid**
+- **Skip, Pause, Resume, Stop feature**
+- **YouTube/Local/Live/m3u8 stream support**
+- **Control With Button support**
+- **Volume Control**
+- **Userbot Auto Join**
 
 ## 🔎 ꜱᴜᴘᴘᴏʀᴛ ɪɴʟɪɴᴇ ꜱᴇᴀʀᴄʜ
 
