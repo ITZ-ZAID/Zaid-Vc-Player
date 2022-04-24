@@ -126,7 +126,7 @@ Zaid@Windows~ $ cp sample.env .env
 
 ```console
 Zaid@Windows~ $ screen
-Zaid@Windows~ $ bash start
+Zaid@Windows~ $ python3 main.py
 ```
 
 ### ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ 💖
