@@ -2,6 +2,18 @@ import os
 import aiofiles
 import aiohttp
 from PIL import Image, ImageDraw, ImageFont
+from random import choice
+
+ZAID_IMG = [
+    "Process/ImageFont/Red.png",
+    "Process/ImageFont/Black.png",
+    "Process/ImageFont/Blue.png",
+    "Process/ImageFont/Grey.png",
+    "Process/ImageFont/Green.png",
+    "Process/ImageFont/Lightblue.png",
+    "Process/ImageFont/Lightred.png",
+    "Process/ImageFont/Purple.png",
+]
 
 
 def changeImageSize(maxWidth, maxHeight, image):
@@ -21,7 +33,8 @@ async def thumb(thumbnail, title, userid, ctitle):
                 await f.write(await resp.read())
                 await f.close()
     image1 = Image.open(f"search/thumb{userid}.png")
-    image2 = Image.open("Process/source/raichux.png")
+    images = choice(ZAID)
+    image2 = Image.open(images)
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
@@ -29,20 +42,10 @@ async def thumb(thumbnail, title, userid, ctitle):
     Image.alpha_composite(image5, image6).save(f"search/temp{userid}.png")
     img = Image.open(f"search/temp{userid}.png")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("Process/source/finalfont.ttf", 85)
-    font2 = ImageFont.truetype("Process/source/finalfont.ttf", 60)
-    draw.text(
-        (20, 46),
-        f"{title[:18]}...",
-        fill="black",
-        font=font2,
-    )
-    draw.text(
-        (25, 595),
-        f"Playing on {ctitle[:8]}...",
-        fill="black",
-        font=font,
-    )
+    font = ImageFont.truetype("Process/ImageFont/finalfont.ttf", 60)
+    font2 = ImageFont.truetype("Process/ImageFont/finalfont.ttf", 70)
+    draw.text((20, 46), f"{title[:30]}...", fill= "white", stroke_width = 1, stroke_fill="white", font=font2)
+    draw.text((120, 595), f"PLAYING ON: {ctitle[:20]}...", fill="white", stroke_width = 1, stroke_fill="white" ,font=font)
     img.save(f"search/final{userid}.png")
     os.remove(f"search/temp{userid}.png")
     os.remove(f"search/thumb{userid}.png")
