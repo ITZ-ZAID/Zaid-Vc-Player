@@ -9,7 +9,8 @@ from os import system, execle, environ
 from git.exc import InvalidGitRepositoryError
 
 from pyrogram.types import Message
-from pyrogram import Client, filters
+from pyrogram import filters
+from Zaid.main import bot as Client
 
 from config import UPSTREAM_REPO, BOT_USERNAME
 
