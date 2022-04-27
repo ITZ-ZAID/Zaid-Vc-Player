@@ -36,11 +36,17 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{START_PIC}",
-        caption=f"""**A Telegram Music Bot Based Mongodb.
- Add Me To Ur Chat For and Help and And Support Click On Buttons  ...
-💞  These Features A.I Based 
+        caption=f"""A Telegram Music Bot Based PyroGram.
+
+💞 **Main Features**
+~ Support Audio + Video Stream
+~ YouTube/Local/Live/m3u8 stream support
+~ Voice Raid / Video Raid
+~ Spam, Bigspam, Raid and LoveRaid
+~ Audio And Video Download from YouTube
+
 Powered By [ᴢᴀɪᴅ ʙᴏᴛꜱ](t.me/superior_bots) ...
-**""",
+""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
