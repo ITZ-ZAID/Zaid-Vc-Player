@@ -119,7 +119,7 @@ async def generate_cover(thumbnail, title, userid, ctitle):
     font = ImageFont.truetype("Process/ImageFont/finalfont.ttf", 60)
     font2 = ImageFont.truetype("Process/ImageFont/finalfont.ttf", 70)     
     draw.text((20, 45), f"{title[:30]}...", fill= "white", stroke_width = 1, stroke_fill="white", font=font2)
-    draw.text((120, 595), f"Playing on: {ctitle[:20]}...", fill="white", stroke_width = 1, stroke_fill="white" ,font=font)
+    draw.text((120, 595), f"PlAYING ON: {ctitle[:20]}...", fill="white", stroke_width = 1, stroke_fill="white" ,font=font)
     img.save(f"final{userid}.png")
     os.remove(f"temp{userid}.png")
     os.remove(f"thumb{userid}.png") 
