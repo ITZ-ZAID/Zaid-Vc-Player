@@ -28,7 +28,7 @@ from youtubesearchpython import VideosSearch
 import yt_dlp
 import yt_dlp
 
-FOREGROUND_IMG = [
+ZAID_IMGS = [
     "Process/ImageFont/Red.png",
     "Process/ImageFont/Black.png",
     "Process/ImageFont/Blue.png",
@@ -107,7 +107,8 @@ async def generate_cover(thumbnail, title, userid, ctitle):
                 await f.write(await resp.read())
                 await f.close()
     image1 = Image.open(f"thumb{userid}.png")
-    image2 = Image.open("Process/ImageFont/raichux.png")
+    images = choice(ZAID_IMGS)
+    image2 = Image.open(images)
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
