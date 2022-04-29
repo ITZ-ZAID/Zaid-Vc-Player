@@ -29,6 +29,7 @@ import yt_dlp
 import yt_dlp
 
 ZAID_IMGS = [
+    "Process/ImageFont/LightGreen.png",
     "Process/ImageFont/Red.png",
     "Process/ImageFont/Black.png",
     "Process/ImageFont/Blue.png",
@@ -37,6 +38,7 @@ ZAID_IMGS = [
     "Process/ImageFont/Lightblue.png",
     "Process/ImageFont/Lightred.png",
     "Process/ImageFont/Purple.png",
+    "Process/ImageFont/foreground.png",
 ]
 
 def ytsearch(query: str):
