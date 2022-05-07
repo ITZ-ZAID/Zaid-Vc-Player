@@ -17,7 +17,7 @@ apt update && apt upgrade -y
 apt install git -y
 _other_installs
 pip3 install -U pip
-git clone git+https://github.com/ITZ-ZAID/Zaid-Vc-Player@Zaid Zaid
+git clone git clone -b Zaid https://github.com/ITZ-ZAID/Zaid-Vc-Player.git Zaid
 cd Zaid
 pip3 install -U -r requirements.txt
 _externals
