@@ -73,7 +73,7 @@
 ### 🚀 Deploy Process
 - Click on the deploy button above and login to your [heroku account](https://heroku.com/login) .
 - Fill your values there.
-- If you don't know how to get config vars : [Please refer here](https://github.com/https://battelxlightning/Zaid-Vc-Player/blob/main/sample.env)
+- If you don't know how to get config vars : [Please refer here](https://github.com/https:/battelxlightning/Zaid-Vc-Player/blob/main/sample.env)
 - Make sure you fill correct values.
 - Click on **Deploy** button.
 - Please wait till the app gets deployed on heroku. Deploying can take upto **2-3 mins**..
