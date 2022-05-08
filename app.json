@@ -2,7 +2,7 @@
     "name": "Zaid Vc Player",
     "description": "Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["Zaid", "Zaid-Vc-Player", "music", "voice chat", "telegram", "Yukki", "Yukki Music", "Private Music"],
-    "repository": "https://github.com/ITZ-ZAID/Zaid-Vc-Player",
+    "repository": "https://github.com/https:/battelxlightning/Zaid-Vc-Player",
   "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -35,7 +35,7 @@
             "value": "Superior_Support"
         },
         "UPDATES_CHANNEL": {
-            "description": "Ur Updates Channel",
+            "description": "Your Updates Channel",
             "required": false,
             "value": "Superior_bots"
         },
@@ -57,21 +57,21 @@
 
     },
   "buildpacks": [
-        {
-            "url": "heroku/python"
-        },
-        {
-            "url": "heroku/nodejs"
-        },
-        {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-        }
-    ],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
-    },
-    "stack": "container"
-}
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "free"
+          }
+      },
+      "stack": "container"
+  }

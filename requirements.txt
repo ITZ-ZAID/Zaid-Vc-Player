@@ -1,10 +1,10 @@
 tgcrypto
 asyncio
 ffmpeg-python
-py-tgcalls[pyrogram]
-git+https://github.com/pyrogram/pyrogram@master
+py-tgcalls==0.8.1
+pyrogram==1.4.12
 youtube-search-python==1.4.9
-git+https://github.com/yt-dlp/yt-dlp@master
+yt-dlp==2021.12.01
 youtube-search
 python-dotenv
 dnspython
@@ -18,4 +18,6 @@ motor
 psutil
 future
 wget
-youtube-dl==2021.12.17
+pyyaml==5.3.1
+telethon
+speedtest-cli
