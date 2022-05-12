@@ -22,10 +22,12 @@
 
 <p align="center"><a href="https://t.me/StringSession_GeneratorBot"> <img src="https://img.shields.io/badge/String%20Session-black?style=for-the-badge&logo=replit" width="220" height="38.45"/></a></p>
 
-[![ɢᴇɴᴇʀᴀᴛᴇ ꜱᴇꜱꜱɪᴏɴ](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@BoooCreative/PyroStringSession#main.py)
-###   
-<a href="https://youtu.be/nQAyresJTC0"><img src="https://img.shields.io/badge/How%20To-Deploy-red.svg?logo=Youtube"></a>
 
+#
+
+<p align="center">𝐇𝐞𝐫𝐨𝐤𝐮 𝐃𝐞𝐩𝐥𝐨𝐲𝐦𝐞𝐧𝐭 𝐓𝐮𝐭𝐨𝐫𝐢𝐚𝐥</p>
+
+<p align="center"><a href="https://youtu.be/nQAyresJTC0"> <img src="https://img.shields.io/badge/Youtube%20Deploy-black?style=for-the-badge&logo=Tutorial" width="220" height="38.45"/></a></p>
 
 ## ᴄᴏᴍᴍᴀɴᴅꜱ 
 
