@@ -36,7 +36,7 @@
 
 ## ꜰᴇᴀᴛᴜʀᴇꜱ ᴡɪᴛʜ ᴀɪ 🔥️
 
-> Click on buttons below to expand and  detailed explanation features. !
+> There is the given all Features.. !
 
 - **ᴘʟᴀʏ ᴍᴜꜱɪᴄ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴠᴏɪᴄᴇ ᴄʜᴀᴛꜱ!** (ꜱᴜᴘᴘᴏʀᴛꜱ ᴍᴜʟᴛɪᴘʟᴇ ɢʀᴏᴜᴘꜱ)
 - **ꜱᴜᴘᴘᴏʀᴛꜱ Qᴜᴇᴜᴇꜱ!**
