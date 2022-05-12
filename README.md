@@ -34,7 +34,7 @@
 [CLICK HERE](https://t.me/SUPERIOR_BOTS/160)
 
 
-#### ꜰᴇᴀᴛᴜʀᴇꜱ ᴡɪᴛʜ ᴀɪ 🔥️
+## ꜰᴇᴀᴛᴜʀᴇꜱ ᴡɪᴛʜ ᴀɪ 🔥️
 
 > Here is the given all Features.. !
 
@@ -60,7 +60,7 @@
 - **Control With Button support**
 - **Volume Control**
 - **Userbot Auto Join**
-####
+</details>
 
 ## 🔎 ꜱᴜᴘᴘᴏʀᴛ ɪɴʟɪɴᴇ ꜱᴇᴀʀᴄʜ
 
