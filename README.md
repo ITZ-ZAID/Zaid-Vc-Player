@@ -36,7 +36,10 @@
 
 ## ꜰᴇᴀᴛᴜʀᴇꜱ ᴡɪᴛʜ ᴀɪ 🔥️
 
-> There is the given all Features.. !
+> Here is the given all Features.. !
+
+<details>
+    <summary><b> Click here to expand » </b></summary>
 
 - **ᴘʟᴀʏ ᴍᴜꜱɪᴄ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴠᴏɪᴄᴇ ᴄʜᴀᴛꜱ!** (ꜱᴜᴘᴘᴏʀᴛꜱ ᴍᴜʟᴛɪᴘʟᴇ ɢʀᴏᴜᴘꜱ)
 - **ꜱᴜᴘᴘᴏʀᴛꜱ Qᴜᴇᴜᴇꜱ!**
