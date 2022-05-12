@@ -105,7 +105,7 @@
 ## ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ 🚄
 ꜰᴏʀ ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ ᴍᴀᴋᴇ [Necessary Variables Here](https://github.com/ITZ-ZAID/Zaid-Vc-Player), ᴜ ʜᴀᴠᴇ ᴛᴏ ꜰɪʟʟ.
 
-<p align="center">[![ᴢᴀɪᴅ+ᴅᴇᴘʟᴏʏ+ᴏɴ+ʀᴀɪʟᴡᴀʏ](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/ITZ-ZAID/Music-Deploy&envs=SESSION_NAME,BOT_TOKEN,GROUP_SUPPORT,UPDATES_CHANNEL,API_ID,API_HASH,SUDO_USERS,DURATION_LIMIT)
+<p align="center"><a [![ᴢᴀɪᴅ+ᴅᴇᴘʟᴏʏ+ᴏɴ+ʀᴀɪʟᴡᴀʏ](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/ITZ-ZAID/Music-Deploy&envs=SESSION_NAME,BOT_TOKEN,GROUP_SUPPORT,UPDATES_CHANNEL,API_ID,API_HASH,SUDO_USERS,DURATION_LIMIT)
 
 
 <h2 align="center">
