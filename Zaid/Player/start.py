@@ -59,7 +59,7 @@ Powered By [ᴢᴀɪᴅ ʙᴏᴛꜱ](t.me/superior_bots) ...
                         "ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ", url=f"https://t.me/SUPERIOR_BOTS/160"
                     ),
                     InlineKeyboardButton(
-                        "ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://github.com/ITZ-ZAID/Zaid-Vc-Player"
+                        "ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://github.com/Skyy112/sky-vc-player"
                     )
                 ],
                 [
@@ -79,7 +79,7 @@ Powered By [ᴢᴀɪᴅ ʙᴏᴛꜱ](t.me/superior_bots) ...
 @Client.on_message(commandpro(["/start", "/stats"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/dd9ca2b2122dd68ffab0e.png",
+        photo=f"https://telegra.ph/file/b10503b594e3b660f5f23.jpg",
         caption=f"""Thanks For Adding Me To Ur Chat, For Any Query U Can Join Our Support Groups 🔥♥️""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -95,13 +95,13 @@ async def start(client: Client, message: Message):
 @Client.on_message(command(["repo", "source"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/92688f2c44a35ba673c23.png",
+        photo=f"https://telegra.ph/file/b10503b594e3b660f5f23.jpg",
         caption=f"""Here Is The Source Code Fork And Give Stars ✨""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        " ʀᴇᴘᴏ ⚒️", url=f"https://github.com/ITZ-ZAID/Zaid-Vc-Player")
+                        " ʀᴇᴘᴏ ⚒️", url=f"https://github.com/Skyy112/sky-vc-player")
                 ]
             ]
         ),
