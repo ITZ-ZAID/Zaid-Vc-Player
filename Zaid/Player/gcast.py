@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.errors import UserAlreadyParticipant
 import asyncio
 from config import SUDO_USERS
-from main import Test, bot as Client
+from Zaid.main import Test, bot as Client
 
 @Client.on_message(filters.command(["gcast", "broadcast"]))
 async def bye(client, message):
