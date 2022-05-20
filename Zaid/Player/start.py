@@ -3,7 +3,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors import MessageNotModified
-from main import Test, bot as Client
+from Zaid.main import Test, bot as Client
 from config import START_PIC
 
 
