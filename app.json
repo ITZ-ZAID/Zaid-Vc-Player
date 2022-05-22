@@ -32,12 +32,12 @@
         "GROUP_SUPPORT": {
             "description": "Ur Support Group Username",
             "required": false,
-            "value": "Superior_Support"
+            "value": "TheSupportChat"
         },
         "UPDATES_CHANNEL": {
             "description": "Your Updates Channel",
             "required": false,
-            "value": "Superior_bots"
+            "value": "TheUpdatesChannel"
         },
         "SUDO_USERS": {
             "description": "fill with the user id who can access all function in your bot (separate with space).",
