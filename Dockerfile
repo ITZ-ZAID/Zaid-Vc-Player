@@ -1,8 +1,9 @@
 FROM node:16-buster-slim
-FROM python:3.9.7-slim-buster
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install ffmpeg -y
-COPY . /app/
-WORKDIR /app/
-RUN pip3 install -U -r requirements.txt
-CMD python3 main.py
+FROM python:3.10-slim-buster
+WORKDIR /app
+RUN apt-get -y update
+RUN apt-get -y install git gcc python3-dev
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+COPY . .
+CMD [ "python3", "main.py"]
