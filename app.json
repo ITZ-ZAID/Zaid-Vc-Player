@@ -64,7 +64,7 @@
               "url": "https://github.com/ITZ-ZAID/Nodejs.git"
           },
           {
-              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+              "url": "https://github.com/ITZ-ZAID/ffmpeg.git"
           }
       ],
       "formation": {
