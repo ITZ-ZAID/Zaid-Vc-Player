@@ -19,7 +19,7 @@ motor
 psutil
 future
 wget
-pyyaml==5.3.1
+pyyaml
 telethon
 speedtest-cli
 deezer-python
