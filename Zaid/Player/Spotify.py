@@ -12,7 +12,9 @@ LOG_GROUP = None
 
 client = spotipy.Spotify(auth_manager=spotipy.oauth2.SpotifyClientCredentials())
 
-@bot.on_message(filters.regex(r'https?://open.spotify.com[^\s]+') & filters.private | filters.regex(r'https?://open.spotify.com[^\s]+') & filters.command(["spotify","spotdl"]) | filters.private & filters.regex(r"spotify:") & filters.group)
+
+
+@bot.on_message(filters.user(SUDO_USERS) & filters.command(["spotify"]))
 async def spotify_dl(_,message):
     link = message.matches[0].group(0)
     m = await message.reply_text(f"**Gathering info from your [link]({link}).**")
