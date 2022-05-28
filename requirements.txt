@@ -1,10 +1,10 @@
 tgcrypto
 asyncio
 ffmpeg-python
-py-tgcalls==0.8.1
-pyrogram==1.4.12
-git+https://github.com/ITZ-ZAID/yt-download@master
-youtube-search-python==1.4.9
+py-tgcalls
+pyrogram==1.4.15
+yt-dlp
+youtube-search-python
 youtube-search
 python-dotenv
 dnspython
