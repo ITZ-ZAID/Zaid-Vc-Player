@@ -7,7 +7,7 @@ from os import mkdir
 from random import randint
 AUTH_CHATS = None
 LOGGER = None
-LOG_GROUP = Nond
+LOG_GROUP = None
 client = spotipy.Spotify(auth_manager=spotipy.oauth2.SpotifyClientCredentials())
 
 @Mbot.on_message(filters.regex(r'https?://open.spotify.com[^\s]+') & filters.private | filters.regex(r'https?://open.spotify.com[^\s]+') & filters.command(["spotify","spotdl"]) | filters.private & filters.regex(r"spotify:") & filters.group)
