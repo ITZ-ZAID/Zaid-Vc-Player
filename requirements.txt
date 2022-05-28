@@ -9,6 +9,7 @@ youtube-search
 python-dotenv
 dnspython
 gitpython
+asgiref
 aiofiles
 aiohttp
 requests
