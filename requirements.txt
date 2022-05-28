@@ -22,3 +22,5 @@ wget
 pyyaml==5.3.1
 telethon
 speedtest-cli
+deezer-python
+spotipy
