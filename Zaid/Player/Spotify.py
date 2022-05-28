@@ -14,7 +14,7 @@ client = spotipy.Spotify(auth_manager=spotipy.oauth2.SpotifyClientCredentials())
 
 
 
-@bot.on_message(filters.command(["spotify"]))
+@bot.on_message(filters.regex(r'https?://open.spotify.com[^\s]+') & filters.command(["spotify"]))
 async def spotify_dl(_,message):
     link = message.matches[0].group(0)
     m = await message.reply_text(f"**Gathering info from your [link]({link}).**")
