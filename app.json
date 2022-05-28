@@ -55,20 +55,5 @@
             "value": ""
         }
 
-    },
-  "buildpacks": [
-          {
-              "url": "heroku/python"
-          },
-          {
-              "url": "https://github.com/ITZ-ZAID/ffmpeg.git"
-          }
-      ],
-      "formation": {
-          "worker": {
-              "quantity": 1,
-              "size": "free"
-          }
-      },
-      "stack": "container"
+    }
   }
