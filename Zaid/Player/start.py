@@ -8,52 +8,52 @@ from config import START_PIC, UPDATES_CHANNEL, GROUP_SUPPORT
 
 
 ALIVE_PIC = START_PIC
-HOME_TEXT = "👋🏻 **Hi Sir [{}](tg://user?id={})** \n\n🤖 Im **Zaid Vc Player**. \n**I Can Stream Lives, Radios, Raid, Vc Raid, YouTube Videos & Telegram Video Files On Voice Chat Of Telegram Groups**"
+HOME_TEXT = "👋🏻 **ᴡᴇʟᴄᴏᴍᴇ [{}](tg://user?id={})** \n\n🤖 ɪᴍ **sʜᴀᴅᴏᴡ ᴛʜᴇᴍᴇᴅ ʀᴏʙᴏᴛ**. \n** ɪᴀᴍ ᴀ ɴᴇxᴛ ɢᴇɴᴇʀᴀᴛɪᴏɴ ᴍᴜsɪᴄ ʀᴏʙᴏᴛ ᴡɪᴛʜ ᴄᴏʟʟ ғᴇᴀᴛᴜʀᴇs ɪ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ & ʀᴀᴅɪᴏ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ**"
 HELP_TEXT = """
 🏷️ **sᴇᴛᴜᴘ ɢᴜɪᴅᴇ** :
 
-\u2022 sᴛᴀʀᴛ ᴀ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
-\u2022 ᴀᴅᴅ ʙᴏᴛ ᴀɴᴅ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ɪɴ ᴄʜᴀᴛ ᴡɪᴛʜ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.
+\u2022 sᴛᴀʀᴛ ᴀ ᴠᴏɪᴄᴇ  ᴄʜᴀᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
+\u2022 ᴀᴅᴅ ʙᴏᴛ  ɪɴ ᴄʜᴀᴛ ᴡɪᴛʜ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.
 \u2022 ᴅᴏɴᴇ sᴇᴛᴜᴘ ᴘʀᴏᴄᴇss ʀᴇᴀᴅ ᴄᴏᴍᴍᴀɴᴅs ʙᴇʟᴏᴡ 👇.
 """
 
 
 
 USER_TEXT = """
-🏷️ **ᴜsᴇʀs ᴄᴏᴍᴍᴀɴᴅs** :
+🏷️ **Users Commands** :
 
 \u2022 /play <Query> ᴛᴏ ᴘʟᴀʏ ᴀ sᴏɴɢ.
 \u2022 /vplay <Query> ᴛᴏ ᴘʟᴀʏ ᴠɪᴅᴇᴏ.
-\u2022 /stream <Live Url> ᴛᴏ ᴘʟᴀʏ ʟɪᴠᴇ sᴛʀᴇᴀᴍs 👇\n /song ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴀᴜᴅɪᴏ ғɪʟᴇ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ. \n /video ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ\n /lyric ᴛᴏ ғɪɴᴅ ʟʏʀɪᴄs.
+\u2022 /stream <Live Url> ᴛᴏ ᴘʟᴀʏ ʟɪᴠᴇ sᴛʀᴇᴀᴍs 👇\n /song ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴀᴜᴅɪᴏ ғɪʟᴇ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ. \n /video ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ\n /lyric ᴛᴏ ғɪɴᴅ sᴏɴɢ.
 """
 
 SPAM_TEXT = """
-🏷️ **sᴘᴀᴍ ʜᴇʟᴘ @adminsOnly** :
+🏷️ **Spam Help @adminsOnly** :
 
-\u2022 /spam <Count> ᴛᴇxᴛ ᴛᴏ sᴘᴀᴍ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ.
-\u2022 /fspam <Count> ᴛᴇxᴛ ғᴏʀ sᴘᴀᴍᴍɪɴɢ.
-\u2022 /delayspam <Count> ᴛᴇxᴛ ғᴏʀ sᴘᴀᴍᴍɪɴɢ.
+\u2022 /spam <Count> Text To Spam Your Message.
+\u2022 /fspam <Count> Text for spamming.
+\u2022 /delayspam <Count> Text for Spamming.
 """
 
 RAID_TEXT = """
-🏷️ **ʀᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅs @SudoOnly** :
+🏷️ **Raid Commands @SudoOnly** :
 
-\u2022 /vcraid <chatid> - ɢɪᴠᴇ ᴀ ᴄʜᴀᴛ ɪᴅ ᴇʟsᴇ ᴜsᴇʀɴᴀᴍᴇ ᴛᴏ ᴠᴏɪᴄᴇ ʀᴀɪᴅ.
-\u2022 /vraid <chatid + ʀᴇᴘʟʏ ᴛᴏ ᴠɪᴅᴇᴏ ғɪʟᴇ> - ᴛᴏ ʀᴀɪᴅ ᴠɪᴅᴇᴏ.
-\u2022 /raidpause - ᴛᴏ ᴘᴀᴜsᴇ ʀᴀɪᴅ.
-\u2022 /raidresume ᴛᴏ ʀᴇsᴜᴍᴇ ʀᴀɪᴅ.
-\u2022 /raidend <chatid> ᴛᴏ ᴇɴᴅ ᴀᴜᴅɪᴏ/ᴠɪᴅᴇᴏ ʀᴀɪᴅ.
+\u2022 /vcraid <chatid> - Give a Chat Id Else Username To Voice Raid.
+\u2022 /vraid <chatid + Reply To Video File> - To Raid Video.
+\u2022 /raidpause - To Pause Raid.
+\u2022 /raidresume To Resume Raid.
+\u2022 /raidend <chatid> To End Audio/Video Raid.
 """
 
 ADMIN = """
-🏷️ **ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs** :
+🏷️ **admin Commands** :
 
-\u2022 /userbotjoin ᴛᴏ ɪɴᴠɪᴛᴇ ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.
-\u2022 /end ᴛᴏ ᴇɴᴅ sᴛʀᴇᴀᴍɪɴɢ.
-\u2022 /pause ᴛᴏ ᴘᴀᴜsᴇ sᴛʀᴇᴀᴍ.
-\u2022 /resume ᴛᴏ ʀᴇsᴜᴍᴇ sᴛʀᴇᴀᴍ.
-\u2022 /volume ᴛᴏ sᴇᴛ ᴠᴏʟᴜᴍᴇ.
-\u2022 /skip ᴛᴏ sᴋɪᴘ ᴛʀᴀᴄᴋs.
+\u2022 /userbotjoin To Invite Assistant To Your Chat.
+\u2022 /end To End Streaming.
+\u2022 /pause To Pause Stream.
+\u2022 /resume To Resume Stream.
+\u2022 /volume To Set Volume.
+\u2022 /skip To Skip Tracks.
 """
 
 @Client.on_callback_query()
@@ -61,16 +61,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
     if query.data=="help":
         buttons = [
             [
-                InlineKeyboardButton("ᴀᴅᴍɪɴ", url="https://telegra.ph/𝗕ooo--‌ᴀꜰᴋ-ᴏꜰꜰʟɪɴᴇ-05-17-2"),
-                InlineKeyboardButton("ᴜsᴇʀs", callback_data="users"),
+                InlineKeyboardButton("👮 Aᴅᴍɪɴꜱ", url="https://telegra.ph/𝗕ooo--‌ᴀꜰᴋ-ᴏꜰꜰʟɪɴᴇ-05-17-2"),
+                InlineKeyboardButton("🗨️ Uꜱᴇʀꜱ", callback_data="users"),
             ],
             [
-                InlineKeyboardButton("ʀᴀɪᴅᴏ", callback_data="raid"),
-                InlineKeyboardButton("sᴘᴀᴍ 👻", callback_data="spam"),
+                InlineKeyboardButton("🤬 Rᴀɪᴅ", callback_data="raid"),
+                InlineKeyboardButton("🗨️ Sᴘᴀᴍ", callback_data="spam"),
             ],
             [
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="home"),
-                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close"),
+                InlineKeyboardButton("🤖 Cʟᴏɴᴇʀ", url="t.me/ZaidClonerBot"),
+            ],
+            [
+                InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="home"),
+                InlineKeyboardButton("🤷 Cʟᴏꜱᴇ", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -87,13 +90,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         USERNAME = get_me.username
         buttons = [
             [
-                InlineKeyboardButton("sʜᴀᴅᴏᴡ ᴄᴏᴍᴍᴀɴᴅs & ʜᴇʟᴘ", callback_data="help"),
+                InlineKeyboardButton("🧐 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ", url='https://t.me/{USERNAME}?startgroup=true'),
             ],
             [
-                InlineKeyboardButton("ᴛɢ-ᴏғғɪᴄᴀʟ", url="https://t.me/tgshadow_fighters"),
+                InlineKeyboardButton("💌 Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("🏷️ Cʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
             ],
             [
-                InlineKeyboardButton("✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url='https://t.me/{USERNAME}?startgroup=true'),
+                InlineKeyboardButton("🤖 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/Itz-Zaid/Zaid-Vc-Player"),
+            ],
+            [
+                InlineKeyboardButton("🤔 Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ", callback_data="help"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -108,8 +115,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="users":
         buttons = [
             [
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="help"),
-                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close"),
+                InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="help"),
+                InlineKeyboardButton("🤷 Cʟᴏꜱᴇ", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -124,8 +131,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="admins":
         buttons = [
             [
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="help"),
-                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close"),
+                InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="help"),
+                InlineKeyboardButton("🤷 Cʟᴏꜱᴇ", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -137,8 +144,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="raid":
         buttons = [
             [
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="help"),
-                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close"),
+                InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="help"),
+                InlineKeyboardButton("🤷 Cʟᴏꜱᴇ", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -153,8 +160,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="spam":
         buttons = [
             [
-                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="help"),
-                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close"),
+                InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="help"),
+                InlineKeyboardButton("🤷 Cʟᴏꜱᴇ", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -180,13 +187,17 @@ async def start(client: Client, message: Message):
     USERNAME = get_me.username
     buttons = [
             [
-                InlineKeyboardButton("sʜᴀᴅᴏᴡ ᴄᴏᴍᴍᴀɴᴅs & ʜᴇʟᴘ", callback_data="help"),
+                InlineKeyboardButton("🧐 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ", url=f'https://t.me/{USERNAME}?startgroup=true'),
             ],
             [
-                InlineKeyboardButton("ᴛɢ-ᴏғғɪᴄᴀʟ", url="https://t.me/tgshadow_fighters"),
+                InlineKeyboardButton("💌 Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("🏷️ Oꜰꜰɪᴄɪᴀʟ Cʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
             ],
             [
-                InlineKeyboardButton("✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url='https://t.me/{USERNAME}?startgroup=true'),
+                InlineKeyboardButton("🤖 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/Itz-Zaid/Zaid-Vc-Player"),
+            ],
+            [
+                InlineKeyboardButton("🤔 Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ", callback_data="help"),
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -198,16 +209,19 @@ async def help(client: Client, message: Message):
     self.username = get_me.username
     buttons = [
             [
-                InlineKeyboardButton("ᴀᴅᴍɪɴ", url="https://telegra.ph/𝗕ooo--‌ᴀꜰᴋ-ᴏꜰꜰʟɪɴᴇ-05-17-2"),
-                InlineKeyboardButton("ᴜsᴇʀs", callback_data="users"),
+                InlineKeyboardButton("👮 Aᴅᴍɪɴꜱ", url="https://telegra.ph/𝗕ooo--‌ᴀꜰᴋ-ᴏꜰꜰʟɪɴᴇ-05-17-2"),
+                InlineKeyboardButton("🗨️ Uꜱᴇʀꜱ", callback_data="users"),
             ],
             [
-                InlineKeyboardButton("ʀᴀɪᴅᴏ", callback_data="raid"),
-                InlineKeyboardButton("sᴘᴀᴍ 👻", callback_data="spam"),
+                InlineKeyboardButton("🤬 Rᴀɪᴅ", callback_data="raid"),
+                InlineKeyboardButton("🗨️ Sᴘᴀᴍ", callback_data="spam"),
             ],
             [
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="home"),
-                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close"),
+                InlineKeyboardButton("🤖 Cʟᴏɴᴇʀ", url="t.me/ZaidClonerBot"),
+            ],
+            [
+                InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="home"),
+                InlineKeyboardButton("🤷 Cʟᴏꜱᴇ", callback_data="close"),
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
