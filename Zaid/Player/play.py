@@ -140,8 +140,8 @@ async def play(c: Client, m: Message):
                   [[
                       InlineKeyboardButton("▷", callback_data="cbstop"),
                       InlineKeyboardButton("II", callback_data="cbpause"),
-                      InlineKeyboardButton("⏭", "skip"),
-                      InlineKeyboardButton("▶", callback_data="cbresume"),
+                      InlineKeyboardButton("‣‣I", "skip"),
+                      InlineKeyboardButton("▢", callback_data="cbresume"),
                   ],[
                       InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls")],
                   ]
@@ -239,7 +239,7 @@ async def play(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_2}",
-                    caption=f"🏷 **ɴᴀᴍᴇ:** [{songname}]({link})\n💭 **ᴄʜᴀᴛ:** `{chat_id}`\n💡 **sᴛᴀᴛᴜs:** `ᴘʟᴀʏɪɴɢ`\n🎧 **ʀᴇǫᴜᴇsᴛ ʙʏ:** {requester}\n📹 **sᴛʀᴇᴀᴍ ᴛʏᴘᴇ:** `ᴍᴜsɪᴄ`",
+                    caption=f"🏷 **name:** [{songname}]({link})\n💭 **chat:** `{chat_id}`\n💡 **status:** `playing`\n🎧 **request by:** {requester}\n📹 **stream type:** `Music`",
                     reply_markup=keyboard, 
                 )
              except Exception as e:
