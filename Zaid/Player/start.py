@@ -10,50 +10,50 @@ from config import START_PIC, UPDATES_CHANNEL, GROUP_SUPPORT
 ALIVE_PIC = START_PIC
 HOME_TEXT = "👋🏻 **Hi Sir [{}](tg://user?id={})** \n\n🤖 Im **Zaid Vc Player**. \n**I Can Stream Lives, Radios, Raid, Vc Raid, YouTube Videos & Telegram Video Files On Voice Chat Of Telegram Groups**"
 HELP_TEXT = """
-🏷️ **Setup Guide** :
+🏷️ **sᴇᴛᴜᴘ ɢᴜɪᴅᴇ** :
 
-\u2022 Start a voice chat in your group.
-\u2022 Add bot and user account in chat with admin rights.
-\u2022 Done Setup Process Read Commands Below 👇.
+\u2022 sᴛᴀʀᴛ ᴀ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
+\u2022 ᴀᴅᴅ ʙᴏᴛ ᴀɴᴅ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ɪɴ ᴄʜᴀᴛ ᴡɪᴛʜ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.
+\u2022 ᴅᴏɴᴇ sᴇᴛᴜᴘ ᴘʀᴏᴄᴇss ʀᴇᴀᴅ ᴄᴏᴍᴍᴀɴᴅs ʙᴇʟᴏᴡ 👇.
 """
 
 
 
 USER_TEXT = """
-🏷️ **Users Commands** :
+🏷️ **ᴜsᴇʀs ᴄᴏᴍᴍᴀɴᴅs** :
 
-\u2022 /play <Query> To Play a Song.
-\u2022 /vplay <Query> To Play Video.
-\u2022 /stream <Live Url> To Play Live Streams 👇\n /song To Download A Audio file from YouTube. \n /video to download Video From YouTube\n /lyric to find Lyrics.
+\u2022 /play <Query> ᴛᴏ ᴘʟᴀʏ ᴀ sᴏɴɢ.
+\u2022 /vplay <Query> ᴛᴏ ᴘʟᴀʏ ᴠɪᴅᴇᴏ.
+\u2022 /stream <Live Url> ᴛᴏ ᴘʟᴀʏ ʟɪᴠᴇ sᴛʀᴇᴀᴍs 👇\n /song ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴀᴜᴅɪᴏ ғɪʟᴇ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ. \n /video ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ\n /lyric ᴛᴏ ғɪɴᴅ ʟʏʀɪᴄs.
 """
 
 SPAM_TEXT = """
-🏷️ **Spam Help @adminsOnly** :
+🏷️ **sᴘᴀᴍ ʜᴇʟᴘ @adminsOnly** :
 
-\u2022 /spam <Count> Text To Spam Your Message.
-\u2022 /fspam <Count> Text for spamming.
-\u2022 /delayspam <Count> Text for Spamming.
+\u2022 /spam <Count> ᴛᴇxᴛ ᴛᴏ sᴘᴀᴍ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ.
+\u2022 /fspam <Count> ᴛᴇxᴛ ғᴏʀ sᴘᴀᴍᴍɪɴɢ.
+\u2022 /delayspam <Count> ᴛᴇxᴛ ғᴏʀ sᴘᴀᴍᴍɪɴɢ.
 """
 
 RAID_TEXT = """
-🏷️ **Raid Commands @SudoOnly** :
+🏷️ **ʀᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅs @SudoOnly** :
 
-\u2022 /vcraid <chatid> - Give a Chat Id Else Username To Voice Raid.
-\u2022 /vraid <chatid + Reply To Video File> - To Raid Video.
-\u2022 /raidpause - To Pause Raid.
-\u2022 /raidresume To Resume Raid.
-\u2022 /raidend <chatid> To End Audio/Video Raid.
+\u2022 /vcraid <chatid> - ɢɪᴠᴇ ᴀ ᴄʜᴀᴛ ɪᴅ ᴇʟsᴇ ᴜsᴇʀɴᴀᴍᴇ ᴛᴏ ᴠᴏɪᴄᴇ ʀᴀɪᴅ.
+\u2022 /vraid <chatid + ʀᴇᴘʟʏ ᴛᴏ ᴠɪᴅᴇᴏ ғɪʟᴇ> - ᴛᴏ ʀᴀɪᴅ ᴠɪᴅᴇᴏ.
+\u2022 /raidpause - ᴛᴏ ᴘᴀᴜsᴇ ʀᴀɪᴅ.
+\u2022 /raidresume ᴛᴏ ʀᴇsᴜᴍᴇ ʀᴀɪᴅ.
+\u2022 /raidend <chatid> ᴛᴏ ᴇɴᴅ ᴀᴜᴅɪᴏ/ᴠɪᴅᴇᴏ ʀᴀɪᴅ.
 """
 
 ADMIN = """
-🏷️ **admin Commands** :
+🏷️ **ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs** :
 
-\u2022 /userbotjoin To Invite Assistant To Your Chat.
-\u2022 /end To End Streaming.
-\u2022 /pause To Pause Stream.
-\u2022 /resume To Resume Stream.
-\u2022 /volume To Set Volume.
-\u2022 /skip To Skip Tracks.
+\u2022 /userbotjoin ᴛᴏ ɪɴᴠɪᴛᴇ ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.
+\u2022 /end ᴛᴏ ᴇɴᴅ sᴛʀᴇᴀᴍɪɴɢ.
+\u2022 /pause ᴛᴏ ᴘᴀᴜsᴇ sᴛʀᴇᴀᴍ.
+\u2022 /resume ᴛᴏ ʀᴇsᴜᴍᴇ sᴛʀᴇᴀᴍ.
+\u2022 /volume ᴛᴏ sᴇᴛ ᴠᴏʟᴜᴍᴇ.
+\u2022 /skip ᴛᴏ sᴋɪᴘ ᴛʀᴀᴄᴋs.
 """
 
 @Client.on_callback_query()
