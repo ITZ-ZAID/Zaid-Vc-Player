@@ -20,7 +20,7 @@ HELP_TEXT = """
 
 
 USER_TEXT = """
-🏷️ **Users Commands** :
+🏷️ **ᴜsᴇʀs ᴄᴏᴍᴍᴀɴᴅs** :
 
 \u2022 /play <Query> ᴛᴏ ᴘʟᴀʏ ᴀ sᴏɴɢ.
 \u2022 /vplay <Query> ᴛᴏ ᴘʟᴀʏ ᴠɪᴅᴇᴏ.
