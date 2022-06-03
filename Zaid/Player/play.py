@@ -314,7 +314,7 @@ async def play(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=image,
-                                caption=f"📡 ** **ɴᴀᴍᴇ:** [{songname[:𝟸𝟸]}]({url})/n🎧 **ʀᴇǫᴜᴇsᴛ ʙʏ:** {Requester}** {𝟶}",
+                                caption=f" **ɴᴀᴍᴇ:** [{songname[:𝟸𝟸]}]({url})/n🎧 **ʀᴇǫᴜᴇsᴛ ʙʏ:** {Requester}** {𝟶}",
                                 reply_markup=keyboard,
                             )
                         except Exception as ep:
