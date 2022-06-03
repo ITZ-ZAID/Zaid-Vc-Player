@@ -28,32 +28,32 @@ USER_TEXT = """
 """
 
 SPAM_TEXT = """
-🏷️ **Spam Help @adminsOnly** :
+🏷️ **sᴘᴀᴍ ʜᴇʟᴘ @adminsOnly** :
 
-\u2022 /spam <Count> Text To Spam Your Message.
-\u2022 /fspam <Count> Text for spamming.
-\u2022 /delayspam <Count> Text for Spamming.
+\u2022 /spam <Count> ᴛᴇxᴛ ᴛᴏ sᴘᴀᴍ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ.
+\u2022 /fspam <Count> ᴛᴇxᴛ ғᴏʀ sᴘᴀᴍᴍɪɴɢ.
+\u2022 /delayspam <Count> ᴛᴇxᴛ ғᴏʀ sᴘᴀᴍᴍɪɴɢ.
 """
 
 RAID_TEXT = """
-🏷️ **Raid Commands @SudoOnly** :
+🏷️ **ʀᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅs @SudoOnly** :
 
-\u2022 /vcraid <chatid> - Give a Chat Id Else Username To Voice Raid.
-\u2022 /vraid <chatid + Reply To Video File> - To Raid Video.
-\u2022 /raidpause - To Pause Raid.
-\u2022 /raidresume To Resume Raid.
-\u2022 /raidend <chatid> To End Audio/Video Raid.
+\u2022 /vcraid <chatid> - ɢɪᴠᴇ ᴀ ᴄʜᴀᴛ ɪᴅ ᴇʟsᴇ ᴜsᴇʀɴᴀᴍᴇ ᴛᴏ ᴠᴏɪᴄᴇ ʀᴀɪᴅ.
+\u2022 /vraid <chatid + ʀᴇᴘʟʏ ᴛᴏ ᴠɪᴅᴇᴏ ғɪʟᴇ> - ᴛᴏ ʀᴀɪᴅ ᴠɪᴅᴇᴏ.
+\u2022 /raidpause - ᴛᴏ ᴘᴀᴜsᴇ ʀᴀɪᴅ.
+\u2022 /raidresume ᴛᴏ ʀᴇsᴜᴍᴇ ʀᴀɪᴅ.
+\u2022 /raidend <chatid> ᴛᴏ ᴇɴᴅ ᴀᴜᴅɪᴏ/ᴠɪᴅᴇᴏ ʀᴀɪᴅ.
 """
 
 ADMIN = """
-🏷️ **admin Commands** :
+🏷️ **ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs** :
 
-\u2022 /userbotjoin To Invite Assistant To Your Chat.
-\u2022 /end To End Streaming.
-\u2022 /pause To Pause Stream.
-\u2022 /resume To Resume Stream.
-\u2022 /volume To Set Volume.
-\u2022 /skip To Skip Tracks.
+\u2022 /userbotjoin ᴛᴏ ɪɴᴠɪᴛᴇ ᴀssɪsᴛᴀɴᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ.
+\u2022 /end ᴛᴏ ᴇɴᴅ sᴛʀᴇᴀᴍɪɴɢ.
+\u2022 /pause ᴛᴏ ᴘᴀᴜsᴇ sᴛʀᴇᴀᴍ.
+\u2022 /resume ᴛᴏ ʀᴇsᴜᴍᴇ sᴛʀᴇᴀᴍ.
+\u2022 /volume ᴛᴏ sᴇᴛ ᴠᴏʟᴜᴍᴇ.
+\u2022 /skip ᴛᴏ sᴋɪᴘ ᴛʀᴀᴄᴋs.
 """
 
 @Client.on_callback_query()
@@ -61,19 +61,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
     if query.data=="help":
         buttons = [
             [
-                InlineKeyboardButton("👮 Aᴅᴍɪɴꜱ", url="https://telegra.ph/𝗕ooo--‌ᴀꜰᴋ-ᴏꜰꜰʟɪɴᴇ-05-17-2"),
-                InlineKeyboardButton("🗨️ Uꜱᴇʀꜱ", callback_data="users"),
+                InlineKeyboardButton("ᴀᴅᴍɪɴs", url="https://telegra.ph/𝗕ooo--‌ᴀꜰᴋ-ᴏꜰꜰʟɪɴᴇ-05-17-2"),
+                InlineKeyboardButton("ᴜsᴇʀs", callback_data="users"),
             ],
             [
-                InlineKeyboardButton("🤬 Rᴀɪᴅ", callback_data="raid"),
-                InlineKeyboardButton("🗨️ Sᴘᴀᴍ", callback_data="spam"),
+                InlineKeyboardButton("ʀᴀᴅɪᴏ", callback_data="raid"),
+                InlineKeyboardButton("sᴘᴀᴍ 👻", callback_data="spam"),
             ],
             [
-                InlineKeyboardButton("🤖 Cʟᴏɴᴇʀ", url="t.me/ZaidClonerBot"),
-            ],
-            [
-                InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="home"),
-                InlineKeyboardButton("🤷 Cʟᴏꜱᴇ", callback_data="close"),
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="home"),
+                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -208,20 +205,17 @@ async def help(client: Client, message: Message):
     get_me = await client.get_me()
     self.username = get_me.username
     buttons = [
-            [
-                InlineKeyboardButton("👮 Aᴅᴍɪɴꜱ", url="https://telegra.ph/𝗕ooo--‌ᴀꜰᴋ-ᴏꜰꜰʟɪɴᴇ-05-17-2"),
-                InlineKeyboardButton("🗨️ Uꜱᴇʀꜱ", callback_data="users"),
+               [
+                InlineKeyboardButton("ᴀᴅᴍɪɴs", url="https://telegra.ph/𝗕ooo--‌ᴀꜰᴋ-ᴏꜰꜰʟɪɴᴇ-05-17-2"),
+                InlineKeyboardButton("ᴜsᴇʀs", callback_data="users"),
             ],
             [
-                InlineKeyboardButton("🤬 Rᴀɪᴅ", callback_data="raid"),
-                InlineKeyboardButton("🗨️ Sᴘᴀᴍ", callback_data="spam"),
+                InlineKeyboardButton("ʀᴀᴅɪᴏ", callback_data="raid"),
+                InlineKeyboardButton("sᴘᴀᴍ 👻", callback_data="spam"),
             ],
             [
-                InlineKeyboardButton("🤖 Cʟᴏɴᴇʀ", url="t.me/ZaidClonerBot"),
-            ],
-            [
-                InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="home"),
-                InlineKeyboardButton("🤷 Cʟᴏꜱᴇ", callback_data="close"),
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="home"),
+                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close"),
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
