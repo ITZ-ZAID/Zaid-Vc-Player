@@ -1,4 +1,5 @@
 ## What's up Kangers
+## Don't Kang without Creadits else I will rape your mom
 
 import os
 from os import getenv
@@ -10,10 +11,33 @@ if os.path.exists("local.env"):
 load_dotenv()
 admins = {}
 SESSION_NAME = getenv("SESSION_NAME", "")
+
+if str(getenv("STRING_SESSION2")).strip() == "":
+    SESSION2 = str(None)
+else:
+    SESSION2 = str(getenv("STRING_SESSION2", ""))
+
+if str(getenv("STRING_SESSION3")).strip() == "":
+    SESSION3 = str(None)
+else:
+    SESSION3 = str(getenv("STRING_SESSION3"))
+
+if str(getenv("STRING_SESSION4")).strip() == "":
+    SESSION4 = str(None)
+else:
+    SESSION4 = str(getenv("STRING_SESSION4"))
+
+if str(getenv("STRING_SESSION5")).strip() == "":
+    SESSION5 = str(None)
+else:
+    SESSION5 = str(getenv("STRING_SESSION5"))
+
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 BOT_NAME = getenv("BOT_NAME", "Umk")
+
 API_ID = int(getenv("API_ID", "8186557"))
 API_HASH = getenv("API_HASH", "efd77b34c69c164ce158037ff5a0d117")
+MONGO_DB_URL = getenv("MONGO_DB_URL", "")
 OWNER_NAME = getenv("OWNER_NAME", "Zaid")
 OWNER_USERNAME = getenv("OWNER_USERNAME", "Timesisnotwaiting")
 ALIVE_NAME = getenv("ALIVE_NAME", "Zaid")
