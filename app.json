@@ -9,10 +9,21 @@
             "description": "fill with the pyrogram session string from account",
             "required": true
         },
-        "ASSISTANT_NAME": {
-            "description": "fill with your telegram id as the owner of the bot",
-            "required": true,
-            "value": "Zaid_assistant"
+        "SESSION2": {
+            "description": "fill with the pyrogram session string from account",
+            "required": false
+        },
+        "SESSION3": {
+            "description": "fill with the pyrogram session string from account",
+            "required": false
+        },
+        "SESSION4": {
+            "description": "fill with the pyrogram session string from account",
+            "required": false
+        },
+        "SESSION5": {
+            "description": "fill with the pyrogram session string from account",
+            "required": false
         },
         "BOT_USERNAME": {
             "description": "fill with telegram id of account",
