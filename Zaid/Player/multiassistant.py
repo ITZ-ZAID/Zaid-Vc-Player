@@ -1,5 +1,5 @@
-#taken from yukki
-#Don't kang Without Creadits @TheUpdatesChannel
+#Taken From @TeamYukki
+#Don't kang Without Credits @TheUpdatesChannel
 
 import random
 
