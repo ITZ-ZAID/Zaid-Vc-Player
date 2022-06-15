@@ -7,7 +7,7 @@ from Process.design.thumbnail import thumb
 from Process.design.chatname import CHAT_TITLE
 from Zaid.filters import command, other_filters
 from Zaid.queues import QUEUE, add_to_queue
-from Zaid.main import call_py, Test as user
+from Zaid.main import call_py, Test as user, call_py2, call_py3, call_py4, call_py5
 from Zaid.main import bot as Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
@@ -19,6 +19,11 @@ from pytgcalls.types.input_stream.quality import (
     LowQualityVideo,
     MediumQualityVideo,
 )
+
+from Zaid.Database.active import *
+
+from Zaid.Database.clientdb import *
+from Zaid.Client.Joiner import *
 from youtubesearchpython import VideosSearch
 IMAGE_THUMBNAIL = "https://telegra.ph/file/adcf833bd6314e0cf31fd.png"
 
@@ -55,10 +60,13 @@ async def ytdl(link):
 
 
 @Client.on_message(command(["vplay", f"vplay@{BOT_USERNAME}"]) & other_filters)
+@AssistantAdd
 async def vplay(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
     chat_id = m.chat.id
+    _assistant = await get_assistant(chat_id, "assistant")
+    assistant = _assistant["saveassistant"]
     user_id = m.from_user.id
     if m.sender_chat:
         return await m.reply_text("you're an __Anonymous__ Admin !\n\n» revert back to user account from admin rights.")
@@ -87,31 +95,6 @@ async def vplay(c: Client, m: Message):
         "💡 To use me, Give me the following permission below:"
         + "\n\n» ❌ __Add users__\n\nOnce done, try again.")
         return
-    try:
-        ubot = (await user.get_me()).id
-        b = await c.get_chat_member(chat_id, ubot) 
-        if b.status == "kicked":
-            await c.unban_chat_member(chat_id, ubot)
-            invitelink = await c.export_chat_invite_link(chat_id)
-            if invitelink.startswith("https://t.me/+"):
-                    invitelink = invitelink.replace(
-                        "https://t.me/+", "https://t.me/joinchat/"
-                    )
-            await user.join_chat(invitelink)
-    except UserNotParticipant:
-        try:
-            invitelink = await c.export_chat_invite_link(chat_id)
-            if invitelink.startswith("https://t.me/+"):
-                    invitelink = invitelink.replace(
-                        "https://t.me/+", "https://t.me/joinchat/"
-                    )
-            await user.join_chat(invitelink)
-        except UserAlreadyParticipant:
-            pass
-        except Exception as e:
-            return await m.reply_text(
-                f"❌ **userbot failed to join**\n\n**reason**: `{e}`"
-            )
 
     if replied:
         if replied.video or replied.document:
@@ -155,15 +138,57 @@ async def vplay(c: Client, m: Message):
                 elif Q == 360:
                     amaze = LowQualityVideo()
                 await loser.edit("🔄 **Joining vc...**")
-                await call_py.join_group_call(
-                    chat_id,
-                    AudioVideoPiped(
-                        dl,
-                        HighQualityAudio(),
-                        amaze,
-                    ),
-                    stream_type=StreamType().local_stream,
-                )
+                if int(assistant) == 1:
+                   await call_py.join_group_call(
+                       chat_id,
+                       AudioVideoPiped(
+                           dl,
+                           HighQualityAudio(),
+                           amaze,
+                       ),
+                       stream_type=StreamType().local_stream,
+                   )
+                if int(assistant) == 2:
+                   await call_py2.join_group_call(
+                       chat_id,
+                       AudioVideoPiped(
+                           dl,
+                           HighQualityAudio(),
+                           amaze,
+                       ),
+                       stream_type=StreamType().local_stream,
+                   )
+                if int(assistant) == 3:
+                   await call_py3.join_group_call(
+                       chat_id,
+                       AudioVideoPiped(
+                           dl,
+                           HighQualityAudio(),
+                           amaze,
+                       ),
+                       stream_type=StreamType().local_stream,
+                   )
+                if int(assistant) == 4:
+                   await call_py4.join_group_call(
+                       chat_id,
+                       AudioVideoPiped(
+                           dl,
+                           HighQualityAudio(),
+                           amaze,
+                       ),
+                       stream_type=StreamType().local_stream,
+                   )
+                if int(assistant) == 5:
+                   await call_py5.join_group_call(
+                       chat_id,
+                       AudioVideoPiped(
+                           dl,
+                           HighQualityAudio(),
+                           amaze,
+                       ),
+                       stream_type=StreamType().local_stream,
+                   )
+                await add_active_video_chat(chat_id)
                 add_to_queue(chat_id, songname, dl, link, "Video", Q)
                 await loser.delete()
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
@@ -224,15 +249,57 @@ async def vplay(c: Client, m: Message):
                         else:
                             try:
                                 await loser.edit("🔄 **Joining vc...**")
-                                await call_py.join_group_call(
-                                    chat_id,
-                                    AudioVideoPiped(
-                                        ytlink,
-                                        HighQualityAudio(),
-                                        amaze,
-                                    ),
+                                if int(assistant) == 1:
+                                   await call_py.join_group_call(
+                                       chat_id,
+                                       AudioVideoPiped(
+                                           ytlink,
+                                           HighQualityAudio(),
+                                           amaze,
+                                       ),
                                     stream_type=StreamType().local_stream,
                                 )
+                                if int(assistant) == 2:
+                                   await call_py2.join_group_call(
+                                       chat_id,
+                                       AudioVideoPiped(
+                                           ytlink,
+                                           HighQualityAudio(),
+                                           amaze,
+                                       ),
+                                    stream_type=StreamType().local_stream,
+                                )
+                                if int(assistant) == 3:
+                                   await call_py3.join_group_call(
+                                       chat_id,
+                                       AudioVideoPiped(
+                                           ytlink,
+                                           HighQualityAudio(),
+                                           amaze,
+                                       ),
+                                    stream_type=StreamType().local_stream,
+                                )
+                                if int(assistant) == 4:
+                                   await call_py4.join_group_call(
+                                       chat_id,
+                                       AudioVideoPiped(
+                                           ytlink,
+                                           HighQualityAudio(),
+                                           amaze,
+                                       ),
+                                    stream_type=StreamType().local_stream,
+                                )
+                                if int(assistant) == 5:
+                                   await call_py5.join_group_call(
+                                       chat_id,
+                                       AudioVideoPiped(
+                                           ytlink,
+                                           HighQualityAudio(),
+                                           amaze,
+                                       ),
+                                    stream_type=StreamType().local_stream,
+                                )
+                                await add_active_video_chat(chat_id)
                                 add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                                 await loser.delete()
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
@@ -295,15 +362,57 @@ async def vplay(c: Client, m: Message):
                     else:
                         try:
                             await loser.edit("🔄 **Joining vc...**")
-                            await call_py.join_group_call(
-                                chat_id,
-                                AudioVideoPiped(
-                                    ytlink,
-                                    HighQualityAudio(),
-                                    amaze,
-                                ),
-                                stream_type=StreamType().local_stream,
-                            )
+                            if int(assistant) == 1:
+                               await call_py.join_group_call(
+                                   chat_id,
+                                   AudioVideoPiped(
+                                       ytlink,
+                                       HighQualityAudio(),
+                                       amaze,
+                                   ),
+                                   stream_type=StreamType().local_stream,
+                               )
+                            if int(assistant) == 2:
+                               await call_py2.join_group_call(
+                                   chat_id,
+                                   AudioVideoPiped(
+                                       ytlink,
+                                       HighQualityAudio(),
+                                       amaze,
+                                   ),
+                                   stream_type=StreamType().local_stream,
+                               )
+                            if int(assistant) == 3:
+                               await call_py3.join_group_call(
+                                   chat_id,
+                                   AudioVideoPiped(
+                                       ytlink,
+                                       HighQualityAudio(),
+                                       amaze,
+                                   ),
+                                   stream_type=StreamType().local_stream,
+                               )
+                            if int(assistant) == 4:
+                               await call_py4.join_group_call(
+                                   chat_id,
+                                   AudioVideoPiped(
+                                       ytlink,
+                                       HighQualityAudio(),
+                                       amaze,
+                                   ),
+                                   stream_type=StreamType().local_stream,
+                               )
+                            if int(assistant) == 5:
+                               await call_py5.join_group_call(
+                                   chat_id,
+                                   AudioVideoPiped(
+                                       ytlink,
+                                       HighQualityAudio(),
+                                       amaze,
+                                   ),
+                                   stream_type=StreamType().local_stream,
+                               )
+                            await add_active_video_chat(chat_id)
                             add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                             await loser.delete()
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
@@ -319,10 +428,13 @@ async def vplay(c: Client, m: Message):
 
 
 @Client.on_message(command(["vstream", "livestream", "stream"]) & other_filters)
+@AssistantAdd
 async def vstream(c: Client, m: Message):
     await m.delete()
     chat_id = m.chat.id
     user_id = m.from_user.id
+    _assistant = await get_assistant(chat_id, "assistant")
+    assistant = _assistant["saveassistant"]
     if m.sender_chat:
         return await m.reply_text("you're an __Anonymous__ Admin !\n\n» revert back to user account from admin rights.")
     try:
@@ -350,31 +462,6 @@ async def vstream(c: Client, m: Message):
         "💡 To use me, Give me the following permission below:"
         + "\n\n» ❌ __Add users__\n\nOnce done, try again.")
         return
-    try:
-        ubot = (await user.get_me()).id
-        b = await c.get_chat_member(chat_id, ubot) 
-        if b.status == "kicked":
-            await c.unban_chat_member(chat_id, ubot)
-            invitelink = await c.export_chat_invite_link(chat_id)
-            if invitelink.startswith("https://t.me/+"):
-                    invitelink = invitelink.replace(
-                        "https://t.me/+", "https://t.me/joinchat/"
-                    )
-            await user.join_chat(invitelink)
-    except UserNotParticipant:
-        try:
-            invitelink = await c.export_chat_invite_link(chat_id)
-            if invitelink.startswith("https://t.me/+"):
-                    invitelink = invitelink.replace(
-                        "https://t.me/+", "https://t.me/joinchat/"
-                    )
-            await user.join_chat(invitelink)
-        except UserAlreadyParticipant:
-            pass
-        except Exception as e:
-            return await m.reply_text(
-                f"❌ **userbot failed to join**\n\n**reason**: `{e}`"
-            )
 
     if len(m.command) < 2:
         await m.reply("» give me a live-link/m3u8 url/youtube link to stream.")
@@ -428,15 +515,57 @@ async def vstream(c: Client, m: Message):
                     amaze = LowQualityVideo()
                 try:
                     await loser.edit("🔄 **Joining vc...**")
-                    await call_py.join_group_call(
-                        chat_id,
-                        AudioVideoPiped(
-                            livelink,
-                            HighQualityAudio(),
-                            amaze,
-                        ),
-                        stream_type=StreamType().live_stream,
-                    )
+                    if int(assistant) == 1:
+                       await call_py.join_group_call(
+                           chat_id,
+                           AudioVideoPiped(
+                               livelink,
+                               HighQualityAudio(),
+                               amaze,
+                           ),
+                           stream_type=StreamType().live_stream,
+                       )
+                    if int(assistant) == 2:
+                       await call_py2.join_group_call(
+                           chat_id,
+                           AudioVideoPiped(
+                               livelink,
+                               HighQualityAudio(),
+                               amaze,
+                           ),
+                           stream_type=StreamType().live_stream,
+                       )
+                    if int(assistant) == 3:
+                       await call_py3.join_group_call(
+                           chat_id,
+                           AudioVideoPiped(
+                               livelink,
+                               HighQualityAudio(),
+                               amaze,
+                           ),
+                           stream_type=StreamType().live_stream,
+                       )
+                    if int(assistant) == 4:
+                       await call_py4.join_group_call(
+                           chat_id,
+                           AudioVideoPiped(
+                               livelink,
+                               HighQualityAudio(),
+                               amaze,
+                           ),
+                           stream_type=StreamType().live_stream,
+                       )
+                    if int(assistant) == 5:
+                       await call_py5.join_group_call(
+                           chat_id,
+                           AudioVideoPiped(
+                               livelink,
+                               HighQualityAudio(),
+                               amaze,
+                           ),
+                           stream_type=StreamType().live_stream,
+                       )
+                    await add_active_video_chat(chat_id)
                     add_to_queue(chat_id, "Live Stream", livelink, link, "Video", Q)
                     await loser.delete()
                     requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"

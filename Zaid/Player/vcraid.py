@@ -19,7 +19,7 @@ from pytgcalls.types.input_stream.quality import (HighQualityAudio, HighQualityV
 
 from Zaid.queues import QUEUE, add_to_queue, get_queue, clear_queue
 
-from Zaid.main import call_py, bot as Zaid, Test
+from Zaid.main import call_py, bot as Zaid, Test, call_py2, call_py3, call_py4, call_py5
 from config import SUDO_USERS
 
 logging.basicConfig(level=logging.INFO)
@@ -60,6 +60,14 @@ async def vcraid(_, e: Message):
         else:
             if call_py:
                 await call_py.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+            if call_py2:
+                await call_py2.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+            if call_py3:
+                await call_py3.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+            if call_py4:
+                await call_py4.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+            if call_py5:
+                await call_py5.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await Zaid.delete()
             await e.reply_text(f"**> Raiding in:** {chat.title} \n\n**> Audio:** {songname} \n**> Position:** Ongoing Raid")
@@ -87,7 +95,16 @@ async def vraid(_, e: Message):
             await Zaid.delete()
             await e.reply_text(f"**> Raiding in:** {chat.title} \n\n**> Audio:** {songname} \n**> Position:** #{pos}")
         else:
-            await call_py.join_group_call(chat_id, AudioVideoPiped(dl), stream_type=StreamType().pulse_stream)
+            if call_py:
+               await call_py.join_group_call(chat_id, AudioVideoPiped(dl), stream_type=StreamType().pulse_stream)
+            if call_py2:
+               await call_py2.join_group_call(chat_id, AudioVideoPiped(dl), stream_type=StreamType().pulse_stream)
+            if call_py3:
+               await call_py3.join_group_call(chat_id, AudioVideoPiped(dl), stream_type=StreamType().pulse_stream)
+            if call_py4:
+               await call_py4.join_group_call(chat_id, AudioVideoPiped(dl), stream_type=StreamType().pulse_stream)
+            if call_py5:
+               await call_py5.join_group_call(chat_id, AudioVideoPiped(dl), stream_type=StreamType().pulse_stream)
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await Zaid.delete()
             await e.reply_text(f"**> Raiding in:** {chat.title} \n\n**> Video:** {songname} \n**> Position:** Ongoing Raid")
@@ -107,6 +124,14 @@ async def ping(_, e: Message):
         try:
             if call_py:
                 await call_py.leave_group_call(chat_id)
+            if call_py2:
+                await call_py2.leave_group_call(chat_id)
+            if call_py3:
+                await call_py3.leave_group_call(chat_id)
+            if call_py4:
+                await call_py4.leave_group_call(chat_id)
+            if call_py5:
+                await call_py5.leave_group_call(chat_id)
             await e.reply_text("**VC Raid Ended!**")
         except Exception as ex:
             await e.reply_text(f"**ERROR** \n`{ex}`")
@@ -128,6 +153,14 @@ async def ping(_, e: Message):
         try:
             if call_py:
                 await call_py.pause_stream(chat_id)
+            if call_py2:
+                await call_py2.pause_stream(chat_id)
+            if call_py3:
+                await call_py3.pause_stream(chat_id)
+            if call_py4:
+                await call_py4.pause_stream(chat_id)
+            if call_py5:
+                await call_py5.pause_stream(chat_id)
             await e.reply_text(f"**VC Raid Paued In:** {chat_.title}")
         except Exception as e:
             await e.reply_text(f"**ERROR** \n`{e}`")
@@ -149,6 +182,14 @@ async def ping(_, e: Message):
         try:
             if call_py:
                 await call_py.resume_stream(chat_id)
+            if call_py2:
+                await call_py2.resume_stream(chat_id)
+            if call_py3:
+                await call_py3.resume_stream(chat_id)
+            if call_py4:
+                await call_py4.resume_stream(chat_id)
+            if call_py5:
+                await call_py5.resume_stream(chat_id)
             await e.reply_text(f"**VC Raid Resumed In {chat_.title}**")
         except Exception as e:
             await e.reply_text(f"**ERROR** \n`{e}`")
