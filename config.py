@@ -13,12 +13,12 @@ admins = {}
 if str(getenv("SESSION_NAME")).strip() == "":
     SESSION_NAME = str(None)
 else:
-    SESSION_NAME = str(getenv("SESSION_NAME", ""))
+    SESSION_NAME = str(getenv("SESSION_NAME"))
 
 if str(getenv("STRING_SESSION2")).strip() == "":
     SESSION2 = str(None)
 else:
-    SESSION2 = str(getenv("STRING_SESSION2", ""))
+    SESSION2 = str(getenv("STRING_SESSION2"))
 
 if str(getenv("STRING_SESSION3")).strip() == "":
     SESSION3 = str(None)
