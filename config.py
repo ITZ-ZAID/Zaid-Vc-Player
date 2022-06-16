@@ -10,12 +10,15 @@ if os.path.exists("local.env"):
 
 load_dotenv()
 admins = {}
-SESSION_NAME = getenv("SESSION_NAME", "")
+if str(getenv("SESSION_NAME")).strip() == "":
+    SESSION_NAME = str(None)
+else:
+    SESSION_NAME = str(getenv("SESSION_NAME"))
 
 if str(getenv("STRING_SESSION2")).strip() == "":
     SESSION2 = str(None)
 else:
-    SESSION2 = str(getenv("STRING_SESSION2", ""))
+    SESSION2 = str(getenv("STRING_SESSION2"))
 
 if str(getenv("STRING_SESSION3")).strip() == "":
     SESSION3 = str(None)
@@ -54,9 +57,9 @@ ALIVE_IMG = getenv("ALIVE_IMG", "https://telegra.ph/file/fc9d87ffd1c6f828eb7fc.p
 START_PIC = getenv("START_PIC", "https://telegra.ph/file/a414e2cdfeaa7d4414b89.png")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "60"))
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/ITZ-ZAID/Zaid-Vc-Player")
-IMG_1 = getenv("IMG_1", "https://telegra.ph/file/c540aac0249486854787b.png")
-IMG_2 = getenv("IMG_2", "https://telegra.ph/file/6f1cfec700087f6fcb391.png")
-IMG_3 = getenv("IMG_3", "https://telegra.ph/file/c3547532105a0cb67229d.png")
-IMG_4 = getenv("IMG_4", "https://telegra.ph/file/be5f551acb116292d15ec.png")
-IMG_5 = getenv("IMG_5", "https://telegra.ph/file/c3401a572375b569138c3.png")
-IMG_6 = getenv("IMG_6", "https://telegra.ph/file/c3401a572375b569138c3.png")
+PLAY_IMG = getenv("PLAY_IMG", "https://telegra.ph/file/10b1f781170b1e1867f68.png")
+QUE_IMG = getenv("QUE_IMG", "https://telegra.ph/file/b95c13eef1ebd14dbb458.png")
+CMD_IMG = getenv("CMD_IMG", "https://telegra.ph/file/66518ed54301654f0b126.png")
+VIDEO_IMG = getenv("VIDEO_IMG", "https://telegra.ph/file/6213d2673486beca02967.png")
+SKIP_IMG = getenv("SKIP_IMG", "https://telegra.ph/file/f02efde766160d3ff52d6.png")
+NEXT_IMG = getenv("NEXT_IMG", "https://telegra.ph/file/f02efde766160d3ff52d6.png")

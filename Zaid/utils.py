@@ -1,6 +1,7 @@
 import os
 import asyncio
 from Zaid.main import bot, call_py, call_py2, call_py3, call_py4, call_py5
+from config import NEXT_IMG
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from Zaid.queues import QUEUE, clear_queue, get_queue, pop_an_item
@@ -241,33 +242,80 @@ async def left_handler(_, chat_id: int):
 
 @call_py.on_stream_end()
 async def stream_end_handler(_, u: Update):
-    chat_id = u.chat_id
-    print(chat_id)
-    await skip_current_song(chat_id)
+    if isinstance(u, StreamAudioEnded):
+        chat_id = u.chat_id
+        print(chat_id)
+        op = await skip_current_song(chat_id)
+        if op==1:
+           await bot.send_message(chat_id, "✅ **userbot has disconnected from video chat.**")
+        elif op==2:
+           await bot.send_message(chat_id, "❌ **an error occurred**\n\n» **Clearing** __Queues__ **and leaving video chat.**")
+        else:
+         await bot.send_photo(chat_id, f"{NEXT_IMG}", caption=f"💡 **Streaming next track**\n\n🏷 **Name:** [{op[0]}]({op[1]}) | `{op[2]}`\n💭 **Chat:** `{chat_id}`", disable_web_page_preview=True, reply_markup=keyboard)
+    else:
+       pass
+
 
 @call_py2.on_stream_end()
 async def stream_end_handler(_, u: Update):
-    chat_id = u.chat_id
-    print(chat_id)
-    await skip_current_song(chat_id)
+    if isinstance(u, StreamAudioEnded):
+        chat_id = u.chat_id
+        print(chat_id)
+        op = await skip_current_song(chat_id)
+        if op==1:
+           await bot.send_message(chat_id, "✅ **userbot has disconnected from video chat.**")
+        elif op==2:
+           await bot.send_message(chat_id, "❌ **an error occurred**\n\n» **Clearing** __Queues__ **and leaving video chat.**")
+        else:
+         await bot.send_photo(chat_id, f"{NEXT_IMG}", caption=f"💡 **Streaming next track**\n\n🏷 **Name:** [{op[0]}]({op[1]}) | `{op[2]}`\n💭 **Chat:** `{chat_id}`", disable_web_page_preview=True, reply_markup=keyboard)
+    else:
+       pass
+
 
 @call_py3.on_stream_end()
 async def stream_end_handler(_, u: Update):
-    chat_id = u.chat_id
-    print(chat_id)
-    await skip_current_song(chat_id)
+    if isinstance(u, StreamAudioEnded):
+        chat_id = u.chat_id
+        print(chat_id)
+        op = await skip_current_song(chat_id)
+        if op==1:
+           await bot.send_message(chat_id, "✅ **userbot has disconnected from video chat.**")
+        elif op==2:
+           await bot.send_message(chat_id, "❌ **an error occurred**\n\n» **Clearing** __Queues__ **and leaving video chat.**")
+        else:
+         await bot.send_photo(chat_id, f"{NEXT_IMG}", caption=f"💡 **Streaming next track**\n\n🏷 **Name:** [{op[0]}]({op[1]}) | `{op[2]}`\n💭 **Chat:** `{chat_id}`", disable_web_page_preview=True, reply_markup=keyboard)
+    else:
+       pass
 
 @call_py4.on_stream_end()
 async def stream_end_handler(_, u: Update):
-    chat_id = u.chat_id
-    print(chat_id)
-    await skip_current_song(chat_id)
+    if isinstance(u, StreamAudioEnded):
+        chat_id = u.chat_id
+        print(chat_id)
+        op = await skip_current_song(chat_id)
+        if op==1:
+           await bot.send_message(chat_id, "✅ **userbot has disconnected from video chat.**")
+        elif op==2:
+           await bot.send_message(chat_id, "❌ **an error occurred**\n\n» **Clearing** __Queues__ **and leaving video chat.**")
+        else:
+         await bot.send_photo(chat_id, f"{NEXT_IMG}", caption=f"💡 **Streaming next track**\n\n🏷 **Name:** [{op[0]}]({op[1]}) | `{op[2]}`\n💭 **Chat:** `{chat_id}`", disable_web_page_preview=True, reply_markup=keyboard)
+    else:
+       pass
 
 @call_py5.on_stream_end()
 async def stream_end_handler(_, u: Update):
-    chat_id = u.chat_id
-    print(chat_id)
-    await skip_current_song(chat_id)
+    if isinstance(u, StreamAudioEnded):
+        chat_id = u.chat_id
+        print(chat_id)
+        op = await skip_current_song(chat_id)
+        if op==1:
+           await bot.send_message(chat_id, "✅ **userbot has disconnected from video chat.**")
+        elif op==2:
+           await bot.send_message(chat_id, "❌ **an error occurred**\n\n» **Clearing** __Queues__ **and leaving video chat.**")
+        else:
+         await bot.send_photo(chat_id, f"{NEXT_IMG}", caption=f"💡 **Streaming next track**\n\n🏷 **Name:** [{op[0]}]({op[1]}) | `{op[2]}`\n💭 **Chat:** `{chat_id}`", disable_web_page_preview=True, reply_markup=keyboard)
+    else:
+       pass
 
 
 async def bash(cmd):
