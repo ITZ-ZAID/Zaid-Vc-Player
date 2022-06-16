@@ -1,3 +1,4 @@
+
 import os
 import sys
 import random
@@ -25,42 +26,42 @@ BOT = TelegramClient('BOT', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
 if not SESSION_NAME:
    ASS_CLI_1 = None
-   call_py = None
 else:   
    ASS_CLI_1 = Client(SESSION_NAME, api_id=API_ID, api_hash=API_HASH)
-   call_py = PyTgCalls(ASS_CLI_1)
+   
 
 if not SESSION2:
    user = None
-   call_py2 = None
-
 else:
    user = Client(SESSION2, api_id=API_ID, api_hash=API_HASH)
-   call_py2 = PyTgCalls(user)
+   
 
 if not SESSION3:
    user3 = None
-   call_py3 = None
 else:
    user3 = Client(SESSION3, api_id=API_ID, api_hash=API_HASH)
-   call_py3 = PyTgCalls(user3)
 
 if not SESSION4:
    user4 = None
-   call_py4 = None
 else:
    user4 = Client(SESSION4, api_id=API_ID, api_hash=API_HASH)
-   call_py4 = PyTgCalls(user4)
+   
 
 if not SESSION5:
    user5 = None
-   call_py5 = None
 else:
    user5 = Client(SESSION5, api_id=API_ID, api_hash=API_HASH)
-   call_py5 = PyTgCalls(user5)
+
+
+call_py5 = PyTgCalls(user5)
 
 Test = ASS_CLI_1
 ASS_CLI_2 = user
+call_py = PyTgCalls(ASS_CLI_1)
+call_py2 = PyTgCalls(user)
+call_py3 = PyTgCalls(user3)
+call_py4 = PyTgCalls(user4)
+call_py5 = PyTgCalls(user5)
 
 ASSIDS = []
 ASSID1 = 0
