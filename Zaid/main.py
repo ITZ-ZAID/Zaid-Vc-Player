@@ -54,10 +54,10 @@ else:
 
 if not SESSION5:
    user5 = None
-   call_py = None
+   call_py5 = None
 else:
    user5 = Client(SESSION5, api_id=API_ID, api_hash=API_HASH)
-   call_py = PyTgCalls(user5)
+   call_py5 = PyTgCalls(user5)
 
 Test = ASS_CLI_1
 ASS_CLI_2 = user
