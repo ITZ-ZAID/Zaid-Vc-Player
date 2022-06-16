@@ -28,7 +28,7 @@ if not SESSION_NAME:
    call_py = None
 else:   
    ASS_CLI_1 = Client(SESSION_NAME, api_id=API_ID, api_hash=API_HASH)
-   call_py = PyTgCalls(Test)
+   call_py = PyTgCalls(ASS_CLI_1)
 
 if not SESSION2:
    user = None
