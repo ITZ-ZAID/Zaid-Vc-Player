@@ -573,7 +573,7 @@ async def vstream(c: Client, m: Message):
                     await m.reply_photo(
                         photo=f"{VIDEO_IMG}",
                         reply_markup=InlineKeyboardMarkup(buttons),
-                        caption=f"💡 **[__Live Streaming Started__]({link}) **\n\n💭 **Chat:** `{chat_id}`\n🧸 **Request by:** {requester}",
+                        caption=f"💡 **[__Live Streaming Started__]({link}) **\n\n💭 **Chatinfo:** `{chat_id}`\n🧸 **Request by:** {requester}",
                     )
                 except Exception as ep:
                     await loser.delete()
