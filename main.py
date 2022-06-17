@@ -1,6 +1,6 @@
 import asyncio
 from pytgcalls import idle
-from Zaid.Database import db
+#from Zaid.Database import db
 
 import os
 import sys
