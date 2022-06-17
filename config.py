@@ -61,7 +61,7 @@ BOT_NAME = getenv("BOT_NAME", "Sufian Srk bot")
 
 API_ID = int(getenv("API_ID", "8940184"))
 API_HASH = getenv("API_HASH", "d4c0543f2c95dc2098ec8d2802f808da")
-MONGO_DB_URL = getenv("MONGO_DB_URL", "mongodb+srv://Cloner:Cloner@cluster0.cgc6t.mongodb.net/?retryWrites=true&w=majority")
+MONGO_DB_URL = getenv("MONGO_DB_URL", "mongodb+srv://Srkbots:Srkbots@cluster0.vtb14.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 OWNER_NAME = getenv("OWNER_NAME", "sufian")
 OWNER_USERNAME = getenv("OWNER_USERNAME", "sufiansrk10")
 ALIVE_NAME = getenv("ALIVE_NAME", "Zaid")
