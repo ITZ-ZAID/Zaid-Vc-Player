@@ -1,17 +1,64 @@
 ## What's up Kangers
 
+## Don't Kang without Creadits else I will rape your mom
+
 import os
+
 from os import getenv
+
 from dotenv import load_dotenv
 
 if os.path.exists("local.env"):
+
     load_dotenv("local.env")
 
 load_dotenv()
+
 admins = {}
-SESSION_NAME = getenv("SESSION_NAME", "BACPQVZ6G7GHfiI-q0_Z29ecNYTYH3QmS5umJE9CLAF100kfKr7US0xas_sidWhyylYV_kZO81-WqNcIXF30k_u6ZWH2uQtSkgz1od4IBGiaBlZ2DFY3uekZfJIAAcNBPLpuaDcQgjGwyX0yGlf8rfH1zNszgB-K3pAFRD2f2am3rhyYz37_-mKBn6a4doWIBpqKPSu4ikaOS1_WPeZt69B6HDXRT1B6C373i5pqAZ30sSNvFhqhCGPVpdGObFyca_xbJEa8eM27uir1h3j7J2rhu_NILjnK6rbR3cXs8dQEmMtlbr_EAcvDsOlLq1K5BJJjlNZxpH4-5uHc8Noc5DJiebRCzwA")
+
+if str(getenv("SESSION_NAME")).strip() == "BACPQVZ6G7GHfiI-q0_Z29ecNYTYH3QmS5umJE9CLAF100kfKr7US0xas_sidWhyylYV_kZO81-WqNcIXF30k_u6ZWH2uQtSkgz1od4IBGiaBlZ2DFY3uekZfJIAAcNBPLpuaDcQgjGwyX0yGlf8rfH1zNszgB-K3pAFRD2f2am3rhyYz37_-mKBn6a4doWIBpqKPSu4ikaOS1_WPeZt69B6HDXRT1B6C373i5pqAZ30sSNvFhqhCGPVpdGObFyca_xbJEa8eM27uir1h3j7J2rhu_NILjnK6rbR3cXs8dQEmMtlbr_EAcvDsOlLq1K5BJJjlNZxpH4-5uHc8Noc5DJiebRCzwA":
+
+    SESSION_NAME = str(None)
+
+else:
+
+    SESSION_NAME = str(getenv("SESSION_NAME"))
+
+if str(getenv("STRING_SESSION2")).strip() == "":
+
+    SESSION2 = str(None)
+
+else:
+
+    SESSION2 = str(getenv("STRING_SESSION2"))
+
+if str(getenv("STRING_SESSION3")).strip() == "":
+
+    SESSION3 = str(None)
+
+else:
+
+    SESSION3 = str(getenv("STRING_SESSION3"))
+
+if str(getenv("STRING_SESSION4")).strip() == "":
+
+    SESSION4 = str(None)
+
+else:
+
+    SESSION4 = str(getenv("STRING_SESSION4"))
+
+if str(getenv("STRING_SESSION5")).strip() == "":
+
+    SESSION5 = str(None)
+
+else:
+
+    SESSION5 = str(getenv("STRING_SESSION5"))
+
 BOT_TOKEN = getenv("BOT_TOKEN", "1918533631:AAHEt5AGNmmSm-yHBTLs6rR4IFmFcstoShs")
 BOT_NAME = getenv("BOT_NAME", "Sufian Srk bot")
+
 API_ID = int(getenv("API_ID", "8940184"))
 API_HASH = getenv("API_HASH", "d4c0543f2c95dc2098ec8d2802f808da")
 OWNER_NAME = getenv("OWNER_NAME", "sufian")
