@@ -2,8 +2,8 @@ tgcrypto
 asyncio
 ffmpeg-python
 py-tgcalls
-pyrogram==1.4.15
-yt-dlp
+pyrogram==1.4.12
+yt-dlp==2021.11.10.1
 youtube-search-python
 youtube-search
 python-dotenv
@@ -22,6 +22,4 @@ wget
 pyyaml
 telethon
 speedtest-cli
-deezer-python
-spotipy
 pymongo
