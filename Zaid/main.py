@@ -17,10 +17,6 @@ bot = Client(
 )
 
 
-BOT = TelegramClient('BOT', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
-
-
-
 if not SESSION_NAME:
    ASS_CLI_1 = None
 else:   
