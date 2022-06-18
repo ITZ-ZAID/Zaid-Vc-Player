@@ -1,10 +1,7 @@
-
 import os
 import sys
 import random
 import asyncio
-import telethon.utils
-from telethon import TelegramClient, events
 from config import API_HASH, API_ID, BOT_TOKEN, SESSION_NAME, SESSION2, SESSION3, SESSION4, SESSION5
 from pyrogram import Client
 from pytgcalls import idle
