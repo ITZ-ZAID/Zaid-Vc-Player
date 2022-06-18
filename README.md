@@ -60,6 +60,7 @@
 - **Control With Button support**
 - **Volume Control**
 - **Userbot Auto Join**
+- **Multi Assistant**
 </details>
 
 ## 🔎 ꜱᴜᴘᴘᴏʀᴛ ɪɴʟɪɴᴇ ꜱᴇᴀʀᴄʜ
