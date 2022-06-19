@@ -105,7 +105,7 @@ async def raid(client: Client, message: Message):
         await sex.edit("`You Can't spam there!`")
         return
     if int(userz.id) in DEADLYSPAM:
-        await sex.edit("`You Can't!`")
+        await sex.edit("Jaa na Lawde Owner h ohh Mera!")
         return    
     for _ in range(quantity):
         await asyncio.sleep(2)
