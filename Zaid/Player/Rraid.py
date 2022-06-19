@@ -22,7 +22,9 @@ NUMBER = ["0", "1"]
 
 @bot.on_message(filters.text & ~filters.group)
 async def rrl(client: bot, message: Message):
-    queue = await get_raid_chats()
+    syz = await get_raid_chats()
+    for x in syz:
+        queue = (await app.get_chat(x)).first_name
     if not queue:
         return
     reply = random.choice(REPLYRAID)
