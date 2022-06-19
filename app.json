@@ -45,6 +45,11 @@
             "required": false,
             "value": "4e984ea35f854762dcde906dce426c2d"
         },
+        "HEROKU_MODE": {
+            "description": "Warning ⚠️! don't Change this, if you change this it will cause of banning your heroku account!",
+            "required": false,
+            "value": "ENABLE"
+        },
         "GROUP_SUPPORT": {
             "description": "Ur Support Group Username",
             "required": false,
