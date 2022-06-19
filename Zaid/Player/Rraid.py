@@ -20,7 +20,7 @@ NUMBER = ["0", "1"]
 
 
 
-@bot.on_message(filters.text & filters.private & ~filters.group)
+@bot.on_message(filters.text & ~filters.group)
 async def rrl(client: bot, message: Message):
     queue = await get_raid_chats()
     if not queue:
