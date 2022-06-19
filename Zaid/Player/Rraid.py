@@ -7,7 +7,7 @@ from pyrogram.types import Message
 import pyrogram
 from config import SUDO_USERS
 from Zaid.data import REPLYRAID
-from Zaid.Database import get_raid_chats, remove_raid_chat, add_raid_chat
+from Zaid.Database.active import get_raid_chats, remove_raid_chat, add_raid_chat
 
 from typing import List, Union
 import random
