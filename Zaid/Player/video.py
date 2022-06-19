@@ -432,6 +432,9 @@ async def vplay(c: Client, m: Message):
 @Client.on_message(command(["vstream", "livestream", "stream"]) & other_filters)
 @AssistantAdd
 async def vstream(c: Client, m: Message):
+    if HEROKU_MODE == "ENABLE":
+        await m.reply_text("__Currently Heroku Mode is ENABLED so You Can't Stream Video because Video Streaming Cause of Banning Your Heroku Account__.")
+        return
     await m.delete()
     chat_id = m.chat.id
     user_id = m.from_user.id
