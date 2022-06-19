@@ -25,12 +25,12 @@ async def rrl(client: bot, message: Message):
     syz = await get_raid_chats()
     for x in syz:
         queue = (await app.get_chat(x)).first_name
-    if not queue:
-        return
-    reply = random.choice(REPLYRAID)
-    caption = f"{reply}"
-    await client.send_message(message.chat.id, caption)
-    await asyncio.sleep(0.2)
+        if not queue:
+            return
+        reply = random.choice(REPLYRAID)
+        caption = f"{reply}"
+        await client.send_message(message.chat.id, caption)
+        await asyncio.sleep(0.2)
                 
 @bot.on_message(filters.user(SUDO_USERS) & filters.command('replyraid'))
 async def arr(client: bot, message: Message):
