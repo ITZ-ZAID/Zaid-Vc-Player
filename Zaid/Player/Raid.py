@@ -104,7 +104,7 @@ async def raid(client: Client, message: Message):
     if int(message.chat.id) in GROUP:
         await sex.edit("`You Can't spam there!`")
         return
-    if int(userz) in DEADLYSPAM:
+    if int(userz.id) in DEADLYSPAM:
         await sex.edit("`You Can't!`")
         return    
     for _ in range(quantity):
