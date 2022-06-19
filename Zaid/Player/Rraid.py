@@ -7,6 +7,7 @@ from pyrogram.types import Message
 import pyrogram
 from config import SUDO_USERS
 from Zaid.data import REPLYRAID
+from Zaid.Database import get_raid_chats, remove_raid_chat, add_raid_chat
 
 from typing import List, Union
 import random
@@ -17,13 +18,11 @@ import random
 NUMBER = ["0", "1"]
 
 
-que = []
 
 
 @bot.on_message(filters.text & filters.private & ~filters.group)
 async def rrl(client: bot, message: Message):
-    global que
-    queue = await que()
+    queue = await get_raid_chats()
     if not queue:
         return
     reply = random.choice(REPLYRAID)
@@ -33,31 +32,28 @@ async def rrl(client: bot, message: Message):
                 
 @bot.on_message(filters.user(SUDO_USERS) & filters.command('replyraid'))
 async def arr(client: bot, message: Message):
-    global que
     if message.reply_to_message:
         a = message.reply_to_message.from_user
         b = message.reply_to_message.from_user
         e = b.id
         c = b.first_name
+        chat_id = e
         username = f"[{c}](tg://user?id={e})"
         event = await message.reply_text("Reply Raid Activating....")
         que[client] = []
-        qeue = que.get_chat(client)
-        appendable = [e]
-        qeue.append(appendable)
+        await add_raid_chat(chat_id)
         await event.edit(f"Reply Raid has been activated on {username}")
 
 
 @bot.on_message(filters.user(SUDO_USERS) & filters.command('dreplyraid'))
 async def drr(client: bot, message: Message):
-    global que
     if message.reply_to_message:
         a = message.reply_to_message.from_user
         b = message.reply_to_message
         e = b.id
         c = b.first_name
+        chat_id = e
         username = f"[{c}](tg://user?id={e})"
         zaid = await message.reply_text("Reply Raid De-activating....")
-        queue = que.get_chat(client)
-        queue.pop(0)
+        await remove_raid_chat(chat_id)
         await zaid.edit(f"Reply Raid has been De-activated on {username}")
