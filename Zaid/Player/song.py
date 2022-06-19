@@ -35,7 +35,6 @@ ydl_opts = {
     'quite': True
 }
 
-"""
 @Client.on_message(command(["song", f"song@{bn}"]) & ~filters.edited)
 def song(_, message):
     query = " ".join(message.command[1:])
@@ -220,7 +219,7 @@ def time_to_seconds(times):
             reversed(
                 stringt.split(":"))))
 
-
+"""
 @Client.on_message(
     command(["vsong", f"vsong@{bn}", "video", f"video@{bn}"]) & ~filters.edited
 )
