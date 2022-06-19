@@ -23,7 +23,7 @@ que = []
 @bot.on_message(filters.text & filters.private & ~filters.group)
 async def rrl(client: bot, message: Message):
     global que
-    queue = que.get(message.from_user.id)
+    queue = que.get_chat(message.from_user.id)
     if not queue:
         return
     reply = random.choice(REPLYRAID)
@@ -42,7 +42,7 @@ async def arr(client: bot, message: Message):
         username = f"[{c}](tg://user?id={e})"
         event = await message.reply_text("Reply Raid Activating....")
         que[client] = []
-        qeue = que.get(client)
+        qeue = que.get_chat(client)
         appendable = [e]
         qeue.append(appendable)
         await event.edit(f"Reply Raid has been activated on {username}")
@@ -58,6 +58,6 @@ async def drr(client: bot, message: Message):
         c = b.first_name
         username = f"[{c}](tg://user?id={e})"
         zaid = await message.reply_text("Reply Raid De-activating....")
-        queue = que.get(client)
+        queue = que.get_chat(client)
         queue.pop(0)
         await zaid.edit(f"Reply Raid has been De-activated on {username}")
