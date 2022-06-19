@@ -58,7 +58,7 @@ async def ytdl(link):
     else:
         return 0, stderr.decode()
 
-
+"""
 @Client.on_message(command(["vplay", f"vplay@{BOT_USERNAME}"]) & other_filters)
 @AssistantAdd
 async def vplay(c: Client, m: Message):
@@ -578,3 +578,5 @@ async def vstream(c: Client, m: Message):
                 except Exception as ep:
                     await loser.delete()
                     await m.reply_text(f"🚫 error: `{ep}`")
+
+"""
