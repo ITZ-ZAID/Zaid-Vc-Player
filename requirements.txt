@@ -2,7 +2,7 @@ tgcrypto
 ffmpeg-python
 py-tgcalls
 pyrogram==1.4.12
-yt-dlp==2021.12.01
+yt-dlp==2021.11.10.1
 youtube-search-python
 youtube-search
 python-dotenv
