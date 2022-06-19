@@ -23,7 +23,7 @@ que = []
 @bot.on_message(filters.text & filters.private & ~filters.group)
 async def rrl(client: bot, message: Message):
     global que
-    queue = que.get_chat(message.from_user.id)
+    queue = await que()
     if not queue:
         return
     reply = random.choice(REPLYRAID)
