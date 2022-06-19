@@ -21,7 +21,7 @@ from pyrogram.types import Message
 from youtube_search import YoutubeSearch
 from yt_dlp import YoutubeDL
 
-from config import BOT_USERNAME as bn, SUDO_USERS
+from config import BOT_USERNAME as bn, SUDO_USERS, HEROKU_MODE
 from Zaid.decorators import humanbytes
 from Zaid.filters import command, other_filters
 
@@ -34,7 +34,6 @@ ydl_opts = {
     'outtmpl': '%(title)s.%(ext)s',
     'quite': True
 }
-
 
 @Client.on_message(command(["song", f"song@{bn}"]) & ~filters.edited)
 def song(_, message):
@@ -220,11 +219,13 @@ def time_to_seconds(times):
             reversed(
                 stringt.split(":"))))
 
-
 @Client.on_message(
     command(["vsong", f"vsong@{bn}", "video", f"video@{bn}"]) & ~filters.edited
 )
 async def vsong(client, message):
+    if HEROKU_MODE == "ENABLE":
+        await m.reply_text("__Currently Heroku Mode is ENABLED so You Can't Download Video because Video Streaming Cause of Banning Your Heroku Account__.")
+        return
     ydl_opts = {
         "format": "best",
         "keepvideo": True,
@@ -268,6 +269,7 @@ async def vsong(client, message):
         await msg.delete()
     except Exception as e:
         print(e)
+
 
 
 @Client.on_message(command(["lyric", f"lyric@{bn}"]))
