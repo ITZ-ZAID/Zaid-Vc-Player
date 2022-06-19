@@ -62,7 +62,7 @@ async def ytdl(link):
 @AssistantAdd
 async def vplay(c: Client, m: Message):
     if HEROKU_MODE == "ENABLE":
-        await m.reply_text("__Currently Heroku Mode is ENABLED so You Can't Stream Video because Video Streaming Cause of Banning Your Account__.")
+        await m.reply_text("__Currently Heroku Mode is ENABLED so You Can't Stream Video because Video Streaming Cause of Banning Your Heroku Account__.")
         return
     await m.delete()
     replied = m.reply_to_message
