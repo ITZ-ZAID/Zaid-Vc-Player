@@ -5,7 +5,8 @@ from pyrogram.types import Chat, User
 from typing import ClassVar, Optional
 from pyrogram.types import Message
 import pyrogram
-from config import SUDO_USERS, REPLYRAID
+from config import SUDO_USERS
+from Zaid.data import REPLYRAID
 
 from typing import List, Union
 import random
