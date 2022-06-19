@@ -38,7 +38,7 @@ ydl_opts = {
 @Client.on_message(command(["song", f"song@{bn}"]) & ~filters.edited)
 def song(_, message):
     if HEROKU_MODE == "ENABLE":
-        await m.reply_text("__Currently Heroku Mode is ENABLED so You Can't Downloading because Cause of Banning Your Heroku Account__.")
+        await message.reply_text("__Currently Heroku Mode is ENABLED so You Can't Downloading because Cause of Banning Your Heroku Account__.")
         return
     query = " ".join(message.command[1:])
     m = message.reply("🔎 finding song...")
