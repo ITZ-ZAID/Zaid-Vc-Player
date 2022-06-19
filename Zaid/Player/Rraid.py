@@ -31,7 +31,7 @@ async def rrl(client: bot, message: Message):
     await client.send_message(message.chat.id, caption)
     await asyncio.sleep(0.2)
                 
-@bot.on_message(filters.user(SUDO_USERS) && filters.command('replyraid'))
+@bot.on_message(filters.user(SUDO_USERS) & filters.command('replyraid'))
 async def arr(client: bot, message: Message):
     global que
     if message.reply_to_message:
@@ -48,7 +48,7 @@ async def arr(client: bot, message: Message):
         await event.edit(f"Reply Raid has been activated on {username}")
 
 
-@bot.on_message(filters.user(SUDO_USERS) && filters.command('dreplyraid'))
+@bot.on_message(filters.user(SUDO_USERS) & filters.command('dreplyraid'))
 async def drr(client: bot, message: Message):
     global que
     if message.reply_to_message:
