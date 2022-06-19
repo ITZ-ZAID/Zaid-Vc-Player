@@ -25,7 +25,7 @@ async def rrl(client: bot, message: Message):
     queue = que.get(message.from_user.id)
     if not queue:
         return
-    reply = random.choice(RAIDHU)
+    reply = random.choice(REPLYRAID)
     caption = f"{reply}"
     await client.send_message(message.chat.id, caption)
     await asyncio.sleep(0.2)
