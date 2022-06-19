@@ -1,7 +1,7 @@
 import re
 import asyncio
 
-from config import ASSISTANT_NAME, BOT_USERNAME, QUE_IMG, VIDEO_IMG, CMD_IMG
+from config import ASSISTANT_NAME, BOT_USERNAME, QUE_IMG, VIDEO_IMG, CMD_IMG, HEROKU_MODE
 from Zaid.inline import stream_markup
 from Process.design.thumbnail import thumb
 from Process.design.chatname import CHAT_TITLE
@@ -58,10 +58,12 @@ async def ytdl(link):
     else:
         return 0, stderr.decode()
 
-"""
 @Client.on_message(command(["vplay", f"vplay@{BOT_USERNAME}"]) & other_filters)
 @AssistantAdd
 async def vplay(c: Client, m: Message):
+    if HEROKU_MODE == "ENABLE":
+        await m.reply_text("__Currently Heroku Mode is ENABLED so You Can't Stream Video because Video Streaming Cause of Banning Your Account__.")
+        return
     await m.delete()
     replied = m.reply_to_message
     chat_id = m.chat.id
@@ -579,4 +581,4 @@ async def vstream(c: Client, m: Message):
                     await loser.delete()
                     await m.reply_text(f"🚫 error: `{ep}`")
 
-"""
+
