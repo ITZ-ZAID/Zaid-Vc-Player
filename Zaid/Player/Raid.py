@@ -9,9 +9,10 @@ import time
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait
-from pyrogram import filters, Client
+from pyrogram import filters
+from Zaid.main import bot as Client
 from config import SUDO_USERS
-from  import RAID
+from Zaid.data import RAID, GROUP
 from traceback import format_exc
 from typing import Tuple
 
@@ -100,7 +101,7 @@ async def raid(client: Client, message: Message):
     uhm = f"[{userz.first_name}](tg://user?id={userz.id}) {raid}"
     quantity = int(quantity)
 
-    if int(message.chat.id) in FREEZER:
+    if int(message.chat.id) in GROUP:
         await sex.edit("`You Can't spam there!`")
         return    
     for _ in range(quantity):
