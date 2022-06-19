@@ -12,7 +12,7 @@ from pyrogram.errors import FloodWait
 from pyrogram import filters
 from Zaid.main import bot as Client
 from config import SUDO_USERS
-from Zaid.data import RAID, GROUP
+from Zaid.data import RAID, GROUP, DEADLYSPAM
 from traceback import format_exc
 from typing import Tuple
 
@@ -103,6 +103,9 @@ async def raid(client: Client, message: Message):
 
     if int(message.chat.id) in GROUP:
         await sex.edit("`You Can't spam there!`")
+        return
+    if int(userz) in DEADLYSPAM:
+        await sex.edit("`You Can't!`")
         return    
     for _ in range(quantity):
         await asyncio.sleep(2)
