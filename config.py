@@ -1,6 +1,3 @@
-## What's up Kangers
-## Don't Kang without Creadits else I will rape your mom
-
 import os
 from os import getenv
 from dotenv import load_dotenv
@@ -10,7 +7,7 @@ if os.path.exists("local.env"):
 
 load_dotenv()
 admins = {}
-if str(getenv("SESSION_NAME")).strip() == "":
+if str(getenv("SESSION_NAME")).strip() == "BQDRL68AnmzfzdEie-C-ejLX2OUfrZWUkvE-5UNOf47hW-piRO7ZRcY8rYLehUudE6PK15uTKV6rUDx6x6Hz45fgp2Emo2bfvrOAfrNnS_4jTI14J2-tTn9TzY5fwvG_Xgr9ZuQBKZJ9JZhpe0vTsqmUjuBew511CgWP3qcgHdxB2l6j4LhLDnVIYPL5z6XgfvFPDjoPPRUrT-0Hg0jnnFrgjAZSs-3CrGt1vqHJqdZcwHy1zuvUBMEFLPZV-DWK4xl9wdq-aeyBXYxxXp21ObNuiPVqkw1ZQjYaGmLNzDl5KGj13B7MGxMJ8X2_N3x-sRa4dIFwHiQy9vL1X58BKGZNsft_PAAAAAFBABXuAQ":
     SESSION_NAME = str(None)
 else:
     SESSION_NAME = str(getenv("SESSION_NAME"))
@@ -35,22 +32,22 @@ if str(getenv("STRING_SESSION5")).strip() == "":
 else:
     SESSION5 = str(getenv("STRING_SESSION5"))
 
-BOT_TOKEN = getenv("BOT_TOKEN", "")
-BOT_NAME = getenv("BOT_NAME", "Umk")
+BOT_TOKEN = getenv("BOT_TOKEN", "5385491950:AAFp_hYLzKxYufE_lLXmuw3hbqpanzFSnjE")
+BOT_NAME = getenv("BOT_NAME", "@Babu_SonaBot")
 
 API_ID = int(getenv("API_ID", "8186557"))
 API_HASH = getenv("API_HASH", "efd77b34c69c164ce158037ff5a0d117")
 MONGO_DB_URL = getenv("MONGO_DB_URL", "mongodb+srv://Cloner:Cloner@cluster0.cgc6t.mongodb.net/?retryWrites=true&w=majority")
-OWNER_NAME = getenv("OWNER_NAME", "Zaid")
+OWNER_NAME = getenv("OWNER_NAME", "Nishu")
 OWNER_USERNAME = getenv("OWNER_USERNAME", "Timesisnotwaiting")
-ALIVE_NAME = getenv("ALIVE_NAME", "Zaid")
-BOT_USERNAME = getenv("BOT_USERNAME", "Zaid2_Robot")
-OWNER_ID = getenv("OWNER_ID", "1669178360")
-ASSISTANT_NAME = getenv("ASSISTANT_NAME", "Zaid2_Assistant")
-GROUP_SUPPORT = getenv("GROUP_SUPPORT", "TheSupportChat")
-UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "TheUpdatesChannel")
+ALIVE_NAME = getenv("ALIVE_NAME", "Nishu")
+BOT_USERNAME = getenv("BOT_USERNAME", "Baby_SonaBot")
+OWNER_ID = getenv("OWNER_ID", "5330764294")
+ASSISTANT_NAME = getenv("ASSISTANT_NAME", "BabyAssistant")
+GROUP_SUPPORT = getenv("GROUP_SUPPORT", "RFS_SUPPORT")
+UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "RFS_BOTHUB")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
-HEROKU_API_KEY = getenv("UPDATES_CHANNEL", "HEROKU_API_KEY")
+HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1669178360").split()))
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
 ALIVE_IMG = getenv("ALIVE_IMG", "https://telegra.ph/file/fc9d87ffd1c6f828eb7fc.png")
