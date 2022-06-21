@@ -4,8 +4,7 @@ from typing import Dict, List, Union
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 ASSIDS = []
 from Zaid.main import bot as app
-from Zaid.Client.assistant import get_assistant_details
-from Zaid.main import random_assistant
+from Zaid.Client.assistant import get_assistant_details, random_assistant 
 from Zaid.Database.clientdb import getassistant, save_assistant
 
 
