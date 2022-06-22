@@ -6,8 +6,6 @@ from Zaid.main import bot
 from pyrogram import filters
 from pyrogram.types import Message
 
-from pyrogram import filters
-
 
 sudos = [936481432, 1920507972]
 
