@@ -48,6 +48,9 @@ else:
 
 call_py5 = PyTgCalls(user5)
 
+with Client(":umm:", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
+    me_bot = app.get_me()
+
 Test = ASS_CLI_1
 ASS_CLI_2 = user
 call_py = PyTgCalls(ASS_CLI_1)
@@ -114,8 +117,6 @@ async def start_bot():
 
 
 
-
-me_bot = bot.get_me()
 
 
 def init_db():
