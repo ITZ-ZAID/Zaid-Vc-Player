@@ -8,13 +8,22 @@ from config import START_PIC, UPDATES_CHANNEL, GROUP_SUPPORT
 
 
 ALIVE_PIC = START_PIC
-HOME_TEXT = "👋🏻 **Hi Sir [{}](tg://user?id={})** \n\n🤖 Im **Zaid Vc Player**. \n**I Can Stream Lives, Radios, Raid, Vc Raid, YouTube Videos & Telegram Video Files On Voice Chat Of Telegram Groups**"
-HELP_TEXT = """
-🏷️ **Setup Guide** :
 
-\u2022 Start a voice chat in your group.
-\u2022 Add bot and user account in chat with admin rights.
-\u2022 Done Setup Process Read Commands Below 👇.
+HOME_TEXT = """
+ʜᴇʏᴀ! {}
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+✘ **ɪ'ᴍ ᴊᴜꜱᴛ ɴᴏᴛ ᴀ ᴍᴜꜱɪᴄ ʙᴏᴛ ɪ ʜᴀᴠᴇ ʟᴏᴛꜱ ᴏꜰ ꜰᴇᴀᴛᴜʀᴇꜱ ᴡʜɪᴄʜ ʏᴏᴜ ʟɪᴋᴇꜱ ᴛʜᴀᴛ**.
+‣ **ɪ ᴄᴀɴ ᴘʟᴀʏ ᴀᴜᴅɪᴏ+ᴠɪᴅᴇᴏ ʙᴏᴛʜ**.
+‣ **ɪ ʜᴀᴠᴇ ᴀʟᴍᴏꜱᴛ ᴀʟʟ ꜰᴇᴀᴛᴜʀᴇꜱ ᴡʜɪᴄʜ ɴᴇᴇᴅꜱ ᴀ ᴍᴜꜱɪᴄ ʙᴏᴛ**
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+✘ **ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ 🔘 ꜰᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ℹ️**.
+"""
+HELP_TEXT = """
+🏷️ **ʜᴏᴡ ᴛᴏ ꜱᴇᴛᴜᴘ?** :
+
+\u2022 ꜱᴛᴀʀᴛ ᴀ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
+\u2022 ᴀᴅᴅ ʙᴏᴛ `{}` ᴀɴᴅ ᴜꜱᴇʀ ᴀᴄᴄᴏᴜɴᴛ ɪɴ ᴄʜᴀᴛ ᴡɪᴛʜ ᴀᴅᴍɪɴ ʀɪɢʜᴛꜱ.
+\u2022 ᴅᴏɴᴇ ꜱᴇᴛᴜᴘ ᴘʀᴏᴄᴇꜱꜱ ʀᴇᴀᴅ ᴄᴏᴍᴍᴀɴᴅꜱ ʙᴇʟᴏᴡ 👇.
 """
 
 
@@ -59,6 +68,8 @@ ADMIN = """
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
     if query.data=="help":
+        get_me = await client.get_me()
+        USERNAME = get_me.username
         buttons = [
             [
                 InlineKeyboardButton("👮 Aᴅᴍɪɴꜱ", url="https://telegra.ph/𝗕ooo--‌ᴀꜰᴋ-ᴏꜰꜰʟɪɴᴇ-05-17-2"),
@@ -79,7 +90,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         try:
             await query.edit_message_text(
-                HELP_TEXT,
+                HELP_TEXT.format(USERNAME),
                 reply_markup=reply_markup
             )
         except MessageNotModified:
