@@ -11,7 +11,6 @@ from Zaid.decorators import sudo_users_only
 from Zaid.Database.dbchat import get_served_chats
 from Zaid.Database.dbusers import get_served_users
 from Zaid.Database.dbpunish import get_gbans_count
-from Zakd.Database.dbqueue import get_active_chats
 
 from config import BOT_USERNAME as uname
 
