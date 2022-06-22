@@ -6,7 +6,7 @@ from Zaid.decorators import authorized_users_only
 from Zaid.filters import command, other_filters
 from Zaid.queues import QUEUE, clear_queue
 from Zaid.utils import skip_current_song, skip_item
-from Zaid.inline import menu_markup
+
 from config import BOT_USERNAME, GROUP_SUPPORT, SKIP_IMG, UPDATES_CHANNEL
 from pyrogram.types import (
     CallbackQuery,
@@ -366,6 +366,7 @@ async def cbmute(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbmenu"))
 async def cbval(_, query: CallbackQuery):
+     from Zaid.inline import menu_markup
      user_id = query.from_user.id
      menu_markup = menu_markup(user_id)
      await query.edit_message_text(
