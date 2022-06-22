@@ -114,8 +114,8 @@ async def start_bot():
 
 
 
-with bot as app:
-    me_bot = app.get_me()
+
+me_bot = bot.get_me()
 
 
 def init_db():
