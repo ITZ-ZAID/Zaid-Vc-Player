@@ -90,7 +90,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         USERNAME = get_me.username
         buttons = [
             [
-                InlineKeyboardButton("✘ ᴀᴅᴍɪɴꜱ", callback_data="admins"),
+                InlineKeyboardButton("✘ ᴀᴅᴍɪɴꜱ", callback_data="adminss"),
                 InlineKeyboardButton("✘ ᴜꜱᴇʀꜱ", callback_data="users"),
             ],
             [
@@ -173,7 +173,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         except MessageNotModified:
             pass
 
-    elif query.data=="admins":
+    elif query.data=="adminss":
         buttons = [
             [
                 InlineKeyboardButton("✘ Bᴀᴄᴋ", callback_data="help"),
@@ -266,7 +266,7 @@ async def help(client: Client, message: Message):
     self.username = get_me.username
     buttons = [
            [
-                InlineKeyboardButton("✘ ᴀᴅᴍɪɴꜱ", call_back_data="admins"),
+                InlineKeyboardButton("✘ ᴀᴅᴍɪɴꜱ", call_back_data="adminss"),
                 InlineKeyboardButton("✘ ᴜꜱᴇʀꜱ", callback_data="users"),
             ],
             [
