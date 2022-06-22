@@ -4,6 +4,10 @@ from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors import MessageNotModified
 from Zaid.main import Test, bot as Client
+
+
+
+from Zaid.Database.dbusers import add_served_user
 from config import START_PIC, UPDATES_CHANNEL, GROUP_SUPPORT
 
 
@@ -233,6 +237,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
 @Client.on_message(filters.command(["start"]) & filters.private)
 async def start(client: Client, message: Message):
     get_me = await client.get_me()
+    user_id = message.from_user.id
+    await add_served_user(user_id)
     USERNAME = get_me.username
     buttons = [
             [
