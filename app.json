@@ -38,7 +38,7 @@
         "MONGO_DB_URL": {
             "description": "fill there mongo Database url else don't change",
             "required": true,
-            "value": "mongodb+srv://Cloner:Cloner@cluster0.cgc6t.mongodb.net/?retryWrites=true&w=majority"
+            "value": "mongodb+srv://user@pass"
         },
         "API_HASH": {
             "description": "your Api Hash from my.telegram.org/apps",

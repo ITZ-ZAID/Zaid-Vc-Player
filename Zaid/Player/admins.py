@@ -6,6 +6,7 @@ from Zaid.decorators import authorized_users_only
 from Zaid.filters import command, other_filters
 from Zaid.queues import QUEUE, clear_queue
 from Zaid.utils import skip_current_song, skip_item
+
 from config import BOT_USERNAME, GROUP_SUPPORT, SKIP_IMG, UPDATES_CHANNEL
 from pyrogram.types import (
     CallbackQuery,
@@ -50,10 +51,7 @@ async def skip(client, m: Message):
         [
             [
                 InlineKeyboardButton(
-                    text="• Mᴇɴᴜ", callback_data="cbmenu"
-                ),
-                InlineKeyboardButton(
-                    text="• Cʟᴏsᴇ", callback_data="cls"
+                    text="• cʟᴏsᴇ", callback_data="cls"
                 ),
             ]
         ]
@@ -363,6 +361,14 @@ async def cbmute(_, query: CallbackQuery):
     else:
         await query.answer("❌ nothing is currently streaming", show_alert=True)
 
+@Client.on_callback_query(filters.regex("cbmenu"))
+async def cbval(_, query: CallbackQuery):
+     from Zaid.inline import menu_markup
+     user_id = query.from_user.id
+     markup = menu_markup(user_id)
+     await query.edit_message_text(
+         "🏷️ Menu section", reply_markup=markup
+     )
 
 @Client.on_callback_query(filters.regex("cbunmute"))
 async def cbunmute(_, query: CallbackQuery):

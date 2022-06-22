@@ -29,6 +29,7 @@ from Zaid.Database.clientdb import *
 from Zaid.Client.assistant import get_assistant_details, random_assistant
 from Zaid.Client.Joiner import AssistantAdd
 from Zaid.Database.active import *
+from Zaid.Database.dbchat import add_served_chat, is_served_chat
 
 import yt_dlp
 import yt_dlp
@@ -142,6 +143,10 @@ async def play(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
     chat_id = m.chat.id
+    if await is_served_chat(chat_id):
+        pass
+    else:
+        await add_served_chat(chat_id)
     _assistant = await get_assistant(chat_id, "assistant")
     assistant = _assistant["saveassistant"]
     keyboard = InlineKeyboardMarkup(
