@@ -222,6 +222,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         except:
             pass
 
+    elif query.data=="cls":
+        try:
+            await query.message.delete()
+            await query.message.reply_to_message.delete()
+        except:
+            pass
+
 
 @Client.on_message(filters.command(["start"]) & filters.private)
 async def start(client: Client, message: Message):
