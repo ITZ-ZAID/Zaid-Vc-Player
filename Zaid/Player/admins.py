@@ -368,9 +368,9 @@ async def cbmute(_, query: CallbackQuery):
 async def cbval(_, query: CallbackQuery):
      from Zaid.inline import menu_markup
      user_id = query.from_user.id
-     menu_markup = menu_markup(user_id)
+     markup = menu_markup(user_id)
      await query.edit_message_text(
-         "🏷️ Menu section", reply_markup=buttons
+         "🏷️ Menu section", reply_markup=markup
      )
 
 @Client.on_callback_query(filters.regex("cbunmute"))
