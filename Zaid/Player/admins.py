@@ -366,8 +366,10 @@ async def cbmute(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbmenu"))
 async def cbval(_, query: CallbackQuery):
-    user_id = query.from_user.id
-    await menu_markup(user_id)
+     user_id = query.from_user.id
+     await query.edit_message_text(
+         "🏷️ Menu section", reply_markup=menu_markup
+     )
 
 @Client.on_callback_query(filters.regex("cbunmute"))
 async def cbunmute(_, query: CallbackQuery):
