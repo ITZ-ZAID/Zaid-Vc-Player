@@ -114,6 +114,10 @@ async def start_bot():
 
 
 
+with bot as app:
+    me_bot = app.get_me()
+
+
 def init_db():
     global db_mem
     db_mem = {}
