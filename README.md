@@ -1,6 +1,6 @@
-<h2 align="centre"> 𝐌𝐮𝐬𝐢𝐜+𝐑𝐚𝐢𝐝 𝐒𝐩𝐚𝐦 𝐁𝐨𝐭🔥</h2>
+<h2 align="centre"> 𝙕𝙖𝙞𝙙 𝙑𝙤𝙞𝙘𝙚 𝙋𝙡𝙖𝙮𝙚𝙧🔥</h2>
 
-### ᴢᴀɪᴅ ᴠᴄ ᴘʟᴀᴇʀ ɪꜱ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴘʀᴏᴊᴇᴄᴛ ʙᴀꜱᴇᴅ ᴏɴ ᴘʏʀᴏɢʀᴀᴍ ꜰᴏʀ ᴘʟᴀʏ ᴍᴜꜱɪᴄꜱ ɪɴ ᴠᴄ ᴄʜᴀᴛꜱ...
+### ᴢᴀɪᴅ ᴠᴄ ᴘʟᴀʏᴇʀ ɪꜱ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴘʀᴏᴊᴇᴄᴛ ʙᴀꜱᴇᴅ ᴏɴ ᴘʏʀᴏɢʀᴀᴍ ꜰᴏʀ ᴘʟᴀʏ ᴍᴜꜱɪᴄꜱ ɪɴ ᴠᴄ ᴄʜᴀᴛꜱ...
 
 <p align="center"><a href="https://t.me/Superior_Bots"><img src="https://telegra.ph/file/c4e036012053c3eb85e80.jpg" width="300"></a></p>
 <p align="center">
@@ -51,12 +51,12 @@
 - **ᴊᴏɪɴ & ʟᴇᴀᴠᴇ ꜱᴛʀᴇᴀᴍᴇʀ ᴀᴄᴄᴏᴜɴᴛ ᴜꜱɪɴɢ ᴀ ᴄᴏᴍᴍᴀɴᴅ**
 - **ᴄᴏᴏʟ ꜱᴛᴀʀᴛꜱ ᴘʟᴜɴɢɪɴꜱ**
 - **Spam**
-- **Replyraid**
+- **Reply Raid**
 - **Love Raid**
-- **VcRaid**
+- **Voice Raid**
 - **Video Raid**
 - **Skip, Pause, Resume, Stop feature**
-- **YouTube/Local/Live/m3u8 stream support**
+- **YouTube/Local/Live/m3u8 ʟɪɴᴋ stream support**
 - **Control With Button support**
 - **Volume Control**
 - **Userbot Auto Join**
@@ -118,10 +118,6 @@
 <h4>Click the button below to import this code. How to host? Simply import this code then fill your vars in config.py then go to Actions and check build logs!</h4>
 <p align="center"><a href="https://github.com/new/import"><img src="https://img.shields.io/badge/Workflow%20Deploy-black?style=for-the-badge&logo=github" width="200""/></a>
 
-## 🚀 Circleci hosting
-
-<h4>Click the button to redirect on circleci Note: First fill your vars in config.py then connect with your GitHub in circleci then deploy!</h4>
-<p align="center"><a href="https://circleci.com/"><img src="https://img.shields.io/badge/CircleCi%20Deploy-red?style=for-the-badge&logo=circleci" width="200""/></a>
 
 ## ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ 🚄
 ꜰᴏʀ ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ ᴍᴀᴋᴇ [Necessary Variables Here](https://github.com/ITZ-ZAID/Zaid-Vc-Player), ᴜ ʜᴀᴠᴇ ᴛᴏ ꜰɪʟʟ.
