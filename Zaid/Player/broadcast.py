@@ -12,7 +12,7 @@ from Zaid.Database.dbchat import get_served_chats
 from Zaid.Database.dbusers import get_served_users
 from Zaid.Database.dbpunish import get_gbans_count
 
-from config import BOT_USERNAME as uname
+from config import BOT_USERNAME as uname, MONGO_DB_URL
 
 
 @Client.on_message(command(["broadcast", f"broadcast@{uname}"]) & ~filters.edited)
@@ -120,6 +120,29 @@ async def broadcast_message_pin(c: Client, message: Message):
 @Client.on_message(command(["stats", f"stats@{uname}"]) & ~filters.edited)
 @sudo_users_only
 async def bot_statistic(c: Client, message: Message):
+    if MONGO_DB_URL == "mongodb+srv://Cloner:Cloner@cluster0.cgc6t.mongodb.net/?retryWrites=true&w=majority":
+        name = me_bot.first_name
+        chat_id = message.chat.id
+        msg = await c.send_message(
+            chat_id, "❖ ꜰᴇᴀᴛᴄʜɪɴɢ ᴅᴇᴛᴀɪʟꜱ..."
+        )
+        served_chats = len(await get_served_chats())
+        served_users = len(await get_served_users())
+        gbans_usertl = await get_gbans_count()
+        tgm = f"""
+    📊 ᴛʜɪꜱ ᴅᴀᴛᴀʙᴀꜱᴇ ᴏꜰ ᴢᴀɪᴅ ɴᴏᴛ ʏᴏᴜʀ! ᴅᴇᴛᴀɪʟꜱ ꜰᴇᴀᴛᴄʜᴇᴅ ʙʏ [{name}](https://t.me/{uname})`:`
+
+    ➥ **ᴛᴏᴛᴀʟ ᴄʜᴀᴛꜱ** : `{served_chats}`
+    ➥ **ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ** : `{served_users}`
+    ➥ **ɢʙᴀɴɴᴇᴅ ᴜꜱᴇʀꜱ** : `{gbans_usertl}`
+
+    ➛ **ᴘʏᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** : `3.10.4`
+    ➛ **ᴘʏ-ᴛɢᴄᴀʟʟꜱ ᴠᴇʀꜱɪᴏɴ** : `{pytgver.__version__}`
+    ➛ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ** : `{pytgver}`
+
+    🤖 ᴄᴏᴅᴇꜱ ᴠᴇʀꜱɪᴏɴ: `2.1`"""
+        await msg.edit(tgm, disable_web_page_preview=True)
+        return
     name = me_bot.first_name
     chat_id = message.chat.id
     msg = await c.send_message(

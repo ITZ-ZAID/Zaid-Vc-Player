@@ -10,6 +10,7 @@ from random import choice
 import aiofiles
 import aiohttp
 from Zaid.converter import convert
+from Process.design.thumbnail import *
 import ffmpeg
 import requests
 from Zaid.fonts import CHAT_TITLE
@@ -47,15 +48,18 @@ ZAID_IMGS = [
     "Process/ImageFont/foreground.png",
 ]
 
-def ytsearch(query: str):
+
+
+def ytsearch(query):
     try:
         search = VideosSearch(query, limit=1).result()
         data = search["result"][0]
         songname = data["title"]
         url = data["link"]
         duration = data["duration"]
-        thumbnail = data["thumbnails"][0]["url"]
-        return [songname, url, duration, thumbnail]
+        thumbnail = f"https://i.ytimg.com/vi/{data['id']}/hqdefault.jpg"
+        videoid = data["id"]
+        return [songname, url, duration, thumbnail, videoid]
     except Exception as e:
         print(e)
         return 0
@@ -143,10 +147,6 @@ async def play(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
     chat_id = m.chat.id
-    if await is_served_chat(chat_id):
-        pass
-    else:
-        await add_served_chat(chat_id)
     _assistant = await get_assistant(chat_id, "assistant")
     assistant = _assistant["saveassistant"]
     keyboard = InlineKeyboardMarkup(
@@ -293,10 +293,12 @@ async def play(c: Client, m: Message):
                 url = search[1]
                 duration = search[2]
                 thumbnail = search[3]
+                videoid = search[4]
                 userid = m.from_user.id
                 gcname = m.chat.title
                 ctitle = await CHAT_TITLE(gcname)
-                image = PLAY_IMG
+                image = await play_thumb(videoid)
+                queuem = await queue_thumb(videoid)
                 format = "bestaudio"
                 abhi, ytlink = await ytdl(format, url)
                 if abhi == 0:
@@ -309,7 +311,7 @@ async def play(c: Client, m: Message):
                             f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                         )
                         await m.reply_photo(
-                            photo=f"{QUE_IMG}",
+                            photo=queuem,
                             caption=f"💡 **Track added to queue »** `{pos}`\n\n🏷 **Name:** [{songname[:22]}]({url}) | `music`\n**⏱ Duration:** `{duration}`\n🎧 **Request by:** {requester}",
                             reply_markup=keyboard,
                         )
@@ -363,7 +365,7 @@ async def play(c: Client, m: Message):
                             await suhu.delete()
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
-                                photo=f"{PLAY_IMG}",
+                                photo=image,
                                 caption=f"🏷 **Name:** [{songname[:22]}]({url})\n**⏱ Duration:** `{duration}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
                                 reply_markup=keyboard,
                             )

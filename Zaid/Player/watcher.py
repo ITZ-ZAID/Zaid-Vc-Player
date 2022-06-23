@@ -19,6 +19,8 @@ from Zaid.filters import command
 from Zaid.main import bot, me_bot
 from Zaid.Database.dbusers import add_served_user
 from Zaid.Database.dbchat import add_served_chat, is_served_chat
+
+from Zaid.Database.dbusers import *
 from Zaid.Database.dbpunish import is_gbanned_user
 
 from pyrogram import Client, filters, __version__ as pyrover
@@ -54,6 +56,11 @@ async def new_chat(c: Client, m: Message):
             return
 
 
+
+
+
+
+
 chat_watcher_group = 5
 
 @Client.on_message(group=chat_watcher_group)
@@ -64,8 +71,18 @@ async def chat_watcher_func(_, message: Message):
         try:
             await message.chat.ban_member(userid)
         except ChatAdminRequired:
-            LOGS.info(f"can't remove gbanned user from chat: {message.chat.id}")
+            print(f"can't remove gbanned user from chat: {message.chat.id}")
             return
         await message.reply_text(
             f"👮🏼 (> {suspect} <)\n\n**Gbanned** user detected, that user has been gbanned by sudo user and was blocked from this Chat !\n\n🚫 **Reason:** potential spammer and abuser."
         )
+    chat_id = message.chat.id
+    if await is_served_chat(chat_id):
+        pass
+    else:
+        await add_served_chat(chat_id)
+    user_id = message.from_user.id
+    if await is_served_user(user_id):
+        pass
+    else:
+        await add_served_user(user_id)

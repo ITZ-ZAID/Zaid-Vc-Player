@@ -84,12 +84,6 @@ random_assistant = []
 
 async def start_bot():
     print("[INFO]: STARTING BOT CLIENT")
-    global ASSIDS
-    global ASSID1, ASSNAME1, ASSMENTION1, ASSUSERNAME1
-    global ASSID2, ASSNAME2, ASSMENTION2, ASSUSERNAME2
-    global ASSID3, ASSNAME3, ASSMENTION3, ASSUSERNAME3
-    global ASSID4, ASSNAME4, ASSMENTION4, ASSUSERNAME4
-    global ASSID5, ASSNAME5, ASSMENTION5, ASSUSERNAME5
     await bot.start()
     if SESSION_NAME != "None":
        await Test.start()
@@ -113,7 +107,7 @@ async def start_bot():
        random_assistant.append(5)
     random_assistant.append(6)
     botinfo = bot.get_me()
-    print("[INFO]: STARTING PYTGCALLSS CLIENT")
+    print("[INFO]: Your Bot Has been Started")
     await idle()
 
 

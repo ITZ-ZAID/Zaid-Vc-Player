@@ -5,6 +5,7 @@ from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 
 from Zaid.main import me_bot, bot as Client
+from config import MONGO_DB_URL
 from Zaid.filters import command, other_filters
 from Zaid.decorators import sudo_users_only
 from Zaid.Database.dbchat import get_served_chats
@@ -16,6 +17,9 @@ from config import OWNER_ID, SUDO_USERS, BOT_USERNAME as bn
 @Client.on_message(command(["gban", f"gban@{bn}"]) & other_filters)
 @sudo_users_only
 async def global_banned(c: Client, message: Message):
+    if MONGO_DB_URL == "mongodb+srv://Cloner:Cloner@cluster0.cgc6t.mongodb.net/?retryWrites=true&w=majority":
+        await message.reply_text("__Plz Add your Mongo Database to do This__.")
+        return
     BOT_NAME = me_bot.first_name
     if not message.reply_to_message:
         if len(message.command) < 2:
@@ -129,6 +133,9 @@ async def global_banned(c: Client, message: Message):
 @Client.on_message(command(["ungban", f"ungban@{bn}"]) & other_filters)
 @sudo_users_only
 async def ungban_global(c: Client, message: Message):
+    if MONGO_DB_URL == "mongodb+srv://Cloner:Cloner@cluster0.cgc6t.mongodb.net/?retryWrites=true&w=majority":
+        await message.reply_text("__Plz Add your Mongo Database to do This__.")
+        return
     chat_id = message.chat.id
     if not message.reply_to_message:
         if len(message.command) != 2:
