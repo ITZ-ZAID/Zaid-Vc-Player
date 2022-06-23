@@ -68,6 +68,15 @@ async def chat_watcher_func(_, message):
             return
         except Exception:
             return
+    user_id = message.from_user.id
+    if await is_served_user(user_id):
+        pass
+    else:
+        await add_served_user(user_id)
+            return
+        except Exception:
+            return
+
 
 chat_watcher_group = 5
 
