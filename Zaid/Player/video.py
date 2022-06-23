@@ -3,7 +3,7 @@ import asyncio
 
 from config import ASSISTANT_NAME, BOT_USERNAME, QUE_IMG, VIDEO_IMG, CMD_IMG, HEROKU_MODE
 from Zaid.inline import stream_markup
-from Process.design.thumbnail import thumb
+from Process.design.thumbnail import *
 from Process.design.chatname import CHAT_TITLE
 from Zaid.filters import command, other_filters
 from Zaid.queues import QUEUE, add_to_queue
