@@ -103,6 +103,8 @@ async def stop(client, m: Message):
         try:
             if int(assistant) == 1:
                await call_py.leave_group_call(chat_id)
+            if int(assistant) == 6:
+               await call_py.leave_group_call(chat_id)
             if int(assistant) == 2:
                await call_py2.leave_group_call(chat_id)
             if int(assistant) == 3:
@@ -141,6 +143,8 @@ async def pause(client, m: Message):
                await call_py4.pause_stream(chat_id)
             if int(assistant) == 5:
                await call_py5.pause_stream(chat_id)
+            if int(assistant) == 6:
+               await call_py.pause_stream(chat_id)
             await m.reply(
                 "⏸ **Track paused.**\n\n• **To resume the stream, use the**\n» /resume command."
             )
@@ -170,6 +174,8 @@ async def resume(client, m: Message):
                await call_py4.resume_stream(chat_id)
             if int(assistant) == 5:
                await call_py5.resume_stream(chat_id)
+            if int(assistant) == 6:
+               await call_py.resume_stream(chat_id)
             await m.reply(
                 "▶️ **Track resumed.**\n\n• **To pause the stream, use the**\n» /pause command."
             )
@@ -199,6 +205,8 @@ async def mute(client, m: Message):
                await call_py4.mute_stream(chat_id)
             if int(assistant) == 5:
                await call_py5.mute_stream(chat_id)
+            if int(assistant) == 6:
+               await call_py.mute_stream(chat_id)
             await m.reply(
                 "🔇 **Userbot muted.**\n\n• **To unmute the userbot, use the**\n» /unmute command."
             )
@@ -228,6 +236,8 @@ async def unmute(client, m: Message):
                await call_py4.unmute_stream(chat_id)
             if int(assistant) == 5:
                await call_py5.unmute_stream(chat_id)
+            if int(assistant) == 6:
+               await call_py.unmute_stream(chat_id)
             await m.reply(
                 "🔊 **Userbot unmuted.**\n\n• **To mute the userbot, use the**\n» /mute command."
             )
@@ -259,6 +269,8 @@ async def cbpause(_, query: CallbackQuery):
                await call_py4.pause_stream(chat_id)
             if int(assistant) == 5:
                await call_py5.pause_stream(chat_id)
+            if int(assistant) == 6:
+               await call_py.pause_stream(chat_id)
             await query.edit_message_text(
                 "⏸ the streaming has paused", reply_markup=bttn
             )
@@ -290,6 +302,8 @@ async def cbresume(_, query: CallbackQuery):
                await call_py4.resume_stream(chat_id)
             if int(assistant) == 5:
                await call_py5.resume_stream(chat_id)
+            if int(assistant) == 6:
+               await call_py.resume_stream(chat_id)
             await query.edit_message_text(
                 "▶️ the streaming has resumed", reply_markup=bttn
             )
@@ -321,6 +335,8 @@ async def cbstop(_, query: CallbackQuery):
                await call_py4.leave_group_call(chat_id)
             if int(assistant) == 5:
                await call_py5.leave_group_call(chat_id)
+            if int(assistant) == 6:
+               await call_py.leave_group_call(chat_id)
             await remove_active_video_chat(chat_id)
             await remove_active_chat(chat_id)
             clear_queue(chat_id)
@@ -353,6 +369,8 @@ async def cbmute(_, query: CallbackQuery):
                await call_py4.mute_stream(chat_id)
             if int(assistant) == 5:
                await call_py5.mute_stream(chat_id)
+            if int(assistant) == 6:
+               await call_py.mute_stream(chat_id)
             await query.edit_message_text(
                 "🔇 userbot succesfully muted", reply_markup=bttn
             )
@@ -392,6 +410,8 @@ async def cbunmute(_, query: CallbackQuery):
                await call_py4.unmute_stream(chat_id)
             if int(assistant) == 5:
                await call_py5.unmute_stream(chat_id)
+            if int(assistant) == 6:
+               await call_py.unmute_stream(chat_id)
             await query.edit_message_text(
                 "🔊 userbot succesfully unmuted", reply_markup=bttn
             )
@@ -422,6 +442,8 @@ async def change_volume(client, m: Message):
                await call_py4.change_volume_call(chat_id, volume=int(range))
             if int(assistant) == 5:
                await call_py5.change_volume_call(chat_id, volume=int(range))
+            if int(assistant) == 6:
+               await call_py.change_volume_call(chat_id
             await m.reply(
                 f"✅ **volume set to** `{range}`%"
             )
