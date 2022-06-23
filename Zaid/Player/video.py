@@ -374,7 +374,6 @@ async def vplay(c: Client, m: Message):
                 image = await play_thumb(videoid)
                 queuem = await queue_thumb(videoid)
                 ctitle = await CHAT_TITLE(gcname)
-                image = await thumb(thumbnail, title, userid, ctitle)
                 veez, ytlink = await ytdl(url)
                 if veez == 0:
                     await loser.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
