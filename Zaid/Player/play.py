@@ -10,6 +10,7 @@ from random import choice
 import aiofiles
 import aiohttp
 from Zaid.converter import convert
+from Process.design.thumbnail import *
 import ffmpeg
 import requests
 from Zaid.fonts import CHAT_TITLE
