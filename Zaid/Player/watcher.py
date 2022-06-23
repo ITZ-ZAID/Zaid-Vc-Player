@@ -81,10 +81,8 @@ async def chat_watcher_func(_, message: Message):
         pass
     else:
         await add_served_chat(chat_id)
-            return
     user_id = message.from_user.id
     if await is_served_user(user_id):
         pass
     else:
         await add_served_user(user_id)
-            return
