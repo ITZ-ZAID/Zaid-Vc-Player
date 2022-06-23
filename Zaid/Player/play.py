@@ -360,6 +360,14 @@ async def play(c: Client, m: Message):
                                    ),
                                    stream_type=StreamType().local_stream,
                                )
+                            if int(assistant) == 6:
+                               await call_py.join_group_call(
+                                   chat_id,
+                                   AudioPiped(
+                                       ytlink,
+                                   ),
+                                   stream_type=StreamType().local_stream,
+                               )
                             await add_active_chat(chat_id)
                             add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
                             await suhu.delete()
