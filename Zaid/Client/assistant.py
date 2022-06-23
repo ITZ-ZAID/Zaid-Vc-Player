@@ -1,31 +1,9 @@
-from Zaid.main import Test, user, user3, user4, user5
+from Zaid.main import *
 
 
 from config import SESSION_NAME, SESSION2, SESSION3, SESSION4, SESSION5
 random_assistant = ["1", "2", "3", "4", "5"]
 
-
-ASSIDS = []
-ASSID1 = 0
-ASSNAME1 = ""
-ASSUSERNAME1 = ""
-ASSMENTION1 = ""
-ASSID2 = 0
-ASSNAME2 = ""
-ASSUSERNAME2 = ""
-ASSMENTION2 = ""
-ASSID3 = 0
-ASSNAME3 = ""
-ASSUSERNAME3 = ""
-ASSMENTION3 = ""
-ASSID4 = 0
-ASSNAME4 = ""
-ASSUSERNAME4 = ""
-ASSMENTION4 = ""
-ASSID5 = 0
-ASSNAME5 = ""
-ASSUSERNAME5 = ""
-ASSMENTION5 = ""
 
 
 async def get_assistant_details(assistant: int):
