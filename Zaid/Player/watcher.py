@@ -56,8 +56,24 @@ async def new_chat(c: Client, m: Message):
 
 
 
-@Client.on_message(filters.incoming)
-async def chat_watcher_func(_, message):
+
+
+
+chat_watcher_group = 5
+
+@Client.on_message(group=chat_watcher_group)
+async def chat_watcher_func(_, message: Message):
+    userid = message.from_user.id
+    suspect = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
+    if await is_gbanned_user(userid):
+        try:
+            await message.chat.ban_member(userid)
+        except ChatAdminRequired:
+            print(f"can't remove gbanned user from chat: {message.chat.id}")
+            return
+        await message.reply_text(
+            f"👮🏼 (> {suspect} <)\n\n**Gbanned** user detected, that user has been gbanned by sudo user and was blocked from this Chat !\n\n🚫 **Reason:** potential spammer and abuser."
+        )
     if message.sender_chat:
         return
     chat_id = message.chat.id
@@ -76,20 +92,3 @@ async def chat_watcher_func(_, message):
             return
         except Exception:
             return
-
-
-chat_watcher_group = 5
-
-@Client.on_message(group=chat_watcher_group)
-async def chat_watcher_func(_, message: Message):
-    userid = message.from_user.id
-    suspect = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
-    if await is_gbanned_user(userid):
-        try:
-            await message.chat.ban_member(userid)
-        except ChatAdminRequired:
-            LOGS.info(f"can't remove gbanned user from chat: {message.chat.id}")
-            return
-        await message.reply_text(
-            f"👮🏼 (> {suspect} <)\n\n**Gbanned** user detected, that user has been gbanned by sudo user and was blocked from this Chat !\n\n🚫 **Reason:** potential spammer and abuser."
-        )
