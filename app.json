@@ -70,6 +70,11 @@
             "required": true,
             "value": "540000"
         },
+        "BOT_NAME": {
+            "description": "Tell us your bot name else don't change this !",
+            "required": true,
+            "value": "Zaid"
+        },
         "BOT_TOKEN": {
             "description": "fill with your bot token get from @BotFather on telegram",
             "required": true,
