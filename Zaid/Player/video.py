@@ -193,6 +193,16 @@ async def vplay(c: Client, m: Message):
                        ),
                        stream_type=StreamType().local_stream,
                    )
+                if int(assistant) == 6:
+                   await call_py.join_group_call(
+                       chat_id,
+                       AudioVideoPiped(
+                           dl,
+                           HighQualityAudio(),
+                           amaze,
+                       ),
+                       stream_type=StreamType().local_stream,
+                   )
                 await add_active_video_chat(chat_id)
                 add_to_queue(chat_id, songname, dl, link, "Video", Q)
                 await loser.delete()
@@ -306,7 +316,7 @@ async def vplay(c: Client, m: Message):
                                        ),
                                     stream_type=StreamType().local_stream,
                                 )
-                               if int(assistant) == 6:
+                                if int(assistant) == 6:
                                    await call_py.join_group_call(
                                        chat_id,
                                        AudioVideoPiped(
@@ -433,7 +443,7 @@ async def vplay(c: Client, m: Message):
                                    stream_type=StreamType().local_stream,
                                )
                             if int(assistant) == 6:
-                               await call_py5.join_group_call(
+                               await call_py.join_group_call(
                                    chat_id,
                                    AudioVideoPiped(
                                        ytlink,
@@ -442,6 +452,7 @@ async def vplay(c: Client, m: Message):
                                    ),
                                    stream_type=StreamType().local_stream,
                                )
+
                             await add_active_video_chat(chat_id)
                             add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                             await loser.delete()
