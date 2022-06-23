@@ -28,7 +28,9 @@ from youtubesearchpython import VideosSearch
 IMAGE_THUMBNAIL = "https://telegra.ph/file/adcf833bd6314e0cf31fd.png"
 
 
-def ytsearch(query: str):
+
+
+def ytsearch(query):
     try:
         search = VideosSearch(query, limit=1).result()
         data = search["result"][0]
@@ -36,7 +38,8 @@ def ytsearch(query: str):
         url = data["link"]
         duration = data["duration"]
         thumbnail = f"https://i.ytimg.com/vi/{data['id']}/hqdefault.jpg"
-        return [songname, url, duration, thumbnail]
+        videoid = data["id"]
+        return [songname, url, duration, thumbnail, videoid]
     except Exception as e:
         print(e)
         return 0
@@ -228,10 +231,12 @@ async def vplay(c: Client, m: Message):
                     url = search[1]
                     duration = search[2]
                     thumbnail = search[3]
+                    videoid = search[4]
                     userid = m.from_user.id
                     gcname = m.chat.title
                     ctitle = await CHAT_TITLE(gcname)
-                    image = VIDEO_IMG
+                    image = await play_thumb(videoid)
+                    queuem = await queue_thumb(videoid)
                     veez, ytlink = await ytdl(url)
                     if veez == 0:
                         await loser.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
@@ -244,7 +249,7 @@ async def vplay(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             buttons = stream_markup(user_id)
                             await m.reply_photo(
-                                photo=f"{QUE_IMG}",
+                                photo=queuem,
                                 reply_markup=InlineKeyboardMarkup(buttons),
                                 caption=f"💡 **Track added to queue »** `{pos}`\n\n🗂 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
                             )
@@ -307,7 +312,7 @@ async def vplay(c: Client, m: Message):
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 buttons = stream_markup(user_id)
                                 await m.reply_photo(
-                                    photo=f"{VIDEO_IMG}",
+                                    photo=image,
                                     reply_markup=InlineKeyboardMarkup(buttons),
                                     caption=f"🗂 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
                                 )
@@ -343,8 +348,11 @@ async def vplay(c: Client, m: Message):
                 url = search[1]
                 duration = search[2]
                 thumbnail = search[3]
+                videoid = search[4]
                 userid = m.from_user.id
                 gcname = m.chat.title
+                image = await play_thumb(videoid)
+                queuem = await queue_thumb(videoid)
                 ctitle = await CHAT_TITLE(gcname)
                 image = await thumb(thumbnail, title, userid, ctitle)
                 veez, ytlink = await ytdl(url)
@@ -357,7 +365,7 @@ async def vplay(c: Client, m: Message):
                         requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                         buttons = stream_markup(user_id)
                         await m.reply_photo(
-                            photo=f"{QUE_IMG}",
+                            photo=queuem,
                             reply_markup=InlineKeyboardMarkup(buttons),
                             caption=f"💡 **Track added to queue »** `{pos}`\n\n🗂 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
                         )
@@ -420,7 +428,7 @@ async def vplay(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             buttons = stream_markup(user_id)
                             await m.reply_photo(
-                                photo=f"{VIDEO_IMG}",
+                                photo=image,
                                 reply_markup=InlineKeyboardMarkup(buttons),
                                 caption=f"🗂 **Name:** [{songname}]({url}) |`video`\n⏱ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
                             )
