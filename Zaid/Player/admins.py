@@ -443,7 +443,7 @@ async def change_volume(client, m: Message):
             if int(assistant) == 5:
                await call_py5.change_volume_call(chat_id, volume=int(range))
             if int(assistant) == 6:
-               await call_py.change_volume_call(chat_id
+               await call_py.change_volume_call(chat_id, volume=int(range))
             await m.reply(
                 f"✅ **volume set to** `{range}`%"
             )
