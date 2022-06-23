@@ -19,6 +19,8 @@ from Zaid.filters import command
 from Zaid.main import bot, me_bot
 from Zaid.Database.dbusers import add_served_user
 from Zaid.Database.dbchat import add_served_chat, is_served_chat
+
+from Zaid.Database.dbusers import *
 from Zaid.Database.dbpunish import is_gbanned_user
 
 from pyrogram import Client, filters, __version__ as pyrover
