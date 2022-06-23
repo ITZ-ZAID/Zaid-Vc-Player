@@ -54,6 +54,21 @@ async def new_chat(c: Client, m: Message):
             return
 
 
+
+
+@Client.on_message(filters.incoming)
+async def chat_watcher_func(_, message):
+    if message.sender_chat:
+        return
+    chat_id = message.chat.id
+    if await is_served_chat(chat_id):
+        pass
+    else:
+        await add_served_chat(chat_id)
+            return
+        except Exception:
+            return
+
 chat_watcher_group = 5
 
 @Client.on_message(group=chat_watcher_group)
