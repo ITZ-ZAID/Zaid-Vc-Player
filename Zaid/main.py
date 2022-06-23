@@ -111,6 +111,7 @@ async def start_bot():
        await user5.start()
        await call_py5.start()
        random_assistant.append(5)
+    random_assistant.append(6)
     botinfo = bot.get_me()
     print("[INFO]: STARTING PYTGCALLSS CLIENT")
     await idle()
