@@ -1,6 +1,6 @@
-<h2 align="centre"> 𝐌𝐮𝐬𝐢𝐜+𝐑𝐚𝐢𝐝 𝐒𝐩𝐚𝐦 𝐁𝐨𝐭🔥</h2>
+<h2 align="centre"> 𝐇𝐘𝐁𝐑𝐈𝐃 𝐌𝐔𝐒𝐈𝐂 𝐏𝐋𝐀𝐘𝐄𝐑🔥</h2>
 
-### ᴢᴀɪᴅ ᴠᴄ ᴘʟᴀᴇʀ ɪꜱ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴘʀᴏᴊᴇᴄᴛ ʙᴀꜱᴇᴅ ᴏɴ ᴘʏʀᴏɢʀᴀᴍ ꜰᴏʀ ᴘʟᴀʏ ᴍᴜꜱɪᴄꜱ ɪɴ ᴠᴄ ᴄʜᴀᴛꜱ...
+### ᴢᴀɪᴅ ᴠᴄ ᴘʟᴀʏᴇʀ ɪꜱ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴘʀᴏᴊᴇᴄᴛ ʙᴀꜱᴇᴅ ᴏɴ ᴘʏʀᴏɢʀᴀᴍ ꜰᴏʀ ᴘʟᴀʏ ᴍᴜꜱɪᴄꜱ ɪɴ ᴠᴄ ᴄʜᴀᴛꜱ...
 
 <p align="center"><a href="https://t.me/Superior_Bots"><img src="https://telegra.ph/file/c4e036012053c3eb85e80.jpg" width="300"></a></p>
 <p align="center">
@@ -51,12 +51,12 @@
 - **ᴊᴏɪɴ & ʟᴇᴀᴠᴇ ꜱᴛʀᴇᴀᴍᴇʀ ᴀᴄᴄᴏᴜɴᴛ ᴜꜱɪɴɢ ᴀ ᴄᴏᴍᴍᴀɴᴅ**
 - **ᴄᴏᴏʟ ꜱᴛᴀʀᴛꜱ ᴘʟᴜɴɢɪɴꜱ**
 - **Spam**
-- **Replyraid**
+- **Reply Raid**
 - **Love Raid**
-- **VcRaid**
+- **Voice Raid**
 - **Video Raid**
 - **Skip, Pause, Resume, Stop feature**
-- **YouTube/Local/Live/m3u8 stream support**
+- **YouTube/Local/Live/m3u8 ʟɪɴᴋ stream support**
 - **Control With Button support**
 - **Volume Control**
 - **Userbot Auto Join**
