@@ -121,7 +121,6 @@ async def broadcast_message_pin(c: Client, message: Message):
 @sudo_users_only
 async def bot_statistic(c: Client, message: Message):
     if MONGO_DB_URL == "mongodb+srv://Cloner:Cloner@cluster0.cgc6t.mongodb.net/?retryWrites=true&w=majority":
-        await message.reply_text("__Plz Add your Mongo Database to do This__.")
         name = me_bot.first_name
         chat_id = message.chat.id
         msg = await c.send_message(
