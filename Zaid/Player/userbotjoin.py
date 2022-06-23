@@ -10,7 +10,7 @@ from Zaid.Client.assistant import get_assistant_details, random_assistant
 from Zaid.Database.active import get_active_chats
 
 
-@Client.on_message(command(["joinassistant", "userbotjoin"]) & filters.user(SUDO_USERS)))
+@Client.on_message(filters.command(["joinassistant", "userbotjoin"]) & filters.user(SUDO_USERS)))
 async def basffy(_, message):
     if len(message.command) != 2:
         await message.reply_text(
