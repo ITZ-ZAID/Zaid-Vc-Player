@@ -85,6 +85,7 @@ async def get_assistant_details(assistant: int):
        ASSUSERNAME5 = getme5.username
        ASSMENTION5 = getme5.mention
     if int(assistant) == 1:
+    elif int(assistant) == 6:
         x = ASSID1
         y = ASSNAME1
         z = ASSUSERNAME1
@@ -109,9 +110,4 @@ async def get_assistant_details(assistant: int):
         y = ASSNAME5
         z = ASSUSERNAME5
         a = user5
-    elif int(assistant) == 6:
-        x = ASSID1
-        y = ASSNAME1
-        z = ASSUSERNAME1
-        a = Test
     return x, y, z, a
