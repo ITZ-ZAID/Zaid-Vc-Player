@@ -12,7 +12,7 @@ from Zaid.Database.active import get_active_chats
 
 @app.on_message(filters.command("joinassistant", "userbotjoin"))
 @authorized_users_only
-async def basffy(_, message):
+async def basffy(client: app, message):
     if len(message.command) != 2:
         await message.reply_text(
             "**Usage:**\n/joinassistant [Chat Username or Chat ID]"
