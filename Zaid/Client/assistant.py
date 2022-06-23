@@ -2,7 +2,7 @@ from Zaid.main import *
 
 
 from config import SESSION_NAME, SESSION2, SESSION3, SESSION4, SESSION5
-random_assistant = ["1", "2", "3", "4", "5"]
+random_assistant = ["1", "2", "3", "4", "5", "6"]
 
 
 
@@ -67,11 +67,6 @@ async def get_assistant_details(assistant: int):
         y = ASSNAME1
         z = ASSUSERNAME1
         a = Test
-    elif int(assistant) == 6:
-        x = ASSID1
-        y = ASSNAME1
-        z = ASSUSERNAME1
-        a = Test
     elif int(assistant) == 2:
         x = ASSID2
         y = ASSNAME2
@@ -92,4 +87,9 @@ async def get_assistant_details(assistant: int):
         y = ASSNAME5
         z = ASSUSERNAME5
         a = user5
+    elif int(assistant) == 6:
+        x = ASSID1
+        y = ASSNAME1
+        z = ASSUSERNAME1
+        a = Test
     return x, y, z, a
