@@ -64,4 +64,3 @@ VIDEO_IMG = getenv("VIDEO_IMG", "https://telegra.ph/file/6213d2673486beca02967.p
 SKIP_IMG = getenv("SKIP_IMG", "https://telegra.ph/file/f02efde766160d3ff52d6.png")
 NEXT_IMG = getenv("NEXT_IMG", "https://telegra.ph/file/f02efde766160d3ff52d6.png")
 HEROKU_MODE = getenv("HEROKU_MODE", None)
-MULTI_MODE = getenv("MULTI_MODE", None)
