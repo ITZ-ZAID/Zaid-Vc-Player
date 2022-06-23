@@ -76,7 +76,6 @@ async def chat_watcher_func(_, message: Message):
         await message.reply_text(
             f"👮🏼 (> {suspect} <)\n\n**Gbanned** user detected, that user has been gbanned by sudo user and was blocked from this Chat !\n\n🚫 **Reason:** potential spammer and abuser."
         )
-        return
     chat_id = message.chat.id
     if await is_served_chat(chat_id):
         pass
