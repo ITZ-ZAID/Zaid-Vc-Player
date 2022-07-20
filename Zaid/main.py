@@ -46,7 +46,6 @@ else:
    user5 = Client(SESSION5, api_id=API_ID, api_hash=API_HASH)
 
 
-call_py5 = PyTgCalls(user5)
 
 with Client(":umm:", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
     me_bot = app.get_me()
