@@ -99,9 +99,9 @@ Zaid@Windows~ $ python3 -m Heroku
 <details>
     <summary><b> Detailed Heroku Depoyment Process » </b></summary>
 
-- Callsmusic
 - Veez
 - PyroGram
+- Yukki (Heavily)
 -xyz ⚡
 </details>
 
