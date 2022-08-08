@@ -2,7 +2,7 @@
     "name": "Music Bot",
     "description": "Telegram Music Bot allows you to stream music trought the telegram voice chat feature !!",
     "keywords": ["telegram music bot", "voice chat", "pytgcalls"],
-    "repository": "https://github.com/Itz-Zaid/Music-Bot-v2",
+    "repository": "https://github.com/ITZ-ZAID/Zaid-Vc-Player",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
