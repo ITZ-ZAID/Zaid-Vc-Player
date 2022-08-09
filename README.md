@@ -97,12 +97,13 @@ Zaid@Windows~ $ python3 -m Heroku
 ```
 # Credits
 <details>
-    <summary><b> Detailed Heroku Depoyment Process » </b></summary>
+    <summary><b> Click» </b></summary>
 
 - Veez
 - PyroGram
 - Yukki (Heavily)
 -xyz ⚡
+
 </details>
 
 <p align="center">𝐒𝐮𝐩𝐩𝐨𝐫𝐭 / 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ----> </p>
