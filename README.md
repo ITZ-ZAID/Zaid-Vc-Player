@@ -102,7 +102,7 @@ Zaid@Windows~ $ python3 -m Heroku
 - Veez
 - PyroGram
 - Yukki (Heavily)
--xyz ⚡
+- xyz ⚡
 
 </details>
 
