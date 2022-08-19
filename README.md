@@ -48,12 +48,12 @@ Read All Commands
    Install Locally Or On A VPS
 </h2>
 
-
+We Suggest To use Debian v-11 else ubuntu v-20+
 ```console
-Zaid@Windows~ $ git clone https://github.com/ITZ-ZAID/Zaid-Vc-Player
-Zaid@Windows~ $ cd Zaid-Vc-Player
-Zaid@Windows~ $ bash setup
-Zaid@Windows~ $ cp sample.env .env
+$ git clone https://github.com/ITZ-ZAID/Zaid-Vc-Player
+$ cd Zaid-Vc-Player
+$ bash setup
+$ cp sample.env .env
 ```
 
 <h3 align="center">
@@ -61,8 +61,8 @@ Zaid@Windows~ $ cp sample.env .env
 </h3>
 
 ```console
-Zaid@Windows~ $ screen
-Zaid@Windows~ $ python3 -m Zaid
+$ screen
+$ python3 -m Zaid
 ```
 #
 
