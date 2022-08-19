@@ -1,1 +1,1 @@
-worker: bash test
+worker: python3 -m Zaid
