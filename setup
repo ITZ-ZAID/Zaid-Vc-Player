@@ -1,0 +1,13 @@
+echo "Updating System And packages"
+sudo apt update && apt upgrade -y
+echo "Installing python or ffmpeg pakage"
+sudo apt install git curl python3-pip ffmpeg -y
+echo "installing pip"
+pip3 install -U pip
+echo "installing nodejs 16+"
+curl -sL https://deb.nodesource.com/setup_16.x | bash -
+sudo apt-get install -y nodejs
+npm i -g npm
+echo "Installing requirements"
+pip3 install -U -r requirements.txt
+echo "Bash setup has been Completed Now Edit your vars then run your bot"
