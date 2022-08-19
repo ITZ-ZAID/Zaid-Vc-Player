@@ -1,4 +1,5 @@
-<h2 align="centre">Zaid Vc Player</h2>
+# Zaid Vc Player
+A telegram Music bot Source Code By Using PyroGram Client
 
 <h3>Requirements 📝</h3>
 
@@ -42,4 +43,7 @@ Read All Commands
 <p align="center"><a href="https://heroku.com/deploy">
   <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-pink?style=flat&logo=heroku" width="325" height="50.100" /></a></p>
 
-
+# Credits
+- PyroGram
+- Yukki(Heavily)
+- Xyz
