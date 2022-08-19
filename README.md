@@ -44,6 +44,27 @@ Read All Commands
   <img src="https://img.shields.io/badge/Heroku%20Deploy-pink?style=for-the-badge&logo=heroku" width="325" height="50.100" /></a></p>
 
 #
+<h2 align="center">
+   Install Locally Or On A VPS
+</h2>
+
+
+```console
+Zaid@Windows~ $ git clone https://github.com/ITZ-ZAID/Zaid-Vc-Player
+Zaid@Windows~ $ cd Zaid-Vc-Player
+Zaid@Windows~ $ bash setup
+Zaid@Windows~ $ cp sample.env .env
+```
+
+<h3 align="center">
+    Edit <b>.env</b> with your own values and Run Bot
+</h3>
+
+```console
+Zaid@Windows~ $ screen
+Zaid@Windows~ $ python3 -m Zaid
+```
+#
 
 <p align="center">Support / Channel ----> </p>
 
