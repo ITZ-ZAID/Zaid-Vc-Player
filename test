@@ -1,3 +1,0 @@
-git clone $REPO mm
-cd mm
-python3 -m Zaid
