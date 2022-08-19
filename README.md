@@ -41,7 +41,14 @@ Read All Commands
 # Deploy
 
 <p align="center"><a href="https://heroku.com/deploy">
-  <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-pink?style=flat&logo=heroku" width="325" height="50.100" /></a></p>
+  <img src="https://img.shields.io/badge/Heroku%20Deploy-pink?style=for-the-badge&logo=heroku" width="325" height="50.100" /></a></p>
+
+#
+
+<p align="center">Support / Channel ----> </p>
+
+<p align="center"><a href="https://t.me/TheSupportChat"><img src="https://img.shields.io/badge/ᴛᴇʟᴇɢʀᴀᴍ-𝐒𝐮𝐩𝐩𝐨𝐫𝐭-black?&style=for-the-badge&logo=telegram" width="220" height="38.45"></a></p>
+<p align="center"><a href="https://t.me/TheUpdatesChannel"><img src="https://img.shields.io/badge/ᴛᴇʟᴇɢʀᴀᴍ-𝐔𝐩𝐝𝐚𝐭𝐞𝐬-black?&style=for-the-badge&logo=telegram" width="220" height="38.45"></a></p>
 
 # Credits
 - PyroGram
