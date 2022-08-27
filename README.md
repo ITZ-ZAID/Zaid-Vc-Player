@@ -73,5 +73,3 @@ $ python3 -m Zaid
 
 # Credits
 - PyroGram
-- Yukki(Heavily)
-- Xyz
