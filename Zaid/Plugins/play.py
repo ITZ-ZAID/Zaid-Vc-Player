@@ -62,6 +62,7 @@ async def play(_, message: Message):
     if message.sender_chat:
         return await message.reply_text("❌ You're an __Anonymous Admin__!\n✅ Revert back to User Account From Admin Rights.")  
     user_id = message.from_user.id
+    userid = user_id
     chat_title = message.chat.title
     username = message.from_user.first_name
     checking = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
@@ -242,37 +243,134 @@ async def play(_, message: Message):
             return
         what = "Query Given"
         query = message.text.split(None, 1)[1]
-        mystic = await message.reply_text("**🔄 Searching**")
         try:
-            a = VideosSearch(query, limit=5)
-            result = (a.result()).get("result")
-            title1 = (result[0]["title"])
-            duration1 = (result[0]["duration"])
-            title2 = (result[1]["title"])
-            duration2 = (result[1]["duration"])      
-            title3 = (result[2]["title"])
-            duration3 = (result[2]["duration"])
-            title4 = (result[3]["title"])
-            duration4 = (result[3]["duration"])
-            title5 = (result[4]["title"])
-            duration5 = (result[4]["duration"])
-            ID1 = (result[0]["id"])
-            ID2 = (result[1]["id"])
-            ID3 = (result[2]["id"])
-            ID4 = (result[3]["id"])
-            ID5 = (result[4]["id"])
+            search = VideosSearch(query, limit=1).result()
+            data = search["result"][0]
+            title = data["title"]
+            duration = data["duration"]
+            url = data["link"]
+            id = data["id"]
         except Exception as e:
-            return await mystic.edit_text(f"❌ Soung Not Found.\n**Possible Reason:**{e}")
-        thumb = f"{RESULT_PIC}"
-        await mystic.delete()   
-        buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
-        hmo = await message.reply_photo(
-            photo=thumb, 
-            caption=(f"**List Of Result**\n\n1️⃣ <b>{title1[:25]}</b>\n  ┗  ⏳ <b>__Duration:__</b> {duration1}\n\n2️⃣ <b>{title2[:25]}</b>\n  ┗  ⏳ <b>__Duration:__</b> {duration2})__</u>\n\n3️⃣ <b>{title3[:25]}</b>\n  ┗  ⏳ <b>__Duration:__</b> {duration3}\n\n4️⃣ <b>{title4[:25]}</b>\n  ┗  ⏳ <b>__Duration:__</b> {duration4}</u>\n\n5️⃣ <b>{title5[:25]}</b>\n  ┗  ⏳ <b>__Duration:__</b> {duration5}"),    
-            reply_markup=InlineKeyboardMarkup(buttons),
-        )  
-        disable_web_page_preview=True
-        return   
+            return await message.reply_text(f"❌ Soung Not Found.\n**Possible Reason:**{e}")
+        url = (f"https://www.youtube.com/watch?v={id}")
+        videoid = id
+        idx = id
+        smex = int(time_to_seconds(duration))
+        if smex > DURATION_LIMIT:
+            await message.reply_text(f"❌ **__Duration Error__**\n\n✅ **Allowed Duration: **90 minute(s)\n📲 **Received Duration:** {duration} minute(s)")
+            return 
+        try:
+            with yt_dlp.YoutubeDL(ytdl_opts) as ytdl:
+                x = ytdl.extract_info(url, download=False)
+        except Exception as e:
+            return await message.reply_text(f"❌ Failed to download this video.\n\n**Reason**:{e}") 
+        title = (x["title"])
+        mystic = await message.reply_text(f"Downloading {title[:50]}")
+        thumbnail = (x["thumbnail"])
+        idx = (x["id"])
+        videoid = (x["id"])
+        def my_hook(d): 
+            if d['status'] == 'downloading':
+                percentage = d['_percent_str']
+                per = (str(percentage)).replace(".","", 1).replace("%","", 1)
+                per = int(per)
+                eta = d['eta']
+                speed = d['_speed_str']
+                size = d['_total_bytes_str']
+                bytesx = d['total_bytes']
+                if str(bytesx) in flex:
+                    pass
+                else:
+                    flex[str(bytesx)] = 1
+                if flex[str(bytesx)] == 1:
+                    flex[str(bytesx)] += 1
+                    try:
+                        if eta > 2:
+                            mystic.edit(f"Downloading {title[:50]}\n\n**File Size:** {size}\n**Downloaded:** {percentage}\n**Speed:** {speed}\n**ETA:** {eta} sec")
+                    except Exception as e:
+                        pass
+                if per > 250:    
+                    if flex[str(bytesx)] == 2:
+                        flex[str(bytesx)] += 1
+                        if eta > 2:     
+                            mystic.edit(f"Downloading {title[:50]}..\n\n**File Size:** {size}\n**Downloaded:** {percentage}\n**Speed:** {speed}\n**ETA:** {eta} sec")
+                        print(f"[{videoid}] Downloaded {percentage} at a speed of {speed} | ETA: {eta} seconds")
+                if per > 500:    
+                    if flex[str(bytesx)] == 3:
+                        flex[str(bytesx)] += 1
+                        if eta > 2:     
+                            mystic.edit(f"Downloading {title[:50]}...\n\n**File Size:** {size}\n**Downloaded:** {percentage}\n**Speed:** {speed}\n**ETA:** {eta} sec")
+                        print(f"[{videoid}] Downloaded {percentage} at a speed of {speed} | ETA: {eta} seconds")
+                if per > 800:    
+                    if flex[str(bytesx)] == 4:
+                        flex[str(bytesx)] += 1
+                        if eta > 2:    
+                            mystic.edit(f"Downloading {title[:50]}....\n\n**File Size:** {size}\n**Downloaded:** {percentage}\n**Speed:** {speed}\n**ETA:** {eta} sec")
+                        print(f"[{videoid}] Downloaded {percentage} at a speed of {speed} | ETA: {eta} seconds")
+            if d['status'] == 'finished': 
+                try:
+                    taken = d['_elapsed_str']
+                except Exception as e:
+                    taken = "00:00"
+                size = d['_total_bytes_str']
+                mystic.edit(f"**Downloaded {title[:50]}.....**\n\n**File Size:** {size}\n**Time Taken:** {taken} sec\n\n**Converting File** [__FFmpeg processing__]")
+                print(f"[{videoid}] Downloaded| Elapsed: {taken} seconds")    
+        loop = asyncio.get_event_loop()
+        x = await loop.run_in_executor(None, download, url, my_hook)
+        file = await convert(x)
+        theme = random.choice(themes)
+        ctitle = message.chat.title
+        ctitle = await CHAT_TITLE(ctitle)
+        thumb = await gen_thumb(thumbnail, title, userid, theme, ctitle)
+        await mystic.delete()
+        if await is_active_chat(chat_id):
+            position = await put(chat_id, file=file)
+            buttons = play_markup(videoid, user_id)
+            _chat_ = ((str(file)).replace("_","", 1).replace("/","", 1).replace(".","", 1))
+            cpl=(f"downloads/{_chat_}final.png")     
+            shutil.copyfile(thumb, cpl) 
+            f20 = open(f'search/{_chat_}title.txt', 'w')
+            f20.write(f"{title}") 
+            f20.close()
+            f111 = open(f'search/{_chat_}duration.txt', 'w')
+            f111.write(f"{duration}") 
+            f111.close()
+            f27 = open(f'search/{_chat_}username.txt', 'w')
+            f27.write(f"{checking}") 
+            f27.close()
+            f28 = open(f'search/{_chat_}videoid.txt', 'w')
+            f28.write(f"{videoid}") 
+            f28.close()
+            await mystic.delete()
+            m = await message.reply_photo(
+            photo=thumb,
+            caption=(f"🎬 <b>__Song:__ </b>[{title[:25]}]({url}) \n⏳ <b>__Duration:__</b> {duration} \n👤 <b>__Requested by:__ </b>{checking} \n🚧 <b>__Queued at:__</b> <b>#{position}!</b>"),
+            reply_markup=InlineKeyboardMarkup(buttons)
+        )
+            os.remove(thumb)
+            await message.delete()       
+        else:
+            await music_on(chat_id)
+            await add_active_chat(chat_id)
+            await music.pytgcalls.join_group_call(
+                chat_id, 
+                InputStream(
+                    InputAudioStream(
+                    file,
+                    ),
+                ),
+                stream_type=StreamType().local_stream,
+            )
+            buttons = play_markup(videoid, user_id)
+            await mystic.delete()
+            m = await message.reply_photo(
+            photo=thumb,
+            reply_markup=InlineKeyboardMarkup(buttons),    
+            caption=(f"🎥 <b>__Playing:__ </b>[{title[:25]}]({url}) \n⏳ <b>__Duration:__</b> {duration} \n👤**__Requested by:__** {checking}")
+        )   
+            os.remove(thumb)
+            await message.delete()
+            return 
     if await is_active_chat(chat_id):
         position = await put(chat_id, file=file)
         _chat_ = ((str(file)).replace("_","", 1).replace("/","", 1).replace(".","", 1))
