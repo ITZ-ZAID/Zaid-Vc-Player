@@ -35,4 +35,3 @@ async def adminsOnly(permission, message):
     permissions = await member_permissions(chatID, userID)
     if userID not in SUDO_USERS and permission not in permissions:
         return await unauthorised(message)
-    return await authorised(message)
