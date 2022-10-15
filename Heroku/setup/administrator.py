@@ -30,8 +30,6 @@ async def unauthorised(message: Message):
 async def adminsOnly(permission, message):
     chatID = message.chat.id
     if not message.from_user:
-        if message.sender_chat:
-            return await authorised(message)
         return await unauthorised(message)
     userID = message.from_user.id
     permissions = await member_permissions(chatID, userID)
