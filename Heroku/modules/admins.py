@@ -24,7 +24,7 @@ from Heroku.calls.queues import clear, get, is_empty, put, task_done
 async def member_permissions(chat_id: int, user_id: int):
     perms = []
     try:
-        member = await app.get_chat_member(chat_id, user_id)
+        member = await Client.get_chat_member(chat_id, user_id)
     except Exception:
         return []
     if member.can_post_messages:
