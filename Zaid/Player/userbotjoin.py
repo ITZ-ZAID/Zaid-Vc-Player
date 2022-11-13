@@ -8,7 +8,7 @@ from Zaid.main import bot as Client, bot as app
 from pyrogram.errors import UserAlreadyParticipant
 from Zaid.Client.assistant import get_assistant_details, random_assistant
 from Zaid.Database.active import get_active_chats
-
+from Zaid.Database.clientdb import get_assistant, save_assistant
 
 @Client.on_message(filters.command(["joinassistant", "userbotjoin"]) & filters.user(SUDO_USERS))
 async def basffy(_, message):
