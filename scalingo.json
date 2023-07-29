@@ -42,7 +42,7 @@
         },
         "API_HASH": {
             "description": "your Api Hash from my.telegram.org/apps",
-            "required": false,
+            "required": true,
             "value": "4e984ea35f854762dcde906dce426c2d"
         },
         "HEROKU_MODE": {
@@ -62,7 +62,7 @@
         },
         "SUDO_USERS": {
             "description": "fill with the user id who can access all function in your bot (separate with space).",
-            "required": true,
+            "required": false,
             "value": "1669178360"
         },
         "DURATION_LIMIT": {
